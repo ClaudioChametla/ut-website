@@ -1,0 +1,33 @@
+{
+	"carreras": [
+		{
+			"name": "TICs",
+			"description": "Decripcion 1",
+			"cost": 1300
+		},
+		{
+			"name": "Software Engineer",
+			"description": "Decripcion 1",
+			"cost": 1300
+		},
+		{
+			"name": "Industry",
+			"description": "Decripcion 1",
+			"cost": 1300
+		},
+		{
+			"name": "TICs 2",
+			"description": "Decripcion 1",
+			"cost": 1300
+		},
+		{
+			"name": "Lic. e-commerce",
+			"description": "Decripcion 1",
+			"cost": 5800,
+			"ubication": "maps address 1",
+			"src": "/images/image1.png",
+			"tags": ["lic", "ecommerce", "university"]
+		}
+	],
+	"formInputs": [{}]
+}
