@@ -1,0 +1,22 @@
+{
+	"links": [
+		{
+			"name": "CONÓCENOS",
+			"childs": [
+				["MENSAJE DE RECTORÍA\n"],
+				["HISTORIA\n"],
+				["IDENTIDAD\n"],
+				["MISIÓN Y VISIÓN\n"],
+				["INSTALACIONES\n"]
+			]
+		},
+		{
+			"name": "OFERTA EDUCATIVA",
+			"childs": ["LICENCIATURA", "POSGRADO"]
+		},
+		{
+			"name": "VINCULACIÓN",
+			"childs": ["CONVENIOS", "BOLSA DE TRABAJO", "SERVICIO SOCIAL", "EGRESADOS"]
+		}
+	]
+}
