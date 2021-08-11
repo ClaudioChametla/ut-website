@@ -1,10 +1,14 @@
 import { Flex, Image, Link, Box, Text, Menu, MenuButton, Portal, MenuList } from "@chakra-ui/react";
+import { useEffect } from "react";
 import icon from "../../data/icon.json";
-import links from "../../data/links.json";
+import conocenos from "../../data/links.json";
+import vinculacion from "../../data/links.json";
 
 const Navbar = () => {
 	const iconsImg = icon.icons;
-	const linksBar = links.links;
+	const Conocenos = conocenos.conocenos;
+	const Vinculacion = vinculacion.vinculacion;
+
 	return (
 		<Box fontFamily="Montserrat">
 			<link
@@ -121,56 +125,246 @@ const Navbar = () => {
 				w="100%"
 				h="90px"
 				bg="rgb(10, 70, 161)"
-				justifyContent="space-between"
-				p="1"
-				fontSize={["8px", "15px", "15px", "17px"]}
+				fontSize={["8px", "5px", "5px", "13px"]}
+				id="navBar"
+				d={["none", "none", "none", "flex"]}
+				fontWeight="bold"
 			>
 				<Box
 					d="flex"
-					alignSelf="center"
+					alignItems="center"
 					color="white"
-					flexWrap="wrap"
-					justifyContent="space-between"
-					w="5%"
+					justifyContent="flex-end"
+					w="10%"
+					h="100%"
 				>
-					<Link textDecoration="none" href="#">
+					<Link paddingRight="2" href="#">
 						INICIO
 					</Link>
 				</Box>
-				<Box
-					d="flex"
-					flexWrap="wrap"
-					w="40%"
-					paddingRight="5"
-					paddingLeft="5"
-					justifyContent="space-between"
-				>
-					{linksBar &&
-						linksBar.map((item) => (
-							<Flex
-								alignSelf="center"
-								color="white"
-								flexWrap="wrap"
-								justifyContent="space-between"
-							>
+				<Box d="flex" w="35%" fontWeight="bold" justifyContent="center">
+					{Conocenos &&
+						Conocenos.map((item) => (
+							<Flex alignSelf="center" color="white" textAlign="center">
 								<Box>
-									<Menu>
-										<MenuButton>
-											{item.name} <br />
+									<Menu ArrowDown>
+										<MenuButton fontWeight="bold" paddingRight="8">
+											{item.name}
 										</MenuButton>
+
 										<Portal>
 											<MenuList
 												border="none"
-												bg="#2C2D32"
-												p="10"
 												color="white"
+												bg="none"
+												p="4"
+												boxShadow="none"
 											>
-												<Flex d="flex" w="auto" flexDirection="column">
-													<Box>{item.childs[0]}</Box>
-													<Box>{item.childs[1]}</Box>
-													<Box>{item.childs[2]}</Box>
-													<Box>{item.childs[3]}</Box>
-													<Box>{item.childs[4]}</Box>
+												<Flex
+													d="flex"
+													fontSize={["8px", "12px", "12px", "15px"]}
+													top="100px"
+													bg="#2C2D32"
+													p="5"
+													color="whiteAlpha.800"
+													flexDirection="column"
+													transform="translate(-10%, 10px)"
+													borderRadius="2"
+												>
+													<Link href={item.l1}>{item.childs[0]}</Link>
+													<br />
+													<Link href={item.l2}>{item.childs[1]}</Link>
+													<br />
+													<Link href={item.l3}>{item.childs[2]}</Link>
+													<br />
+													<Link href={item.l4}>{item.childs[3]}</Link>
+													<br />
+													<Link href={item.l5}>{item.childs[4]}</Link>
+												</Flex>
+											</MenuList>
+										</Portal>
+									</Menu>
+								</Box>
+							</Flex>
+						))}
+
+					<Flex
+						objectFit="cover"
+						alignSelf="center"
+						justifyContent="flex-end"
+						color="white"
+					>
+						<Box>
+							<Menu>
+								<MenuButton fontWeight="bold" paddingRight="8">
+									OFERTA EDUCATIVA
+								</MenuButton>
+
+								<Portal>
+									<MenuList
+										border="none"
+										bg="none"
+										color="white"
+										p="4"
+										boxShadow="none"
+									>
+										<Flex
+											d="flex"
+											fontSize={["8px", "12px", "12px", "15px"]}
+											top="100px"
+											bg="#2C2D32"
+											p="5"
+											color="whiteAlpha.800"
+											flexDirection="column"
+											transform="translate(-10%, 10px)"
+											borderRadius="2"
+										>
+											<Menu isLazy>
+												<MenuButton textAlign="start" p="1">
+													LICENCIATURA
+												</MenuButton>
+												<MenuList
+													bg="none"
+													w="0"
+													h="0"
+													border="none"
+													p="2"
+													boxShadow="none"
+												>
+													<Flex
+														fontSize={["8px", "12px", "12px", "15px"]}
+														top="100px"
+														bg="#2C2D32"
+														p="5"
+														color="whiteAlpha.800"
+														flexDirection="column"
+														transform="translate(78%, -40px)"
+														borderRadius="2"
+													>
+														<Link>PEDAGOGIA</Link>
+														<br />
+														<Link>GASTRONOMIA</Link>
+														<br />
+														<Link>PSICOLOGÍA</Link>
+														<br />
+														<Link>CONTADURÍA</Link>
+														<br />
+														<Link>ARQUITECTURA</Link>
+														<br />
+														<Link>DERECHO</Link>
+													</Flex>
+												</MenuList>
+											</Menu>
+											<br />
+											<Menu isLazy>
+												<MenuButton textAlign="start" p="1">
+													POSGRADO
+												</MenuButton>
+												<MenuList
+													flexDirection="column"
+													bg="none"
+													w="0"
+													border="none"
+													p="2"
+													boxShadow="none"
+												>
+													<Flex
+														fontSize={["8px", "12px", "12px", "15px"]}
+														top="100px"
+														bg="#2C2D32"
+														p="5"
+														color="whiteAlpha.800"
+														flexDirection="column"
+														transform="translate(78%, -50px)"
+														borderRadius="2"
+													>
+														<Menu isLazy>
+															<MenuButton textAlign="start" p="1">
+																ESPECIALIDAD
+															</MenuButton>
+															<MenuList
+																d="flex"
+																flexDirection="column"
+																bg="none"
+																border="none"
+																p="2"
+																boxShadow="none"
+															>
+																<Flex
+																	fontSize={[
+																		"8px",
+																		"12px",
+																		"12px",
+																		"15px",
+																	]}
+																	top="100px"
+																	bg="#2C2D32"
+																	p="5"
+																	color="whiteAlpha.800"
+																	flexDirection="column"
+																	transform="translate(60%, -50px)"
+																	borderRadius="2"
+																>
+																	<Link>DERECHO DE AMPARO</Link>
+																	<br />
+																	<Link>FORMACIÓN DOCENTE</Link>
+																	<br />
+																	<Link>
+																		PSICOLOGIA EDUCATIVA
+																	</Link>
+																	<br />
+																	<Link>
+																		COSTOS DE LA CONSTRUCCIÓN
+																	</Link>
+																</Flex>
+															</MenuList>
+														</Menu>
+													</Flex>
+												</MenuList>
+											</Menu>
+										</Flex>
+									</MenuList>
+								</Portal>
+							</Menu>
+						</Box>
+					</Flex>
+
+					{Vinculacion &&
+						Vinculacion.map((item) => (
+							<Flex alignSelf="center" color="white" flexWrap="wrap">
+								<Box>
+									<Menu ArrowDown>
+										<MenuButton fontWeight="bold" paddingRight="8">
+											{item.name}
+										</MenuButton>
+
+										<Portal>
+											<MenuList
+												border="none"
+												bg="none"
+												color="white"
+												p="4"
+												boxShadow="none"
+											>
+												<Flex
+													d="flex"
+													fontSize={["8px", "12px", "12px", "15px"]}
+													top="100px"
+													bg="#2C2D32"
+													p="5"
+													color="whiteAlpha.800"
+													flexDirection="column"
+													transform="translate(-10%, 10px)"
+													borderRadius="2"
+												>
+													<Link href={item.l1}>{item.childs[0]}</Link>
+													<br />
+													<Link href={item.l2}>{item.childs[1]}</Link>
+													<br />
+													<Link href={item.l3}>{item.childs[2]}</Link>
+													<br />
+													<Link href={item.l4}>{item.childs[3]}</Link>
+													<Link href={item.l5}>{item.childs[4]}</Link>
 												</Flex>
 											</MenuList>
 										</Portal>
@@ -195,18 +389,21 @@ const Navbar = () => {
 					alignSelf="center"
 					color="white"
 					flexWrap="wrap"
-					justifyContent="space-between"
+					justifyContent="flex-start"
 					w="45%"
-					paddingLeft="10"
+					p="10"
 				>
-					<Link href="#">NUEVO INGRESO</Link>
-					<Link href="#">BLOG</Link>
-					<Link paddingRight="7" href="#">
-						CONTACTO
+					<Link href="#" paddingRight="8">
+						NUEVO INGRESO
 					</Link>
+					<Link href="#" paddingRight="8">
+						BLOG
+					</Link>
+					<Link href="#">CONTACTO</Link>
 				</Box>
 			</Flex>
 		</Box>
 	);
 };
+
 export default Navbar;
