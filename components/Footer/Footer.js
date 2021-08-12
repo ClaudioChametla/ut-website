@@ -9,6 +9,7 @@ import {
 	IconButton,
 	Divider,
 	Link,
+	Image,
 } from "@chakra-ui/react";
 
 const Footer = () => (
@@ -36,9 +37,9 @@ const Footer = () => (
 					<Divider w="80px" />
 					<VStack spacing={8} mt="6" w="300px" bg="red">
 						<HStack w="100%">
-							<Box w="60px" h="60px" bg="blue">
+							<Image w="60px" h="60px" bg="blue">
 								I
-							</Box>
+							</Image>
 							<Box>
 								<Link href="#" color="white">
 									ESPECIALIDAD EN GASTRONOMÍA

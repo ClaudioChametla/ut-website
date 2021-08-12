@@ -3,31 +3,31 @@
 		{
 			"name": "facebook",
 			"link": "https://www.facebook.com/universidadtollancingo",
-			"src": "/images/facebook-f.svg",
+			"src": "/icons/facebook-f.svg",
 			"filter": "invert(33%) sepia(53%) saturate(667%) hue-rotate(183deg) brightness(87%) contrast(88%)"
 		},
 		{
 			"name": "instagram",
 			"link": "https://www.instagram.com/universidadtollancingooficial/",
-			"src": "/images/instagram.svg",
+			"src": "/icons/instagram.svg",
 			"filter": "invert(23%) sepia(33%) saturate(4353%) hue-rotate(262deg) brightness(96%) contrast(91%)"
 		},
 		{
 			"name": "youtube",
 			"link": "https://www.youtube.com/channel/UCiAIp9QxWE_MWW5I3YCOENw",
-			"src": "/images/youtube.svg",
+			"src": "/icons/youtube.svg",
 			"filter": "invert(22%) sepia(71%) saturate(2597%) hue-rotate(345deg) brightness(94%) contrast(89%)"
 		},
 		{
 			"name": "google",
 			"link": "https://mail.google.com/a/universidadtollancingo.com",
-			"src": "/images/google.svg",
+			"src": "/icons/google.svg",
 			"filter": "invert(40%) sepia(25%) saturate(3240%) hue-rotate(333deg) brightness(88%) contrast(93%)"
 		},
 		{
 			"name": "sign-in",
 			"link": "#",
-			"src": "/images/sign-in-alt.svg",
+			"src": "/icons/sign-in-alt.svg",
 			"filter": "invert(48%) sepia(95%) saturate(1081%) hue-rotate(10deg) brightness(95%) contrast(101%)"
 		}
 	]

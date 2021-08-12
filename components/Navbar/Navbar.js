@@ -36,7 +36,7 @@ const Navbar = () => {
 						p="1"
 					>
 						<Image
-							src="/images/phone-alt.svg"
+							src="/icons/phone-alt.svg"
 							alt="phone number"
 							h="50%"
 							w="50%"
@@ -70,7 +70,7 @@ const Navbar = () => {
 						p="1"
 					>
 						<Image
-							src="/images/envelope.svg"
+							src="/icons/envelope.svg"
 							alt="mail"
 							h="60%"
 							w="60%"
