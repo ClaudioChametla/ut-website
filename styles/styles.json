@@ -1,0 +1,22 @@
+{
+	"container": {
+		"width": "70vw"
+	},
+	"font": {
+		"heroOneTitle": "72px",
+		"heroTwoTitle": "52px",
+		"title": "32px",
+		"subtitle": "24px",
+		"text": "16px"
+	},
+	"background": {
+		"light": "rgb(10, 70, 161)",
+		"solid": "rgb(0, 72, 158)"
+	},
+	"button": {
+		"fontSize": "13px"
+	},
+	"icons": {
+		"gray": "invert(93%) sepia(0%) saturate(0%) hue-rotate(166deg) brightness(90%) contrast(91%)"
+	}
+}

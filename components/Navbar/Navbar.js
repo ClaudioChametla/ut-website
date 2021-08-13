@@ -11,23 +11,17 @@ import {
 	Popover,
 	PopoverTrigger,
 	PopoverContent,
-	PopoverHeader,
 	PopoverBody,
-	PopoverFooter,
 	PopoverArrow,
-	PopoverCloseButton,
-	Button,
 	Input,
 } from "@chakra-ui/react";
 import { useEffect } from "react";
 import icon from "../../data/icon.json";
-import conocenos from "../../data/links.json";
-import vinculacion from "../../data/links.json";
+import links from "../../data/links.json";
 
 const Navbar = () => {
 	const iconsImg = icon.icons;
-	const Conocenos = conocenos.conocenos;
-	const Vinculacion = vinculacion.vinculacion;
+	const { conocenos, vinculacion } = links;
 
 	return (
 		<Box fontFamily="Montserrat">
@@ -49,7 +43,7 @@ const Navbar = () => {
 						d="flex"
 						justifyContent="center"
 						border="1px"
-						borderColor="white"
+						borderColor="rgba(255,255,255,0.4)"
 						w="45px"
 						h="45px"
 						alignItems="center"
@@ -83,7 +77,7 @@ const Navbar = () => {
 						d="flex"
 						justifyContent="center"
 						border="1px"
-						borderColor="white"
+						borderColor="rgba(255,255,255,0.4)"
 						w="45px"
 						h="45px"
 						alignItems="center"
@@ -163,8 +157,8 @@ const Navbar = () => {
 					</Link>
 				</Box>
 				<Box d="flex" w="35%" fontWeight="bold" justifyContent="center">
-					{Conocenos &&
-						Conocenos.map((item) => (
+					{conocenos &&
+						conocenos.map((item) => (
 							<Flex alignSelf="center" color="white" textAlign="center">
 								<Box>
 									<Menu ArrowDown>
@@ -349,8 +343,8 @@ const Navbar = () => {
 						</Box>
 					</Flex>
 
-					{Vinculacion &&
-						Vinculacion.map((item) => (
+					{vinculacion &&
+						vinculacion.map((item) => (
 							<Flex alignSelf="center" color="white" flexWrap="wrap">
 								<Box>
 									<Menu ArrowDown>

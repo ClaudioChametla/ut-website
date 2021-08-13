@@ -1,7 +1,7 @@
 import Head from "next/head";
 import { Flex } from "@chakra-ui/react";
 import Container from "../components/Container";
-import { SubHero } from "../components/Hero";
+import { Hero } from "../components/Hero";
 import Example from "../components/Example";
 
 export default function Home() {
@@ -13,7 +13,7 @@ export default function Home() {
 				<link rel="icon" href="/favicon.ico" />
 			</Head>
 			<Container>
-				<SubHero title="Secundario" />
+				<Hero title="SE FAMILIA UT" />
 			</Container>
 		</Flex>
 	);

@@ -2,7 +2,7 @@ import { Box, Center, Text } from "@chakra-ui/react";
 import PropTypes from "prop-types";
 
 export const Hero = ({ title }) => (
-	<Box h="90vh" w="100%" bg="pink.100">
+	<Box h="90vh" w="100%" bg="blue.300">
 		<Center h="100%">
 			<Text fontSize="24px" fontFamily="mono" fontWeight="bold">
 				{title && title}
