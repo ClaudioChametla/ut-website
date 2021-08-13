@@ -1,4 +1,24 @@
-import { Flex, Image, Link, Box, Text, Menu, MenuButton, Portal, MenuList } from "@chakra-ui/react";
+import {
+	Flex,
+	Image,
+	Link,
+	Box,
+	Text,
+	Menu,
+	MenuButton,
+	Portal,
+	MenuList,
+	Popover,
+	PopoverTrigger,
+	PopoverContent,
+	PopoverHeader,
+	PopoverBody,
+	PopoverFooter,
+	PopoverArrow,
+	PopoverCloseButton,
+	Button,
+	Input,
+} from "@chakra-ui/react";
 import { useEffect } from "react";
 import icon from "../../data/icon.json";
 import conocenos from "../../data/links.json";
@@ -388,10 +408,10 @@ const Navbar = () => {
 					d="flex"
 					alignSelf="center"
 					color="white"
-					flexWrap="wrap"
-					justifyContent="flex-start"
-					w="45%"
+					justifyContent="center"
+					w="35%"
 					p="10"
+					h="100%"
 				>
 					<Link href="#" paddingRight="8">
 						NUEVO INGRESO
@@ -399,8 +419,42 @@ const Navbar = () => {
 					<Link href="#" paddingRight="8">
 						BLOG
 					</Link>
-					<Link href="#">CONTACTO</Link>
+					<Link href="#" paddingRight="10">
+						CONTACTO
+					</Link>
 				</Box>
+				<Popover>
+					<PopoverTrigger>
+						<Flex h="100%" justifyContent="flex-start" alignItems="center" w="10%">
+							<Box
+								href="#"
+								d="flex"
+								justifyContent="center"
+								border="1px"
+								borderColor="white"
+								w="40px"
+								h="40px"
+								alignItems="center"
+								p="1"
+							>
+								<Image
+									src="/icons/search.svg"
+									alt="mail"
+									h="60%"
+									w="60%"
+									filter="invert(93%) sepia(0%) saturate(0%) hue-rotate(166deg) brightness(90%) contrast(91%)"
+									_hover={{ transform: "scale(1.2)" }}
+								/>
+							</Box>
+						</Flex>
+					</PopoverTrigger>
+					<PopoverContent>
+						<PopoverArrow />
+						<PopoverBody>
+							<Input placeholder="Buscar" />
+						</PopoverBody>
+					</PopoverContent>
+				</Popover>
 			</Flex>
 		</Box>
 	);
