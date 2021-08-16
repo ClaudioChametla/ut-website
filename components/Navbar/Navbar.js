@@ -15,6 +15,12 @@ import {
 	PopoverArrow,
 	Input,
 	Center,
+	Accordion,
+	AccordionItem,
+	AccordionButton,
+	AccordionPanel,
+	AccordionIcon,
+	Divider,
 } from "@chakra-ui/react";
 import { useEffect } from "react";
 import icon from "../../data/icon.json";
@@ -35,11 +41,12 @@ const Navbar = () => {
 							rel="stylesheet"
 						/>
 						<Flex
-							bg="#22283C"
+							bg={styles.background.navbarBgOne}
 							p="1"
 							fontSize={["12px", "15px", "15px", "17px"]}
 							w="100%"
 							h="45px"
+							d={["none", "none", "none", "flex"]}
 						>
 							<Box
 								d="flex"
@@ -151,7 +158,6 @@ const Navbar = () => {
 					</Box>
 				</Box>
 			</Center>
-
 			<Center w="100%" bg={styles.background.light}>
 				<Box w={styles.container.width} fontFamily="Montserrat">
 					<Flex
@@ -515,6 +521,208 @@ const Navbar = () => {
 					</Flex>
 				</Box>
 			</Center>
+			<Flex
+				w="100%"
+				h={["80px", "90px", "90px", "100px"]}
+				fontSize={["8px", "5px", "5px", "13px"]}
+				id="navBar"
+				d={["flex", "flex", "flex", "none"]}
+				fontWeight="bold"
+				bg={styles.background.light}
+				position="fixed"
+				justifyContent="space-between"
+				p="2"
+			>
+				<Flex w="20%" justifyContent="center" alignSelf="center">
+					<Link href="#" h="100%" d="flex" justifyContent="center">
+						<Image
+							src="/images/logo_UT_FFF_100.png"
+							alt="Logo"
+							fallbackSrc="https://www.universidadtollancingo.com/wp-content/uploads/2020/07/logo_UT_FFF_100.png"
+							h="85%"
+							w="75%"
+						/>
+					</Link>
+				</Flex>
+				<Menu>
+					<MenuButton marginEnd="5">
+						<Box
+							href="#"
+							d="flex"
+							justifyContent="center"
+							border="1px"
+							borderColor="white"
+							w="55px"
+							h="55px"
+							alignItems="center"
+							p="1"
+							borderRadius="5"
+						>
+							<Image
+								src="/icons/bars.svg"
+								alt="mail"
+								h="60%"
+								w="60%"
+								filter="invert(93%) sepia(0%) saturate(0%) hue-rotate(166deg) brightness(90%) contrast(91%)"
+								_hover={{ transform: "scale(1.2)" }}
+							/>
+						</Box>
+					</MenuButton>
+					<Portal w="100vw">
+						<MenuList
+							border="none"
+							w="100vw"
+							color="white"
+							bg={styles.background.navBgSolid}
+							p="4"
+							boxShadow="none"
+						>
+							<Flex
+								h="auto"
+								w="100%"
+								flexDir="column"
+								bg={styles.background.navBgSolid}
+							>
+								<Box align="center" w="100%" p="3" bg={styles.background.light}>
+									<Text>INICIO</Text>
+								</Box>
+								<Accordion allowToggle>
+									<AccordionItem>
+										<h2>
+											<AccordionButton
+												_expanded={{
+													bg: styles.background.light,
+													color: "white",
+												}}
+											>
+												<Box p="3" flex="1" textAlign="center">
+													CONÓCENOS
+												</Box>
+											</AccordionButton>
+										</h2>
+										{conocenos &&
+											conocenos.map((item) => (
+												<AccordionPanel
+													bg={styles.background.navBgLight}
+													pb={4}
+												>
+													<Text p="3" align="center">
+														{item.childs[0]}
+													</Text>
+													<Divider />
+													<Text p="3" align="center">
+														{item.childs[1]}
+													</Text>
+													<Divider />
+													<Text p="3" align="center">
+														{item.childs[2]}
+													</Text>
+													<Divider />
+													<Text p="3" align="center">
+														{item.childs[3]}
+													</Text>
+													<Divider />
+													<Text p="3" align="center">
+														{item.childs[4]}
+													</Text>
+												</AccordionPanel>
+											))}
+									</AccordionItem>
+
+									<AccordionItem>
+										<h2>
+											<AccordionButton
+												_expanded={{
+													bg: styles.background.light,
+													color: "white",
+												}}
+											>
+												<Box flex="1" p="3" textAlign="center">
+													OFERTA EDUCATIVA
+												</Box>
+											</AccordionButton>
+										</h2>
+										<AccordionPanel pb={4} bg={styles.background.navBgLight}>
+											<Text p="3" align="center">
+												LICENCIATURA
+											</Text>
+											<Divider />
+											<Text p="3" align="center">
+												POSGRADO
+											</Text>
+										</AccordionPanel>
+									</AccordionItem>
+
+									<AccordionItem>
+										<h2>
+											<AccordionButton
+												_expanded={{
+													bg: styles.background.light,
+													color: "white",
+												}}
+											>
+												<Box p="3" flex="1" textAlign="center">
+													VINCULACIÓN
+												</Box>
+											</AccordionButton>
+										</h2>
+										{vinculacion &&
+											vinculacion.map((item) => (
+												<AccordionPanel
+													pb={4}
+													bg={styles.background.navBgLight}
+												>
+													<Text p="3" align="center">
+														{item.childs[0]}
+													</Text>
+													<Divider />
+													<Text p="3" align="center">
+														{item.childs[1]}
+													</Text>
+													<Divider />
+													<Text p="3" align="center">
+														{item.childs[2]}
+													</Text>
+													<Divider />
+													<Text p="3" align="center">
+														{item.childs[3]}
+													</Text>
+												</AccordionPanel>
+											))}
+									</AccordionItem>
+								</Accordion>
+								<Box
+									align="center"
+									w="100%"
+									p="3"
+									bg={styles.background.navBgSolid}
+								>
+									<Text>NUEVO INGRESO</Text>
+								</Box>
+								<Divider />
+								<Box
+									align="center"
+									w="100%"
+									p="3"
+									bg={styles.background.navBgSolid}
+								>
+									<Text>BLOG</Text>
+								</Box>
+								<Divider />
+								<Box
+									align="center"
+									w="100%"
+									p="3"
+									bg={styles.background.navBgSolid}
+								>
+									<Text>CONTACTO</Text>
+								</Box>
+								<Divider />
+							</Flex>
+						</MenuList>
+					</Portal>
+				</Menu>
+			</Flex>
 		</Box>
 	);
 };
