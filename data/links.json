@@ -25,14 +25,80 @@
 		]
 	},
 
-	"vinculacion": [
-		{
-			"name": ["VINCULACIÓN"],
-			"childs": ["CONVENIOS", "BOLSA DE TRABAJO", "SERVICIO SOCIAL", "EGRESADOS"],
-			"l1": "https://chakra-ui.com/docs/theming/customize-theme#customizing-component-styles",
-			"l2": "https://chakra-ui.com/docs/overlay/menu",
-			"l3": "https://google.com",
-			"l4": "https://facebook.com"
-		}
-	]
+	"vinculacion": {
+		"name": "VINCULACIÓN",
+		"childs": [
+			{
+				"name": "CONVENIOS",
+				"link": "https://chakra-ui.com/docs/overlay/menu"
+			},
+			{
+				"name": "BOLSA DE TRABAJO",
+				"link": "https://google.com"
+			},
+			{
+				"name": "SERVICIO SOCIAL",
+				"link": "https://google.com"
+			},
+			{
+				"name": "EGRESADOS",
+				"link": "https://google.com"
+			}
+		]
+	},
+	"licenciatura": {
+		"name": "LICENCIATURA",
+		"childs": [
+			{
+				"name": "PEDAGOGÍA",
+				"link": "https://google.com"
+			},
+			{
+				"name": "GASTRONOMÍA",
+				"link": "https://google.com"
+			},
+			{
+				"name": "PSICOLOGÍA",
+				"link": "https://google.com"
+			},
+			{
+				"name": "CONTADURÍA",
+				"link": "https://google.com"
+			},
+			{
+				"name": "ARQUITECTURA",
+				"link": "https://google.com"
+			},
+			{
+				"name": "DERECHO",
+				"link": "https://google.com"
+			}
+		]
+	},
+
+	"especialidad": {
+		"name": "ESPECIALIDAD",
+		"childs": [
+			{
+				"name": "DERECHO DE AMPARO",
+				"link": "https://google.com"
+			},
+			{
+				"name": "FORMACIÓN DOCENTE",
+				"link": "https://google.com"
+			},
+			{
+				"name": "PSICOLOGIA EDUCATIVA",
+				"link": "https://google.com"
+			},
+			{
+				"name": "DERECHO DE AMPARO",
+				"link": "https://google.com"
+			},
+			{
+				"name": "COSTOS DE LA CONSTRUCCIÓN",
+				"link": "https://google.com"
+			}
+		]
+	}
 }

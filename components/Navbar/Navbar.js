@@ -29,7 +29,7 @@ import styles from "../../styles/styles.json";
 
 const Navbar = () => {
 	const iconsImg = icon.icons;
-	const { conocenos, vinculacion } = links;
+	const { conocenos, vinculacion, licenciatura, especialidad } = links;
 	const { isOpen, onOpen, onClose } = useDisclosure();
 	return (
 		<Box>
@@ -168,7 +168,13 @@ const Navbar = () => {
 						d={["none", "none", "none", "flex"]}
 						fontWeight="bold"
 					>
-						<Box d="flex" w="45%" fontWeight="bold" justifyContent="center">
+						<Box
+							d="flex"
+							color="white"
+							w="45%"
+							fontWeight="bold"
+							justifyContent="center"
+						>
 							<Link alignSelf="center" href="#" marginRight="2">
 								INICIO
 							</Link>
@@ -274,17 +280,17 @@ const Navbar = () => {
 																transform="translate(78%, -40px)"
 																borderRadius="2"
 															>
-																<Link>PEDAGOGIA</Link>
-																<br />
-																<Link>GASTRONOMIA</Link>
-																<br />
-																<Link>PSICOLOGÍA</Link>
-																<br />
-																<Link>CONTADURÍA</Link>
-																<br />
-																<Link>ARQUITECTURA</Link>
-																<br />
-																<Link>DERECHO</Link>
+																{licenciatura &&
+																	licenciatura.childs.map(
+																		(item) => (
+																			<Link
+																				p="3"
+																				href={item.link}
+																			>
+																				{item.name}
+																			</Link>
+																		),
+																	)}
 															</Flex>
 														</MenuList>
 													</Menu>
@@ -346,22 +352,21 @@ const Navbar = () => {
 																			transform="translate(60%, -50px)"
 																			borderRadius="2"
 																		>
-																			<Link>
-																				DERECHO DE AMPARO
-																			</Link>
-																			<br />
-																			<Link>
-																				FORMACIÓN DOCENTE
-																			</Link>
-																			<br />
-																			<Link>
-																				PSICOLOGIA EDUCATIVA
-																			</Link>
-																			<br />
-																			<Link>
-																				COSTOS DE LA
-																				CONSTRUCCIÓN
-																			</Link>
+																			{especialidad &&
+																				especialidad.childs.map(
+																					(item) => (
+																						<Link
+																							p="3"
+																							href={
+																								item.link
+																							}
+																						>
+																							{
+																								item.name
+																							}
+																						</Link>
+																					),
+																				)}
 																		</Flex>
 																	</MenuList>
 																</Menu>
@@ -375,68 +380,44 @@ const Navbar = () => {
 								</Box>
 							</Flex>
 
-							{vinculacion &&
-								vinculacion.map((item) => (
-									<Flex alignSelf="center" h="100%" color="white">
-										<Box h="100%">
-											<Menu>
-												<MenuButton
-													fontWeight="bold"
-													h="100%"
-													marginRight="2"
-												>
-													{item.name}
-												</MenuButton>
+							<Flex alignSelf="center" h="100%" color="white">
+								<Box h="100%">
+									<Menu>
+										<MenuButton fontWeight="bold" h="100%" marginRight="2">
+											{vinculacion.name}
+										</MenuButton>
 
-												<Portal>
-													<MenuList
-														border="none"
-														bg="none"
-														color="white"
-														p="4"
-														boxShadow="none"
-													>
-														<Flex
-															d="flex"
-															fontSize={[
-																"8px",
-																"12px",
-																"12px",
-																"15px",
-															]}
-															top="100px"
-															bg="#2C2D32"
-															p="5"
-															color="whiteAlpha.800"
-															flexDirection="column"
-															transform="translate(-10%, -25px)"
-															borderRadius="2"
-														>
-															<Link href={item.l1}>
-																{item.childs[0]}
+										<Portal>
+											<MenuList
+												border="none"
+												bg="none"
+												color="white"
+												p="4"
+												boxShadow="none"
+											>
+												<Flex
+													d="flex"
+													fontSize={["8px", "12px", "12px", "15px"]}
+													top="100px"
+													bg="#2C2D32"
+													p="5"
+													color="whiteAlpha.800"
+													flexDirection="column"
+													transform="translate(-10%, -25px)"
+													borderRadius="2"
+												>
+													{vinculacion &&
+														vinculacion.childs.map((item) => (
+															<Link p="3" href={item.link}>
+																{item.name}
 															</Link>
-															<br />
-															<Link href={item.l2}>
-																{item.childs[1]}
-															</Link>
-															<br />
-															<Link href={item.l3}>
-																{item.childs[2]}
-															</Link>
-															<br />
-															<Link href={item.l4}>
-																{item.childs[3]}
-															</Link>
-															<Link href={item.l5}>
-																{item.childs[4]}
-															</Link>
-														</Flex>
-													</MenuList>
-												</Portal>
-											</Menu>
-										</Box>
-									</Flex>
-								))}
+														))}
+												</Flex>
+											</MenuList>
+										</Portal>
+									</Menu>
+								</Box>
+							</Flex>
 						</Box>
 						<Flex w="10%" justifyContent="center" alignSelf="center">
 							<Link href="#" h="100%" d="flex" justifyContent="center">
@@ -582,7 +563,7 @@ const Navbar = () => {
 													color: "white",
 												}}
 											>
-												<Box p="3" ml="4" flex="1" textAlign="center">
+												<Box p="2" ml="4" flex="1" textAlign="center">
 													CONÓCENOS
 												</Box>
 												<AccordionIcon />
@@ -594,7 +575,7 @@ const Navbar = () => {
 													bg={styles.background.navBgLight}
 													pb={4}
 												>
-													<Text p="3" align="center">
+													<Text p="2" align="center">
 														{item.name}
 													</Text>
 													<Divider />
@@ -610,17 +591,19 @@ const Navbar = () => {
 													color: "white",
 												}}
 											>
-												<Box flex="1" p="3" textAlign="center">
+												<Box flex="1" ml="4" p="2" textAlign="center">
 													OFERTA EDUCATIVA
 												</Box>
+												<AccordionIcon />
 											</AccordionButton>
 										</h2>
 										<AccordionPanel pb={4} bg={styles.background.navBgLight}>
-											<Text p="3" align="center">
+											<Text p="2" align="center">
 												LICENCIATURA
 											</Text>
+
 											<Divider />
-											<Text p="3" align="center">
+											<Text p="2" align="center">
 												POSGRADO
 											</Text>
 										</AccordionPanel>
@@ -634,32 +617,22 @@ const Navbar = () => {
 													color: "white",
 												}}
 											>
-												<Box p="3" flex="1" textAlign="center">
+												<Box p="2" flex="1" ml="4" textAlign="center">
 													VINCULACIÓN
 												</Box>
+												<AccordionIcon />
 											</AccordionButton>
 										</h2>
 										{vinculacion &&
-											vinculacion.map((item) => (
+											vinculacion.childs.map((item) => (
 												<AccordionPanel
 													pb={4}
 													bg={styles.background.navBgLight}
 												>
-													<Text p="3" align="center">
-														{item.childs[0]}
+													<Text p="2" align="center">
+														{item.name}
 													</Text>
 													<Divider />
-													<Text p="3" align="center">
-														{item.childs[1]}
-													</Text>
-													<Divider />
-													<Text p="3" align="center">
-														{item.childs[2]}
-													</Text>
-													<Divider />
-													<Text p="3" align="center">
-														{item.childs[3]}
-													</Text>
 												</AccordionPanel>
 											))}
 									</AccordionItem>
