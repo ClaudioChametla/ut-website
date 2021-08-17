@@ -578,7 +578,7 @@ const Navbar = () => {
 													<Text p="2" align="center">
 														{item.name}
 													</Text>
-													<Divider />
+													<Divider color="#2E3138" />
 												</AccordionPanel>
 											))}
 									</AccordionItem>
@@ -602,7 +602,7 @@ const Navbar = () => {
 												LICENCIATURA
 											</Text>
 
-											<Divider />
+											<Divider color="#2E3138" />
 											<Text p="2" align="center">
 												POSGRADO
 											</Text>
@@ -614,7 +614,7 @@ const Navbar = () => {
 											<AccordionButton
 												_expanded={{
 													bg: styles.background.light,
-													color: "white",
+													color: "#B6B6B6",
 												}}
 											>
 												<Box p="2" flex="1" ml="4" textAlign="center">
@@ -632,7 +632,7 @@ const Navbar = () => {
 													<Text p="2" align="center">
 														{item.name}
 													</Text>
-													<Divider />
+													<Divider color="" />
 												</AccordionPanel>
 											))}
 									</AccordionItem>
@@ -645,7 +645,7 @@ const Navbar = () => {
 								>
 									<Text>NUEVO INGRESO</Text>
 								</Box>
-								<Divider />
+								<Divider color="#2E3138" />
 								<Box
 									align="center"
 									w="100%"
@@ -654,7 +654,7 @@ const Navbar = () => {
 								>
 									<Text>BLOG</Text>
 								</Box>
-								<Divider />
+								<Divider color="#2E3138" />
 								<Box
 									align="center"
 									w="100%"
@@ -663,7 +663,59 @@ const Navbar = () => {
 								>
 									<Text>CONTACTO</Text>
 								</Box>
-								<Divider />
+								<Divider color="#2E3138" />
+								<Flex
+									flexDirection="row"
+									h="80px"
+									w="100%"
+									justifyContent="center"
+									alignItems="center"
+								>
+									<Input
+										w="60%"
+										borderRadius="none"
+										border="none"
+										bg={styles.background.navBgOne}
+										placeholder="Buscar"
+									/>
+									<Image
+										p="2"
+										borderLeft="1px"
+										src="/icons/search.svg"
+										filter=" invert(73%) sepia(8%) saturate(80%) hue-rotate(169deg) brightness(90%) contrast(91%)"
+										w="40px"
+										h="40px"
+									/>
+								</Flex>
+								<Center borderTop="1px" borderColor="#2E3138">
+									{iconsImg &&
+										iconsImg.map((item) => (
+											<Link
+												href={item.link}
+												target="_blank"
+												d="flex"
+												justifyContent="center"
+												borderRight="1px"
+												borderLeft="1px"
+												borderColor="#2E3138"
+												w="70px"
+												h="35px"
+												alignItems="center"
+											>
+												<Image
+													src={item.src}
+													alt="mail"
+													h="50%"
+													w="50%"
+													filter="invert(72%) sepia(7%) saturate(95%) hue-rotate(169deg) brightness(91%) contrast(90%)"
+													_hover={{
+														filter: item.filter,
+														transform: "scale(1.3)",
+													}}
+												/>
+											</Link>
+										))}
+								</Center>
 							</Flex>
 						</MenuList>
 					</Portal>
