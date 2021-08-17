@@ -21,8 +21,8 @@ import {
 	AccordionPanel,
 	AccordionIcon,
 	Divider,
+	useDisclosure,
 } from "@chakra-ui/react";
-import { useEffect } from "react";
 import icon from "../../data/icon.json";
 import links from "../../data/links.json";
 import styles from "../../styles/styles.json";
@@ -30,7 +30,7 @@ import styles from "../../styles/styles.json";
 const Navbar = () => {
 	const iconsImg = icon.icons;
 	const { conocenos, vinculacion } = links;
-
+	const { isOpen, onOpen, onClose } = useDisclosure();
 	return (
 		<Box>
 			<Center w="100%" bg="#22283C">
@@ -169,82 +169,62 @@ const Navbar = () => {
 						fontWeight="bold"
 					>
 						<Box d="flex" w="45%" fontWeight="bold" justifyContent="center">
-							{conocenos &&
-								conocenos.map((item) => (
-									<Flex alignSelf="center" color="white" textAlign="center">
-										<Link href="#" marginRight="2">
-											INICIO
-										</Link>
-										<Box>
-											<Menu ArrowDown>
-												<MenuButton
-													marginLeft="2"
-													fontWeight="bold"
-													marginRight="2"
-												>
-													{item.name}
-												</MenuButton>
+							<Link alignSelf="center" href="#" marginRight="2">
+								INICIO
+							</Link>
 
-												<Portal>
-													<MenuList
-														border="none"
-														color="white"
-														bg="none"
-														p="4"
-														boxShadow="none"
-													>
-														<Flex
-															d="flex"
-															fontSize={[
-																"8px",
-																"12px",
-																"12px",
-																"15px",
-															]}
-															top="100px"
-															bg="#2C2D32"
-															p="5"
-															color="whiteAlpha.800"
-															flexDirection="column"
-															transform="translate(-10%, 10px)"
-															borderRadius="2"
-														>
-															<Link href={item.l1}>
-																{item.childs[0]}
-															</Link>
-															<br />
-															<Link href={item.l2}>
-																{item.childs[1]}
-															</Link>
-															<br />
-															<Link href={item.l3}>
-																{item.childs[2]}
-															</Link>
-															<br />
-															<Link href={item.l4}>
-																{item.childs[3]}
-															</Link>
-															<br />
-															<Link href={item.l5}>
-																{item.childs[4]}
-															</Link>
-														</Flex>
-													</MenuList>
-												</Portal>
-											</Menu>
-										</Box>
-									</Flex>
-								))}
-
-							<Flex
-								objectFit="cover"
-								alignSelf="center"
-								justifyContent="flex-end"
-								color="white"
-							>
+							<Flex alignSelf="center" color="white" textAlign="center" h="100%">
 								<Box>
+									<Menu isOpen={isOpen} h="20px">
+										<MenuButton
+											marginLeft="2"
+											fontWeight="bold"
+											marginRight="2"
+											onMouseEnter={onOpen}
+											onMouseLeave={onClose}
+											h="100%"
+										>
+											{conocenos.name}
+										</MenuButton>
+
+										<Portal>
+											<MenuList
+												border="none"
+												color="white"
+												bg="none"
+												p="4"
+												boxShadow="none"
+											>
+												<Flex
+													onMouseEnter={onOpen}
+													onMouseLeave={onClose}
+													fontSize={["8px", "12px", "12px", "15px"]}
+													top="100px"
+													bg="#2C2D32"
+													p="5"
+													_hover={{ d: "flex" }}
+													color="whiteAlpha.800"
+													flexDirection="column"
+													transform="translate(-10%, -25px)"
+													borderRadius="2"
+												>
+													{conocenos &&
+														conocenos.childs.map((item) => (
+															<Link py="2" href={item.link}>
+																{item.name}
+															</Link>
+														))}
+												</Flex>
+											</MenuList>
+										</Portal>
+									</Menu>
+								</Box>
+							</Flex>
+
+							<Flex color="white">
+								<Box alignSelf="center" h="100%" align="center">
 									<Menu>
-										<MenuButton fontWeight="bold" marginRight="2">
+										<MenuButton fontWeight="bold" h="100%" marginRight="2">
 											OFERTA EDUCATIVA
 										</MenuButton>
 
@@ -264,10 +244,10 @@ const Navbar = () => {
 													p="5"
 													color="whiteAlpha.800"
 													flexDirection="column"
-													transform="translate(-10%, 10px)"
+													transform="translate(-10%, -25px)"
 													borderRadius="2"
 												>
-													<Menu isLazy>
+													<Menu>
 														<MenuButton textAlign="start" p="1">
 															LICENCIATURA
 														</MenuButton>
@@ -309,7 +289,7 @@ const Navbar = () => {
 														</MenuList>
 													</Menu>
 													<br />
-													<Menu isLazy>
+													<Menu>
 														<MenuButton textAlign="start" p="1">
 															POSGRADO
 														</MenuButton>
@@ -336,7 +316,7 @@ const Navbar = () => {
 																transform="translate(78%, -50px)"
 																borderRadius="2"
 															>
-																<Menu isLazy>
+																<Menu>
 																	<MenuButton
 																		textAlign="start"
 																		p="1"
@@ -397,10 +377,14 @@ const Navbar = () => {
 
 							{vinculacion &&
 								vinculacion.map((item) => (
-									<Flex alignSelf="center" color="white" flexWrap="wrap">
-										<Box>
-											<Menu ArrowDown>
-												<MenuButton fontWeight="bold" marginRight="2">
+									<Flex alignSelf="center" h="100%" color="white">
+										<Box h="100%">
+											<Menu>
+												<MenuButton
+													fontWeight="bold"
+													h="100%"
+													marginRight="2"
+												>
 													{item.name}
 												</MenuButton>
 
@@ -425,7 +409,7 @@ const Navbar = () => {
 															p="5"
 															color="whiteAlpha.800"
 															flexDirection="column"
-															transform="translate(-10%, 10px)"
+															transform="translate(-10%, -25px)"
 															borderRadius="2"
 														>
 															<Link href={item.l1}>
@@ -472,6 +456,7 @@ const Navbar = () => {
 							justifyContent="center"
 							w="35%"
 							h="100%"
+							textAlign="center"
 						>
 							<Link href="#" marginRight="8">
 								NUEVO INGRESO
@@ -479,7 +464,9 @@ const Navbar = () => {
 							<Link href="#" marginRight="8">
 								BLOG
 							</Link>
-							<Link href="#">CONTACTO</Link>
+							<Link href="#" marginRight="4">
+								CONTACTO
+							</Link>
 						</Box>
 						<Popover>
 							<PopoverTrigger>
@@ -595,36 +582,22 @@ const Navbar = () => {
 													color: "white",
 												}}
 											>
-												<Box p="3" flex="1" textAlign="center">
+												<Box p="3" ml="4" flex="1" textAlign="center">
 													CONÓCENOS
 												</Box>
+												<AccordionIcon />
 											</AccordionButton>
 										</h2>
 										{conocenos &&
-											conocenos.map((item) => (
+											conocenos.childs.map((item) => (
 												<AccordionPanel
 													bg={styles.background.navBgLight}
 													pb={4}
 												>
 													<Text p="3" align="center">
-														{item.childs[0]}
+														{item.name}
 													</Text>
 													<Divider />
-													<Text p="3" align="center">
-														{item.childs[1]}
-													</Text>
-													<Divider />
-													<Text p="3" align="center">
-														{item.childs[2]}
-													</Text>
-													<Divider />
-													<Text p="3" align="center">
-														{item.childs[3]}
-													</Text>
-													<Divider />
-													<Text p="3" align="center">
-														{item.childs[4]}
-													</Text>
 												</AccordionPanel>
 											))}
 									</AccordionItem>
