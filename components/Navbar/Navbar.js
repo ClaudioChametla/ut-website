@@ -22,7 +22,9 @@ import {
 	AccordionIcon,
 	Divider,
 	useDisclosure,
+	Button,
 } from "@chakra-ui/react";
+import { useRef } from "react";
 import icon from "../../data/icon.json";
 import links from "../../data/links.json";
 import styles from "../../styles/styles.json";
@@ -30,7 +32,10 @@ import styles from "../../styles/styles.json";
 const Navbar = () => {
 	const iconsImg = icon.icons;
 	const { conocenos, vinculacion, licenciatura, especialidad } = links;
-	const { isOpen, onOpen, onClose } = useDisclosure();
+	const { isOpen: isM1Open, onOpen: onM1Open, onClose: onM1Close } = useDisclosure();
+	const { isOpen: isM2Open, onOpen: onM2Open, onClose: onM2Close } = useDisclosure();
+	const { isOpen: isM3Open, onOpen: onM3Open, onClose: onM3Close } = useDisclosure();
+	const finalRef = useRef();
 	return (
 		<Box>
 			<Center w="100%" bg="#22283C">
@@ -181,14 +186,16 @@ const Navbar = () => {
 
 							<Flex alignSelf="center" color="white" textAlign="center" h="100%">
 								<Box>
-									<Menu isOpen={isOpen} h="20px">
+									<Menu id="idmenu" isOpen={isM1Open} h="20px">
 										<MenuButton
+											ref={finalRef}
 											marginLeft="2"
 											fontWeight="bold"
 											marginRight="2"
-											onMouseEnter={onOpen}
-											onMouseLeave={onClose}
+											onMouseEnter={onM1Open}
+											onMouseLeave={onM1Close}
 											h="100%"
+											id="idbutton"
 										>
 											{conocenos.name}
 										</MenuButton>
@@ -202,8 +209,8 @@ const Navbar = () => {
 												boxShadow="none"
 											>
 												<Flex
-													onMouseEnter={onOpen}
-													onMouseLeave={onClose}
+													onMouseEnter={onM1Open}
+													onMouseLeave={onM1Close}
 													fontSize={["8px", "12px", "12px", "15px"]}
 													top="100px"
 													bg="#2C2D32"
@@ -229,8 +236,16 @@ const Navbar = () => {
 
 							<Flex color="white">
 								<Box alignSelf="center" h="100%" align="center">
-									<Menu>
-										<MenuButton fontWeight="bold" h="100%" marginRight="2">
+									<Menu id="idmenu2" ref={finalRef} isOpen={isM2Open}>
+										<MenuButton
+											ref={finalRef}
+											fontWeight="bold"
+											h="100%"
+											marginRight="2"
+											onMouseEnter={onM2Open}
+											onMouseLeave={onM2Close}
+											id="idbutton2"
+										>
 											OFERTA EDUCATIVA
 										</MenuButton>
 
@@ -248,6 +263,8 @@ const Navbar = () => {
 													top="100px"
 													bg="#2C2D32"
 													p="5"
+													onMouseEnter={onM2Open}
+													onMouseLeave={onM2Close}
 													color="whiteAlpha.800"
 													flexDirection="column"
 													transform="translate(-10%, -25px)"
@@ -382,8 +399,14 @@ const Navbar = () => {
 
 							<Flex alignSelf="center" h="100%" color="white">
 								<Box h="100%">
-									<Menu>
-										<MenuButton fontWeight="bold" h="100%" marginRight="2">
+									<Menu isOpen={isM3Open}>
+										<MenuButton
+											fontWeight="bold"
+											h="100%"
+											marginRight="2"
+											onMouseEnter={onM3Open}
+											onMouseLeave={onM3Close}
+										>
 											{vinculacion.name}
 										</MenuButton>
 
@@ -405,6 +428,8 @@ const Navbar = () => {
 													flexDirection="column"
 													transform="translate(-10%, -25px)"
 													borderRadius="2"
+													onMouseEnter={onM3Open}
+													onMouseLeave={onM3Close}
 												>
 													{vinculacion &&
 														vinculacion.childs.map((item) => (
