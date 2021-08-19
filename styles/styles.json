@@ -11,7 +11,10 @@
 	},
 	"background": {
 		"light": "rgb(10, 70, 161)",
-		"solid": "rgb(0, 72, 158)"
+		"solid": "rgb(0, 72, 158)",
+		"navBgOne": "#22283C",
+		"navBgSolid": "#1F2127",
+		"navBgLight": "#282A31"
 	},
 	"button": {
 		"fontSize": "13px"
