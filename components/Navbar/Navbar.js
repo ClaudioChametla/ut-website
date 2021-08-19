@@ -21,21 +21,16 @@ import {
 	AccordionPanel,
 	AccordionIcon,
 	Divider,
-	useDisclosure,
-	Button,
 } from "@chakra-ui/react";
 import { useRef } from "react";
 import icon from "../../data/icon.json";
 import links from "../../data/links.json";
 import styles from "../../styles/styles.json";
+import MenuComponent from "./MenuComponent";
 
 const Navbar = () => {
 	const iconsImg = icon.icons;
-	const { conocenos, vinculacion, licenciatura, especialidad } = links;
-	const { isOpen: isM1Open, onOpen: onM1Open, onClose: onM1Close } = useDisclosure();
-	const { isOpen: isM2Open, onOpen: onM2Open, onClose: onM2Close } = useDisclosure();
-	const { isOpen: isM3Open, onOpen: onM3Open, onClose: onM3Close } = useDisclosure();
-	const finalRef = useRef();
+
 	return (
 		<Box>
 			<Center w="100%" bg="#22283C">
@@ -183,266 +178,9 @@ const Navbar = () => {
 							<Link alignSelf="center" href="#" marginRight="2">
 								INICIO
 							</Link>
-
-							<Flex alignSelf="center" color="white" textAlign="center" h="100%">
-								<Box>
-									<Menu id="idmenu" isOpen={isM1Open} h="20px">
-										<MenuButton
-											ref={finalRef}
-											marginLeft="2"
-											fontWeight="bold"
-											marginRight="2"
-											onMouseEnter={onM1Open}
-											onMouseLeave={onM1Close}
-											h="100%"
-											id="idbutton"
-										>
-											{conocenos.name}
-										</MenuButton>
-
-										<Portal>
-											<MenuList
-												border="none"
-												color="white"
-												bg="none"
-												p="4"
-												boxShadow="none"
-											>
-												<Flex
-													onMouseEnter={onM1Open}
-													onMouseLeave={onM1Close}
-													fontSize={["8px", "12px", "12px", "15px"]}
-													top="100px"
-													bg="#2C2D32"
-													p="5"
-													_hover={{ d: "flex" }}
-													color="whiteAlpha.800"
-													flexDirection="column"
-													transform="translate(-10%, -25px)"
-													borderRadius="2"
-												>
-													{conocenos &&
-														conocenos.childs.map((item) => (
-															<Link py="2" href={item.link}>
-																{item.name}
-															</Link>
-														))}
-												</Flex>
-											</MenuList>
-										</Portal>
-									</Menu>
-								</Box>
-							</Flex>
-
-							<Flex color="white">
-								<Box alignSelf="center" h="100%" align="center">
-									<Menu id="idmenu2" ref={finalRef} isOpen={isM2Open}>
-										<MenuButton
-											ref={finalRef}
-											fontWeight="bold"
-											h="100%"
-											marginRight="2"
-											onMouseEnter={onM2Open}
-											onMouseLeave={onM2Close}
-											id="idbutton2"
-										>
-											OFERTA EDUCATIVA
-										</MenuButton>
-
-										<Portal>
-											<MenuList
-												border="none"
-												bg="none"
-												color="white"
-												p="4"
-												boxShadow="none"
-											>
-												<Flex
-													d="flex"
-													fontSize={["8px", "12px", "12px", "15px"]}
-													top="100px"
-													bg="#2C2D32"
-													p="5"
-													onMouseEnter={onM2Open}
-													onMouseLeave={onM2Close}
-													color="whiteAlpha.800"
-													flexDirection="column"
-													transform="translate(-10%, -25px)"
-													borderRadius="2"
-												>
-													<Menu>
-														<MenuButton textAlign="start" p="1">
-															LICENCIATURA
-														</MenuButton>
-														<MenuList
-															bg="none"
-															w="0"
-															h="0"
-															border="none"
-															p="2"
-															boxShadow="none"
-														>
-															<Flex
-																fontSize={[
-																	"8px",
-																	"12px",
-																	"12px",
-																	"15px",
-																]}
-																top="100px"
-																bg="#2C2D32"
-																p="5"
-																color="whiteAlpha.800"
-																flexDirection="column"
-																transform="translate(78%, -40px)"
-																borderRadius="2"
-															>
-																{licenciatura &&
-																	licenciatura.childs.map(
-																		(item) => (
-																			<Link
-																				p="3"
-																				href={item.link}
-																			>
-																				{item.name}
-																			</Link>
-																		),
-																	)}
-															</Flex>
-														</MenuList>
-													</Menu>
-													<br />
-													<Menu>
-														<MenuButton textAlign="start" p="1">
-															POSGRADO
-														</MenuButton>
-														<MenuList
-															flexDirection="column"
-															bg="none"
-															w="0"
-															border="none"
-															p="2"
-															boxShadow="none"
-														>
-															<Flex
-																fontSize={[
-																	"8px",
-																	"12px",
-																	"12px",
-																	"15px",
-																]}
-																top="100px"
-																bg="#2C2D32"
-																p="5"
-																color="whiteAlpha.800"
-																flexDirection="column"
-																transform="translate(78%, -50px)"
-																borderRadius="2"
-															>
-																<Menu>
-																	<MenuButton
-																		textAlign="start"
-																		p="1"
-																	>
-																		ESPECIALIDAD
-																	</MenuButton>
-																	<MenuList
-																		d="flex"
-																		flexDirection="column"
-																		bg="none"
-																		border="none"
-																		p="2"
-																		boxShadow="none"
-																	>
-																		<Flex
-																			fontSize={[
-																				"8px",
-																				"12px",
-																				"12px",
-																				"15px",
-																			]}
-																			top="100px"
-																			bg="#2C2D32"
-																			p="5"
-																			color="whiteAlpha.800"
-																			flexDirection="column"
-																			transform="translate(60%, -50px)"
-																			borderRadius="2"
-																		>
-																			{especialidad &&
-																				especialidad.childs.map(
-																					(item) => (
-																						<Link
-																							p="3"
-																							href={
-																								item.link
-																							}
-																						>
-																							{
-																								item.name
-																							}
-																						</Link>
-																					),
-																				)}
-																		</Flex>
-																	</MenuList>
-																</Menu>
-															</Flex>
-														</MenuList>
-													</Menu>
-												</Flex>
-											</MenuList>
-										</Portal>
-									</Menu>
-								</Box>
-							</Flex>
-
-							<Flex alignSelf="center" h="100%" color="white">
-								<Box h="100%">
-									<Menu isOpen={isM3Open}>
-										<MenuButton
-											fontWeight="bold"
-											h="100%"
-											marginRight="2"
-											onMouseEnter={onM3Open}
-											onMouseLeave={onM3Close}
-										>
-											{vinculacion.name}
-										</MenuButton>
-
-										<Portal>
-											<MenuList
-												border="none"
-												bg="none"
-												color="white"
-												p="4"
-												boxShadow="none"
-											>
-												<Flex
-													d="flex"
-													fontSize={["8px", "12px", "12px", "15px"]}
-													top="100px"
-													bg="#2C2D32"
-													p="5"
-													color="whiteAlpha.800"
-													flexDirection="column"
-													transform="translate(-10%, -25px)"
-													borderRadius="2"
-													onMouseEnter={onM3Open}
-													onMouseLeave={onM3Close}
-												>
-													{vinculacion &&
-														vinculacion.childs.map((item) => (
-															<Link p="3" href={item.link}>
-																{item.name}
-															</Link>
-														))}
-												</Flex>
-											</MenuList>
-										</Portal>
-									</Menu>
-								</Box>
-							</Flex>
+							{links.navbar.map((item) => (
+								<MenuComponent item={item} />
+							))}
 						</Box>
 						<Flex w="10%" justifyContent="center" alignSelf="center">
 							<Link href="#" h="100%" d="flex" justifyContent="center">
@@ -579,89 +317,38 @@ const Navbar = () => {
 								<Box align="center" w="100%" p="3" bg={styles.background.light}>
 									<Text>INICIO</Text>
 								</Box>
-								<Accordion allowToggle>
-									<AccordionItem>
-										<h2>
-											<AccordionButton
-												_expanded={{
-													bg: styles.background.light,
-													color: "white",
-												}}
-											>
-												<Box p="2" ml="4" flex="1" textAlign="center">
-													CONÓCENOS
-												</Box>
-												<AccordionIcon />
-											</AccordionButton>
-										</h2>
-										{conocenos &&
-											conocenos.childs.map((item) => (
-												<AccordionPanel
-													bg={styles.background.navBgLight}
-													pb={4}
+								{links.navbar.map((item) => (
+									<Accordion allowToggle>
+										<AccordionItem>
+											<h2>
+												<AccordionButton
+													_expanded={{
+														bg: styles.background.light,
+														color: "white",
+													}}
 												>
-													<Text p="2" align="center">
+													<Box p="2" ml="4" flex="1" textAlign="center">
 														{item.name}
-													</Text>
-													<Divider color="#2E3138" />
-												</AccordionPanel>
-											))}
-									</AccordionItem>
+													</Box>
+													<AccordionIcon />
+												</AccordionButton>
+											</h2>
 
-									<AccordionItem>
-										<h2>
-											<AccordionButton
-												_expanded={{
-													bg: styles.background.light,
-													color: "white",
-												}}
+											<AccordionPanel
+												bg={styles.background.navBgLight}
+												pb={4}
 											>
-												<Box flex="1" ml="4" p="2" textAlign="center">
-													OFERTA EDUCATIVA
-												</Box>
-												<AccordionIcon />
-											</AccordionButton>
-										</h2>
-										<AccordionPanel pb={4} bg={styles.background.navBgLight}>
-											<Text p="2" align="center">
-												LICENCIATURA
-											</Text>
-
-											<Divider color="#2E3138" />
-											<Text p="2" align="center">
-												POSGRADO
-											</Text>
-										</AccordionPanel>
-									</AccordionItem>
-
-									<AccordionItem>
-										<h2>
-											<AccordionButton
-												_expanded={{
-													bg: styles.background.light,
-													color: "#B6B6B6",
-												}}
-											>
-												<Box p="2" flex="1" ml="4" textAlign="center">
-													VINCULACIÓN
-												</Box>
-												<AccordionIcon />
-											</AccordionButton>
-										</h2>
-										{vinculacion &&
-											vinculacion.childs.map((item) => (
-												<AccordionPanel
-													pb={4}
-													bg={styles.background.navBgLight}
-												>
-													<Text p="2" align="center">
-														{item.name}
-													</Text>
-													<Divider color="" />
-												</AccordionPanel>
-											))}
-									</AccordionItem>
-								</Accordion>
+												{item.options &&
+													item.options.map((option) => (
+														<Text p="2" align="center">
+															{option.name}
+														</Text>
+													))}
+												<Divider color="#2E3138" />
+											</AccordionPanel>
+										</AccordionItem>
+									</Accordion>
+								))}
 								<Box
 									align="center"
 									w="100%"

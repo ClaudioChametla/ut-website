@@ -1,104 +1,69 @@
 {
-	"conocenos": {
-		"name": "CONÓCENOS",
-		"childs": [
-			{
-				"name": "MENSAJE DE RECTORÍA",
-				"link": "https://chakra-ui.com/docs/theming/customize-theme#customizing-component-styles"
-			},
-			{
-				"name": "HISTORIA",
-				"link": "https://chakra-ui.com/docs/overlay/menu"
-			},
-			{
-				"name": "IDENTIDAD",
-				"link": "https://google.com"
-			},
-			{
-				"name": "MISIÓN Y VISIÓN",
-				"link": "https://facebook.com"
-			},
-			{
-				"name": "INSTALACIONES",
-				"link": "https://google.com"
-			}
-		]
-	},
-
-	"vinculacion": {
-		"name": "VINCULACIÓN",
-		"childs": [
-			{
-				"name": "CONVENIOS",
-				"link": "https://chakra-ui.com/docs/overlay/menu"
-			},
-			{
-				"name": "BOLSA DE TRABAJO",
-				"link": "https://google.com"
-			},
-			{
-				"name": "SERVICIO SOCIAL",
-				"link": "https://google.com"
-			},
-			{
-				"name": "EGRESADOS",
-				"link": "https://google.com"
-			}
-		]
-	},
-	"licenciatura": {
-		"name": "LICENCIATURA",
-		"childs": [
-			{
-				"name": "PEDAGOGÍA",
-				"link": "https://google.com"
-			},
-			{
-				"name": "GASTRONOMÍA",
-				"link": "https://google.com"
-			},
-			{
-				"name": "PSICOLOGÍA",
-				"link": "https://google.com"
-			},
-			{
-				"name": "CONTADURÍA",
-				"link": "https://google.com"
-			},
-			{
-				"name": "ARQUITECTURA",
-				"link": "https://google.com"
-			},
-			{
-				"name": "DERECHO",
-				"link": "https://google.com"
-			}
-		]
-	},
-
-	"especialidad": {
-		"name": "ESPECIALIDAD",
-		"childs": [
-			{
-				"name": "DERECHO DE AMPARO",
-				"link": "https://google.com"
-			},
-			{
-				"name": "FORMACIÓN DOCENTE",
-				"link": "https://google.com"
-			},
-			{
-				"name": "PSICOLOGIA EDUCATIVA",
-				"link": "https://google.com"
-			},
-			{
-				"name": "DERECHO DE AMPARO",
-				"link": "https://google.com"
-			},
-			{
-				"name": "COSTOS DE LA CONSTRUCCIÓN",
-				"link": "https://google.com"
-			}
-		]
-	}
+	"navbar": [
+		{
+			"name": "CONOCENOS",
+			"filter": "invert(16%) sepia(14%) saturate(313%) hue-rotate(193deg) brightness(91%) contrast(93%)",
+			"icon": "/icons/angle-right.svg",
+			"options": [
+				{ "name": "MENSAJE DE RECTORÍA", "as": "text" },
+				{ "name": "HISTORIA", "as": "text" },
+				{ "name": "IDENTIDAD", "as": "text" },
+				{ "name": "MISIÓN Y VISIÓN", "as": "text" },
+				{ "name": "INSTALACIONES", "as": "text" }
+			]
+		},
+		{
+			"name": "OFERTA EDUCATIVA",
+			"filter": "invert(93%) sepia(0%) saturate(0%) hue-rotate(166deg) brightness(90%) contrast(91%)",
+			"icon": "/icons/angle-right.svg",
+			"options": [
+				{
+					"name": "LICENCIATURA",
+					"as": "list",
+					"icon": "/icons/angle-right.svg",
+					"filter": "invert(16%) sepia(14%) saturate(313%) hue-rotate(193deg) brightness(91%) contrast(93%)",
+					"options": [
+						{ "name": "PEDAGOGIA" },
+						{ "name": "GASTRONOMÍA" },
+						{ "name": "PSICOLOGÍA" },
+						{ "name": "CONTADURÍA" },
+						{ "name": "ARQUITECTURA" },
+						{ "name": "DERECHO" }
+					]
+				},
+				{
+					"name": "POSGRADO",
+					"as": "list",
+					"icon": "/icons/angle-right.svg",
+					"filter": "invert(93%) sepia(0%) saturate(0%) hue-rotate(166deg) brightness(90%) contrast(91%)",
+					"options": [
+						{
+							"name": "ESPECIALIDAD",
+							"as": "list",
+							"icon": "/icons/angle-right.svg",
+							"filter": "invert(16%) sepia(14%) saturate(313%) hue-rotate(193deg) brightness(91%) contrast(93%)",
+							"options": [
+								{ "name": "DERECHO DE AMPARO" },
+								{ "name": "FORMACIÓN DOCENTE" },
+								{ "name": "PSICOLOGIA EDUCATIVA" },
+								{ "name": "DERECHO DE AMPARO" },
+								{ "name": "COSTOS DE LA CONSTRUCCIÓN" }
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "VINCULACIÓN",
+			"filter": "invert(16%) sepia(14%) saturate(313%) hue-rotate(193deg) brightness(91%) contrast(93%)",
+			"icon": "/icons/angle-right.svg",
+			"options": [
+				{ "name": "CONVENIOS", "as": "text" },
+				{ "name": "BOLSA DE TRABAJO", "as": "text" },
+				{ "name": "SERVICIO SOCIAL", "as": "text" },
+				{ "name": "EGRESADOS", "as": "text" }
+			]
+		}
+	]
 }
