@@ -1,0 +1,60 @@
+{
+	"socialNetworks": [
+		{
+			"img": "/icons/facebook-f.svg",
+			"filter": "invert(99%)",
+			"link": "https://www.facebook.com/universidadtollancingo",
+			"bg": "#3b5998"
+		},
+		{
+			"img": "/icons/youtube.svg",
+			"filter": "invert(99%)",
+			"link": "https://www.youtube.com/channel/UCiAIp9QxWE_MWW5I3YCOENw",
+			"bg": "#e52d27"
+		},
+		{
+			"img": "/icons/instagram.svg",
+			"filter": "invert(99%)",
+			"link": "https://www.instagram.com/universidadtollancingooficial/",
+			"bg": "#e03b6a"
+		}
+	],
+	"instalaciones": [
+		{
+			"title": "INSTALACIONES",
+			"img": "/images/foo(1).jpg"
+		},
+		{
+			"title": "INSTALACIONES",
+			"img": "/images/foo(2).jpg"
+		},
+		{
+			"title": "INSTALACIONES",
+			"img": "/images/foo(3).jpg"
+		},
+		{
+			"title": "INSTALACIONES",
+			"img": "/images/foo(4).jpg"
+		},
+		{
+			"title": "UT",
+			"img": "/images/foo(5).jpg"
+		},
+		{
+			"title": "CENTRO DE CÓMPUTO",
+			"img": "/images/foo(6).jpg"
+		},
+		{
+			"title": "BIBLIOTECA",
+			"img": "/images/foo(7).jpg"
+		},
+		{
+			"title": "BIBLIOTECA",
+			"img": "/images/foo(8).jpg"
+		},
+		{
+			"title": "INSTALACIONES",
+			"img": "/images/foo(9).jpg"
+		}
+	]
+}
