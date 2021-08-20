@@ -41,6 +41,7 @@ const MenuComponent = ({ item }) => {
 										d="flex"
 										fontSize={["8px", "12px", "12px", "15px"]}
 										top="100px"
+										key={`FlexNav-${option.name}`}
 										bg="#2C2D32"
 										p="2"
 										color="whiteAlpha.800"
@@ -84,6 +85,7 @@ const MenuComponent = ({ item }) => {
 																"12px",
 																"15px",
 															]}
+															key={`FlexNav2-${subOption.name}`}
 															top="100px"
 															bg="#2C2D32"
 															p="2"
@@ -124,7 +126,7 @@ const MenuComponent = ({ item }) => {
 																>
 																	{subOption.options &&
 																		subOption.options.map(
-																			(lastOption) => (
+																			(lastOption, index) => (
 																				<Flex
 																					fontSize={[
 																						"8px",
@@ -139,6 +141,7 @@ const MenuComponent = ({ item }) => {
 																						onM3Close
 																					}
 																					top="100px"
+																					key={`FlexNav3-${lastOption.name}-${index}`}
 																					bg="#2C2D32"
 																					p="3"
 																					color="whiteAlpha.800"
@@ -163,6 +166,7 @@ const MenuComponent = ({ item }) => {
 																</MenuList>
 															</Menu>
 															<Image
+																key={`ImgIcon-${option.icon}`}
 																src={option.icon}
 																w="15px"
 																h="15px"

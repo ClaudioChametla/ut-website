@@ -1,3 +1,4 @@
+/* eslint-disable react/no-array-index-key */
 import {
 	Center,
 	Box,
@@ -25,28 +26,26 @@ import footerSN from "../../data/footerSN.json";
 
 const Modalcomponent = ({ dataModal, isOpen, onClose }) => (
 	<div>
-		<Modal isOpen={isOpen} onClose={onClose} size="full">
+		<Modal isOpen={isOpen} onClose={onClose} size="xl" isCentered>
 			<ModalOverlay />
 			<ModalContent w="auto" h="auto" borderRadius="0">
-				<ModalHeader>
-					<Image
-						objectFit="cover"
-						src={dataModal.img ? dataModal.img : ""}
-						w="100%"
-						h="88vh"
-					/>
-				</ModalHeader>
 				<ModalCloseButton
 					position="absolute"
 					top="0"
 					right={["0", "0", "-50px", "-50px"]}
 					boxSize="50px"
 					bg="#0053B8"
-					onSelect="false"
 					borderRadius="0"
 					color="white"
+					_focus={{ border: 0 }}
 				/>
-				<ModalBody>
+				<ModalBody maxH="90vh">
+					<Image
+						objectFit="cover"
+						src={dataModal.img ? dataModal.img : ""}
+						w="100%"
+						h="auto"
+					/>
 					<Text textAlign="center" fontSize={styles.font.text} fontWeight="bold">
 						{dataModal.title ? dataModal.title : ""}
 					</Text>
@@ -102,11 +101,13 @@ const Footer = () => {
 									socialNetworks.map((item) => (
 										<Link
 											href={item.link}
+											key={`Link-${item.img}`}
 											bg={item.bg}
 											_hover={{ bg: "whiteAlpha.800" }}
 										>
 											<Image
 												m="2"
+												key={`Img-${item.img}`}
 												src={item.img}
 												alt=""
 												h="20px"
@@ -240,9 +241,13 @@ const Footer = () => {
 							<Center pt="20px">
 								<Wrap spacing="20px" align="center" w="300px">
 									{instalaciones &&
-										instalaciones.map((item) => (
-											<WrapItem onClick={onOpen}>
+										instalaciones.map((item, index) => (
+											<WrapItem
+												onClick={onOpen}
+												key={`WrapItemFooter-${item.title}-${index}`}
+											>
 												<Image
+													key={`ImgFooter-${item.title}-${index}`}
 													src={item.img}
 													_hover={{ filter: "brightness(60%)" }}
 													boxSize="85px"

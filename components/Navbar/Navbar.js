@@ -128,6 +128,7 @@ const Navbar = () => {
 								{iconsImg &&
 									iconsImg.map((item) => (
 										<Link
+											key={`LinkNav-${item.name}`}
 											href={item.link}
 											target="_blank"
 											d="flex"
@@ -179,7 +180,7 @@ const Navbar = () => {
 								INICIO
 							</Link>
 							{links.navbar.map((item) => (
-								<MenuComponent item={item} />
+								<MenuComponent key={`FlexNav-${item.name}`} item={item} />
 							))}
 						</Box>
 						<Flex w="10%" justifyContent="center" alignSelf="center">
@@ -318,7 +319,7 @@ const Navbar = () => {
 									<Text>INICIO</Text>
 								</Box>
 								{links.navbar.map((item) => (
-									<Accordion allowToggle>
+									<Accordion allowToggle key={`Accordion-${item.name}`}>
 										<AccordionItem>
 											<h2>
 												<AccordionButton
@@ -340,7 +341,11 @@ const Navbar = () => {
 											>
 												{item.options &&
 													item.options.map((option) => (
-														<Text p="2" align="center">
+														<Text
+															p="2"
+															align="center"
+															key={`Text-${option.name}`}
+														>
 															{option.name}
 														</Text>
 													))}
@@ -403,6 +408,7 @@ const Navbar = () => {
 									{iconsImg &&
 										iconsImg.map((item) => (
 											<Link
+												key={`LinkIconsImg-${item.name}`}
 												href={item.link}
 												target="_blank"
 												d="flex"
