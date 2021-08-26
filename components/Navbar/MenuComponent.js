@@ -1,3 +1,4 @@
+/* eslint-disable react/no-array-index-key */
 import {
 	Flex,
 	Link,
@@ -21,9 +22,12 @@ const MenuComponent = ({ item }) => {
 	return (
 		<Flex color="white">
 			<Box alignSelf="center" h="100%" align="center">
-				<Menu isOpen={isOpen} ref={finalRef}>
+				<Menu id="Menu-inMenuComponent" isOpen={isOpen} isLazy>
 					<MenuButton
 						ref={finalRef}
+						role="button"
+						id="MenuComponent-button-01"
+						key="KMenuComponent-button-01"
 						fontWeight="bold"
 						h="100%"
 						marginRight="2"
@@ -55,8 +59,15 @@ const MenuComponent = ({ item }) => {
 										}}
 										justifyContent="space-between"
 									>
-										<Menu isOpen={index === 0 ? isM2Open : isM4Open}>
+										<Menu
+											id="Menu-inMenuComponent2"
+											isOpen={index === 0 ? isM2Open : isM4Open}
+											isLazy
+										>
 											<MenuButton
+												role="button"
+												id={`IDMenuButton-${option.name}-${index}`}
+												key={`KMenuButton-${option.name}-${index}`}
 												w="100%"
 												textAlign="start"
 												p="1"
@@ -77,7 +88,7 @@ const MenuComponent = ({ item }) => {
 												boxShadow="none"
 											>
 												{option.options &&
-													option.options.map((subOption) => (
+													option.options.map((subOption, index2) => (
 														<Flex
 															fontSize={[
 																"8px",
@@ -104,8 +115,11 @@ const MenuComponent = ({ item }) => {
 																index === 0 ? onM2Close : onM4Close
 															}
 														>
-															<Menu isOpen={isM3Open}>
+															<Menu isOpen={isM3Open} isLazy>
 																<MenuButton
+																	role="button"
+																	id={`IDMenuButton-${option.name}-${index2}`}
+																	key={`KMenuButton-${option.name}-${index2}`}
 																	textAlign="start"
 																	p="1"
 																	ref={finalRef}
@@ -126,7 +140,10 @@ const MenuComponent = ({ item }) => {
 																>
 																	{subOption.options &&
 																		subOption.options.map(
-																			(lastOption, index) => (
+																			(
+																				lastOption,
+																				index3,
+																			) => (
 																				<Flex
 																					fontSize={[
 																						"8px",
@@ -141,7 +158,7 @@ const MenuComponent = ({ item }) => {
 																						onM3Close
 																					}
 																					top="100px"
-																					key={`FlexNav3-${lastOption.name}-${index}`}
+																					key={`FlexNav3-${lastOption.name}-${index3}`}
 																					bg="#2C2D32"
 																					p="3"
 																					color="whiteAlpha.800"
