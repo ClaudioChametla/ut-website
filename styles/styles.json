@@ -6,11 +6,12 @@
 		"heroOneTitle": "72px",
 		"heroTwoTitle": "52px",
 		"title": "32px",
-		"subtitle": "24px",
-		"text": "16px"
+		"subtitle": "18px",
+		"text": "16px",
+		"fontFamily": "Montserrat"
 	},
 	"background": {
-		"light": "rgb(10, 70, 161)",
+		"light": "#00489E",
 		"solid": "rgb(0, 72, 158)",
 		"navBgOne": "#22283C",
 		"navBgSolid": "#1F2127",
