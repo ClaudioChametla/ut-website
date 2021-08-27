@@ -2,7 +2,7 @@ import Head from "next/head";
 import { Flex } from "@chakra-ui/react";
 import Container from "../components/Container";
 import { Hero } from "../components/Hero";
-import Example from "../components/Example";
+import HomeContent from "../components/HomeContent";
 
 export default function Home() {
 	return (
@@ -14,6 +14,7 @@ export default function Home() {
 			</Head>
 			<Container>
 				<Hero title="SE FAMILIA UT" />
+				<HomeContent />
 			</Container>
 		</Flex>
 	);
