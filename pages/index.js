@@ -1,7 +1,7 @@
 import Head from "next/head";
 import { Flex } from "@chakra-ui/react";
 import Container from "../components/Container";
-import Hero from "../components/Hero/Hero";
+import { Hero, SubHero } from "../components/Hero";
 import Example from "../components/Example";
 
 export default function Home() {
@@ -14,6 +14,7 @@ export default function Home() {
 			</Head>
 			<Container>
 				<Hero />
+				<SubHero title="VINCULACIÓN" src="/images/subHero1.jpeg" />
 			</Container>
 		</Flex>
 	);
