@@ -2,7 +2,8 @@ import Head from "next/head";
 import { Flex } from "@chakra-ui/react";
 import Container from "../components/Container";
 import { Hero, SubHero } from "../components/Hero";
-import Example from "../components/Example";
+import Cards from "../components/Cards";
+import CardStats from "../components/CardStats";
 
 export default function Home() {
 	return (
@@ -15,6 +16,8 @@ export default function Home() {
 			<Container>
 				<Hero />
 				<SubHero title="VINCULACIÓN" src="/images/subHero1.jpeg" />
+				<Cards />
+				<CardStats />
 			</Container>
 		</Flex>
 	);

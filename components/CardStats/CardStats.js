@@ -40,7 +40,7 @@ const CardStats = () => {
 	}, [inView]);
 
 	return (
-		<Center w="100vw" ref={ref}>
+		<Center w="100%" ref={ref}>
 			<Grid templateColumns={["", "", "", "repeat(3, 1fr)"]} w={["95%", "95%", "95%", "85%"]}>
 				{infocardStats &&
 					infocardStats.map((item, index) => (

@@ -88,7 +88,7 @@ const Hero = () => {
 									color="white"
 									fontWeight="bold"
 									position="absolute"
-									top={["25%", "30%"]}
+									top={["25%", "35%"]}
 									justifyContent="center"
 									w={["90%", "90%", "90%", "90%", "50%"]}
 								>
@@ -140,7 +140,7 @@ const Hero = () => {
 					position="absolute"
 					w="100%"
 					pt="30px"
-					top={["8%", "25%"]}
+					top={["8%", "13%"]}
 				>
 					<Button
 						h="100px"

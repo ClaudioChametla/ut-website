@@ -6,7 +6,7 @@ import cardsinfo from "../../data/cardsinfo.json";
 const Cards = () => {
 	const infocards = cardsinfo.cards;
 	return (
-		<Center w="100vw">
+		<Center w="100%">
 			<Grid templateColumns={["", "", "", "repeat(3, 1fr)"]} w={["95%", "95%", "95%", "85%"]}>
 				{infocards &&
 					infocards.map((item, index) => (
