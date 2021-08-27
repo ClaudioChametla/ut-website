@@ -140,7 +140,7 @@ const Hero = () => {
 					position="absolute"
 					w="100%"
 					pt="30px"
-					top={["8%", "13%"]}
+					top={["2.5%", "5%", "8%", "10%"]}
 				>
 					<Button
 						h="100px"

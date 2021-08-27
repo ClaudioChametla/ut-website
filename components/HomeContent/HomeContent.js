@@ -17,7 +17,7 @@ import contentList from "../../data/homeContentList.json";
 import AModal from "./AModal";
 
 const HomeContent = () => (
-	<Box bg="#f5f5f5">
+	<Box bg="#f5f5f5" zIndex="1">
 		<Center
 			w="90%"
 			margin="0 0 10px 50px"
@@ -32,7 +32,7 @@ const HomeContent = () => (
 			marginBottom="50px"
 		>
 			<Text> ALCANZA TU MÁXIMO POTENCIAL E INSPIRA A OTROS PARA QUE LO LOGREN </Text>
-			<Box margin="10px 0 10px 0" w="50%" zIndex="99">
+			<Box margin="10px 0 10px 0" w="50%">
 				<Divider orientation="horizontal" />
 			</Box>
 			<Image

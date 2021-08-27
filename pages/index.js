@@ -4,6 +4,7 @@ import Container from "../components/Container";
 import { Hero, SubHero } from "../components/Hero";
 import Cards from "../components/Cards";
 import CardStats from "../components/CardStats";
+import HomeContent from "../components/HomeContent";
 
 export default function Home() {
 	return (
@@ -17,6 +18,7 @@ export default function Home() {
 				<Hero />
 				<SubHero title="VINCULACIÓN" src="/images/subHero1.jpeg" />
 				<Cards />
+				<HomeContent />
 				<CardStats />
 			</Container>
 		</Flex>
