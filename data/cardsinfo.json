@@ -1,0 +1,36 @@
+{
+	"cards": [
+		{
+			"icon": "/icons/users.svg",
+			"title": "OFERTA EDUCATIVA",
+			"content": "Nuestro plan educativo está enfocado en nuestros alumnos para que adquieran conocimientos, habilidades y valores que les permita consolidar el desarrollo personal, la independencia y la capacidad de crear oportunidades de negocio."
+		},
+		{
+			"icon": "/icons/atlas.svg",
+			"title": "BIBLIOTECA DIGITAL",
+			"content": "Encuentra novedosos contenidos digitales para apoyar tu proceso de aprendizaje en cualquier área de conocimiento."
+		},
+		{
+			"icon": "/icons/comment-dots.svg",
+			"title": "SOCIAL MEDIA",
+			"content": "Nos gusta estar en contacto contigo y escucharte a través de nuestras redes oficiales."
+		}
+	],
+	"CardStats": [
+		{
+			"title": 3372,
+			"subtitle": "EGRESADOS",
+			"icon": "/icons/medal.svg"
+		},
+		{
+			"title": 2192,
+			"subtitle": "CASOS DE ÉXITO",
+			"icon": "/icons/star.svg"
+		},
+		{
+			"title": 28,
+			"subtitle": "AÑOS DE EXPERIENCIA EDUCATIVA",
+			"icon": "/icons/clock.svg"
+		}
+	]
+}
