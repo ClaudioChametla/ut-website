@@ -2,23 +2,26 @@
 	"navbar": [
 		{
 			"name": "CONOCENOS",
+			"link": "#1",
 			"filter": "invert(16%) sepia(14%) saturate(313%) hue-rotate(193deg) brightness(91%) contrast(93%)",
 			"icon": "/icons/angle-right.svg",
 			"options": [
-				{ "name": "MENSAJE DE RECTORÍA", "as": "text" },
-				{ "name": "HISTORIA", "as": "text" },
-				{ "name": "IDENTIDAD", "as": "text" },
-				{ "name": "MISIÓN Y VISIÓN", "as": "text" },
-				{ "name": "INSTALACIONES", "as": "text" }
+				{ "name": "MENSAJE DE RECTORÍA", "as": "text", "link": "#1" },
+				{ "name": "HISTORIA", "as": "text", "link": "#2" },
+				{ "name": "IDENTIDAD", "as": "text", "link": "#3" },
+				{ "name": "MISIÓN Y VISIÓN", "as": "text", "link": "#4" },
+				{ "name": "INSTALACIONES", "as": "text", "link": "#5" }
 			]
 		},
 		{
 			"name": "OFERTA EDUCATIVA",
+			"link": "#2",
 			"filter": "invert(93%) sepia(0%) saturate(0%) hue-rotate(166deg) brightness(90%) contrast(91%)",
 			"icon": "/icons/angle-right.svg",
 			"options": [
 				{
 					"name": "LICENCIATURA",
+					"link": "#1",
 					"as": "list",
 					"icon": "/icons/angle-right.svg",
 					"filter": "invert(16%) sepia(14%) saturate(313%) hue-rotate(193deg) brightness(91%) contrast(93%)",
@@ -34,20 +37,22 @@
 				{
 					"name": "POSGRADO",
 					"as": "list",
+					"link": "#2",
 					"icon": "/icons/angle-right.svg",
 					"filter": "invert(93%) sepia(0%) saturate(0%) hue-rotate(166deg) brightness(90%) contrast(91%)",
 					"options": [
 						{
 							"name": "ESPECIALIDAD",
+							"link": "#",
 							"as": "list",
 							"icon": "/icons/angle-right.svg",
 							"filter": "invert(16%) sepia(14%) saturate(313%) hue-rotate(193deg) brightness(91%) contrast(93%)",
 							"options": [
-								{ "name": "DERECHO DE AMPARO" },
-								{ "name": "FORMACIÓN DOCENTE" },
-								{ "name": "PSICOLOGIA EDUCATIVA" },
-								{ "name": "DERECHO DE AMPARO" },
-								{ "name": "COSTOS DE LA CONSTRUCCIÓN" }
+								{ "name": "DERECHO DE AMPARO", "link": "#1" },
+								{ "name": "FORMACIÓN DOCENTE", "link": "#2" },
+								{ "name": "PSICOLOGIA EDUCATIVA", "link": "#3" },
+								{ "name": "DERECHO DE AMPARO", "link": "#4" },
+								{ "name": "COSTOS DE LA CONSTRUCCIÓN", "link": "#5" }
 							]
 						}
 					]
@@ -56,14 +61,30 @@
 		},
 		{
 			"name": "VINCULACIÓN",
+			"link": "#3",
 			"filter": "invert(16%) sepia(14%) saturate(313%) hue-rotate(193deg) brightness(91%) contrast(93%)",
 			"icon": "/icons/angle-right.svg",
 			"options": [
-				{ "name": "CONVENIOS", "as": "text" },
-				{ "name": "BOLSA DE TRABAJO", "as": "text" },
-				{ "name": "SERVICIO SOCIAL", "as": "text" },
-				{ "name": "EGRESADOS", "as": "text" }
+				{ "name": "CONVENIOS", "as": "text", "link": "#1" },
+				{ "name": "BOLSA DE TRABAJO", "as": "text", "link": "#2" },
+				{ "name": "SERVICIO SOCIAL", "as": "text", "link": "#3" },
+				{ "name": "EGRESADOS", "as": "text", "link": "#4" }
 			]
+		}
+	],
+
+	"navbar2": [
+		{
+			"name": "NUEVO INGRESO",
+			"link": "#1"
+		},
+		{
+			"name": "BLOG",
+			"link": "#2"
+		},
+		{
+			"name": "CONTACTO",
+			"link": "#3"
 		}
 	]
 }

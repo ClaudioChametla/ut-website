@@ -1,3 +1,4 @@
+/* eslint-disable react/no-array-index-key */
 import { Box, Text, Image, Flex, Link, Button } from "@chakra-ui/react";
 import { useRef, useEffect } from "react";
 import heroImg from "../../data/heroImg.json";
@@ -64,8 +65,9 @@ const Hero = () => {
 			<Box h={["45vh", "100vh"]} bg="black" overflow="hidden">
 				<Flex w="100%" h="100%" flexWrap="nowrap" ref={slideShow} position="relative">
 					{img &&
-						img.map((item) => (
+						img.map((item, index) => (
 							<Flex
+								key={`Flex-${index}Hero`}
 								fontFamily="mono"
 								fontWeight="bold"
 								textAlign="center"
