@@ -49,7 +49,7 @@ const HomeContent = () => (
 				<Box marginTop="50px">
 					<UnorderedList spacing={1}>
 						{contentList.contentList.map((item, index) => (
-							<Flex>
+							<Flex key={`FlexHomeContent-${index}`}>
 								<Image
 									boxSize="25px"
 									borderRadius="0%"
@@ -64,7 +64,7 @@ const HomeContent = () => (
 						))}
 					</UnorderedList>
 				</Box>
-				<Box w="90%" h="500px">
+				<Box w="90%">
 					<BModal />
 				</Box>
 			</Stack>

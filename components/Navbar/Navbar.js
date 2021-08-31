@@ -1,3 +1,4 @@
+/* eslint-disable react/no-array-index-key */
 import {
 	Flex,
 	Image,
@@ -224,8 +225,12 @@ const Navbar = () => {
 								h="100%"
 								textAlign="center"
 							>
-								{links.navbar2.map((item) => (
-									<Link href={item.link} marginRight="8">
+								{links.navbar2.map((item, index) => (
+									<Link
+										href={item.link}
+										marginRight="8"
+										key={`Links-2Navbar-${index}`}
+									>
 										{item.name}
 									</Link>
 								))}
@@ -400,12 +405,13 @@ const Navbar = () => {
 												</AccordionItem>
 											</Accordion>
 										))}
-										{links.navbar2.map((item) => (
+										{links.navbar2.map((item, index) => (
 											<Box
 												align="center"
 												w="100%"
 												bg={styles.background.navBgSolid}
 												p="3"
+												key={`LinkNavbar2-${index}`}
 											>
 												<Link href={item.link}>{item.name}</Link>
 												<Divider color="#2E3138" />
