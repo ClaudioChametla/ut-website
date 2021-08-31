@@ -41,7 +41,10 @@ const CardStats = () => {
 
 	return (
 		<Center w="100%" ref={ref}>
-			<Grid templateColumns={["", "", "", "repeat(3, 1fr)"]} w={["95%", "95%", "95%", "85%"]}>
+			<Grid
+				templateColumns={["", "", "repeat(3, 1fr)", "repeat(3, 1fr)"]}
+				w={["95%", "95%", "95%", "85%"]}
+			>
 				{infocardStats &&
 					infocardStats.map((item, index) => (
 						<Flex direction="column" align="center" key={`Flex-${index}`}>
