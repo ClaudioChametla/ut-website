@@ -23,20 +23,22 @@ const MenuComponent = ({ item }) => {
 		<Flex color="white">
 			<Box alignSelf="center" h="100%" align="center">
 				<Menu id="Menu-inMenuComponent" isOpen={isOpen} isLazy>
-					<MenuButton
-						ref={finalRef}
-						role="button"
-						id="MenuComponent-button-01"
-						key="KMenuComponent-button-01"
-						fontWeight="bold"
-						h="100%"
-						marginRight="2"
-						onMouseEnter={onOpen}
-						onMouseLeave={onClose}
-					>
-						{item.name}
-					</MenuButton>
-
+					<Link href={item.link}>
+						<MenuButton
+							ref={finalRef}
+							role="button"
+							id="MenuComponent-button-01"
+							key="KMenuComponent-button-01"
+							fontWeight="bold"
+							h="100%"
+							marginRight="2"
+							onMouseEnter={onOpen}
+							onMouseLeave={onClose}
+							w="100%"
+						>
+							{item.name}
+						</MenuButton>
+					</Link>
 					<Portal>
 						<MenuList border="none" bg="none" color="white" boxShadow="none">
 							{item.options &&
@@ -53,6 +55,7 @@ const MenuComponent = ({ item }) => {
 										transform="translate(0%, -17px)"
 										onMouseEnter={onOpen}
 										onMouseLeave={onClose}
+										zIndex="20"
 										_hover={{
 											borderLeft: "solid",
 											borderColor: "blue",
@@ -64,11 +67,13 @@ const MenuComponent = ({ item }) => {
 											isOpen={index === 0 ? isM2Open : isM4Open}
 											isLazy
 										>
-											<MenuButton
+											<Link
 												role="button"
 												id={`IDMenuButton-${option.name}-${index}`}
 												key={`KMenuButton-${option.name}-${index}`}
 												w="100%"
+												h="100%"
+												href={option.link}
 												textAlign="start"
 												p="1"
 												ref={finalRef}
@@ -77,7 +82,7 @@ const MenuComponent = ({ item }) => {
 											>
 												{option.name}
 												<br />
-											</MenuButton>
+											</Link>
 
 											<MenuList
 												bg="none"
@@ -100,9 +105,11 @@ const MenuComponent = ({ item }) => {
 															top="100px"
 															bg="#2C2D32"
 															p="2"
+															w="100%"
+															zIndex="40"
 															color="whiteAlpha.800"
 															flexDirection="row"
-															transform="translate(95%, -40px)"
+															transform="translate(99%, 0px)"
 															justifyContent="space-between"
 															_hover={{
 																borderLeft: "solid",
@@ -116,19 +123,22 @@ const MenuComponent = ({ item }) => {
 															}
 														>
 															<Menu isOpen={isM3Open} isLazy>
-																<MenuButton
-																	role="button"
-																	id={`IDMenuButton-${option.name}-${index2}`}
-																	key={`KMenuButton-${option.name}-${index2}`}
-																	textAlign="start"
-																	p="1"
-																	ref={finalRef}
-																	onMouseEnter={onM3Open}
-																	onMouseLeave={onM3Close}
-																>
-																	{subOption.name}
-																	<br />
-																</MenuButton>
+																<Link href={subOption.link}>
+																	<MenuButton
+																		role="button"
+																		id={`IDMenuButton-${option.name}-${index2}`}
+																		key={`KMenuButton-${option.name}-${index2}`}
+																		textAlign="start"
+																		p="1"
+																		ref={finalRef}
+																		onMouseEnter={onM3Open}
+																		onMouseLeave={onM3Close}
+																		w="100%"
+																	>
+																		{subOption.name}
+																		<br />
+																	</MenuButton>
+																</Link>
 
 																<MenuList
 																	bg="none"
@@ -137,6 +147,8 @@ const MenuComponent = ({ item }) => {
 																	border="none"
 																	p="2"
 																	boxShadow="none"
+																	onMouseEnter={onM3Open}
+																	onMouseLeave={onM3Close}
 																>
 																	{subOption.options &&
 																		subOption.options.map(
@@ -164,7 +176,7 @@ const MenuComponent = ({ item }) => {
 																					color="whiteAlpha.800"
 																					w="100%"
 																					flexDirection="column"
-																					transform="translate(90%, -30px)"
+																					transform="translate(86%, -50px)"
 																					_hover={{
 																						borderLeft:
 																							"solid",
@@ -172,7 +184,11 @@ const MenuComponent = ({ item }) => {
 																							"blue",
 																					}}
 																				>
-																					<Link href="#">
+																					<Link
+																						href={
+																							lastOption.link
+																						}
+																					>
 																						{
 																							lastOption.name
 																						}
@@ -186,9 +202,11 @@ const MenuComponent = ({ item }) => {
 																key={`ImgIcon-${option.icon}`}
 																src={option.icon}
 																w="15px"
-																h="15px"
+																h="20px"
 																alignSelf="center"
 																filter={option.filter}
+																onMouseEnter={onM3Open}
+																onMouseLeave={onM3Close}
 															/>
 														</Flex>
 													))}
@@ -198,9 +216,11 @@ const MenuComponent = ({ item }) => {
 										<Image
 											src={item.icon}
 											w="15px"
-											h="15px"
+											h="20px"
 											alignSelf="center"
 											filter={item.filter}
+											onMouseEnter={index === 0 ? onM2Open : onM4Open}
+											onMouseLeave={index === 0 ? onM2Close : onM4Close}
 										/>
 									</Flex>
 								))}
