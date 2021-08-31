@@ -1,3 +1,4 @@
+/* eslint-disable react/no-array-index-key */
 import { Box, Grid, Image, Flex, Text, Center } from "@chakra-ui/react";
 import styles from "../../styles/styles.json";
 import stylesTwo from "../../styles/stylesTwo.json";
@@ -6,11 +7,11 @@ import cardsinfo from "../../data/cardsinfo.json";
 const Cards = () => {
 	const infocards = cardsinfo.cards;
 	return (
-		<Center w="100%">
+		<Center w="100%" mt={["10px", "10px", "20px", "-40px"]}>
 			<Grid templateColumns={["", "", "", "repeat(3, 1fr)"]} w={["95%", "95%", "95%", "85%"]}>
 				{infocards &&
 					infocards.map((item, index) => (
-						<Flex direction="column" align="center">
+						<Flex direction="column" align="center" key={`Flex-${index}Cards`}>
 							<Box
 								bgColor={index % 2 === 0 ? "#00489e" : "#0053b8"}
 								align="center"

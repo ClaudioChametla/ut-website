@@ -13,11 +13,10 @@ import {
 	Modal,
 	ModalOverlay,
 	ModalContent,
-	ModalHeader,
 	ModalBody,
 	ModalCloseButton,
 	useDisclosure,
-	Flex,
+	Grid,
 } from "@chakra-ui/react";
 import { useState } from "react";
 import styles from "../../styles/styles.json";
@@ -65,7 +64,7 @@ const Footer = () => {
 	};
 	return (
 		<div>
-			<Center w="100%" bg="#25282e">
+			<Center w="100%" bg="#25282e" fontSize={["85%", "", "", ""]}>
 				<Box
 					w={stylesTwo.containerFooter.width}
 					h="auto"
@@ -118,15 +117,26 @@ const Footer = () => {
 									))}
 							</HStack>
 						</VStack>
-						<Box w="300px" h="auto" align="strench">
-							<Text ml="15px" color="white" fontSize={styles.font.subtitle}>
+						<Box w={["95%", "300px", "300px", "300px"]} h="auto" align="strench">
+							<Text
+								ml={["", "", "", "15px"]}
+								color="white"
+								fontSize={styles.font.subtitle}
+								textAlign={["center", "left", "left", "left"]}
+							>
 								Oferta Educativa
 							</Text>
 							<Divider w="80px" />
-							<VStack spacing={6} mt="6" w="300px">
+							<VStack spacing={6} mt="6" w={["100%", "100%", "300px", "300px"]}>
 								<HStack w="100%">
-									<Image src="/images/30-Gast-76x65.jpg" w="60px" h="60px" />
-									<Text w="200px" fontSize={styles.font.text}>
+									<Image
+										src="/images/30-Gast-76x65.jpg"
+										boxSize={["50px", "60px", "60px", "60px"]}
+									/>
+									<Text
+										w={["", "200px", "200px", "200px"]}
+										fontSize={styles.font.text}
+									>
 										<Link
 											href="#"
 											color="whiteAlpha.700"
@@ -138,7 +148,10 @@ const Footer = () => {
 								</HStack>
 								<Divider />
 								<HStack w="100%">
-									<Image src="/images/30-Conta-76x65.jpg" w="60px" h="60px" />
+									<Image
+										src="/images/30-Conta-76x65.jpg"
+										boxSize={["50px", "60px", "60px", "60px"]}
+									/>
 									<Text w="200px" fontSize={styles.font.text}>
 										<Link
 											href="#"
@@ -153,8 +166,7 @@ const Footer = () => {
 								<HStack w="100%">
 									<Image
 										src="/images/background_video-76x65.jpg"
-										w="60px"
-										h="60px"
+										boxSize={["50px", "60px", "60px", "60px"]}
 									/>
 									<Text w="200px" fontSize={styles.font.text}>
 										<Link
@@ -168,8 +180,13 @@ const Footer = () => {
 								</HStack>
 							</VStack>
 						</Box>
-						<Box w="300px" h="auto">
-							<Text ml="15px" color="white" fontSize={styles.font.subtitle}>
+						<Box w={["95%", "300px", "300px", "300px"]} h="auto" align="strench">
+							<Text
+								ml="15px"
+								color="white"
+								fontSize={styles.font.subtitle}
+								textAlign={["center", "left", "left", "left"]}
+							>
 								Contacto
 							</Text>
 							<Divider w="80px" />
@@ -233,30 +250,35 @@ const Footer = () => {
 								</Center>
 							</HStack>
 						</Box>
-						<Box w="300px" h="auto">
-							<Text ml="15px" color="white" fontSize={styles.font.subtitle}>
+						<Box w={["95%", "300px", "300px", "300px"]} h="auto" align="strench">
+							<Text
+								ml="15px"
+								color="white"
+								fontSize={styles.font.subtitle}
+								textAlign={["center", "left", "left", "left"]}
+							>
 								Instalaciones
 							</Text>
 							<Divider w="80px" />
 							<Center pt="20px">
-								<Wrap spacing="20px" align="center" w="300px">
+								<Grid templateColumns="repeat(3, 1fr)" gap={4}>
 									{instalaciones &&
 										instalaciones.map((item, index) => (
-											<WrapItem
+											<Box
 												onClick={onOpen}
-												key={`WrapItemFooter-${item.title}-${index}`}
+												key={`GridItemFooter-${item.title}-${index}`}
 											>
 												<Image
 													key={`ImgFooter-${item.title}-${index}`}
 													src={item.img}
 													_hover={{ filter: "brightness(60%)" }}
-													boxSize="85px"
-													objectFit="cover"
+													boxSize={["80px", "85px", "85px", "85px"]}
 													onClick={() => action(item)}
+													objectFit="cover"
 												/>
-											</WrapItem>
+											</Box>
 										))}
-								</Wrap>
+								</Grid>
 							</Center>
 						</Box>
 					</Wrap>
