@@ -296,6 +296,7 @@ const Footer = () => {
 				<Text textAlign="center" color="whiteAlpha.500" fontSize={styles.font.text}>
 					©2020 UNIVERSIDAD TOLLANCINGO | TODOS LOS DERECHOS RESERVADOS. | POWERED BY
 					<Link href="#" color="blue.400">
+						{" "}
 						ZENIAQ TECHNOLOGIES
 					</Link>
 					.
