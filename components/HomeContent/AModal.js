@@ -14,21 +14,21 @@ function BasicUsage() {
 	return (
 		<Flex>
 			<Image
-				_hover={{ cursor: "pointer", filter: "brightness(60%)" }}
-				w="1370px"
+				w="100%"
 				h="auto"
+				padding="10"
+				_hover={{ cursor: "pointer", filter: "brightness(60%)" }}
 				onClick={onOpen}
 				src="/images/background_video.jpg"
-				m="10"
 			/>
 			<Modal isOpen={isOpen} onClose={onClose}>
 				<ModalOverlay />
 				<ModalContent>
-					<ModalBody>
-						<AspectRatio maxW="1080px">
+					<ModalBody maxW="1080px">
+						<AspectRatio>
 							<iframe
 								title="UniversidadVideo"
-								src="https://www.youtube.com/embed/QhBnZ6NPOY0"
+								src="https://www.youtube.com/embed/aFmjC5ViALk"
 								allowFullScreen
 							/>
 						</AspectRatio>
