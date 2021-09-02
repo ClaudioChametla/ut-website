@@ -1,0 +1,770 @@
+[
+	{
+		"carrera": "Licenciatura en Gastronomía",
+		"nivel": "Licenciatura",
+		"costo": 1750,
+		"imagenes": ["img1", "img2", "img3"],
+		"plan": {
+			"duracion": "10 Cuatrimestres",
+			"creditos": 403,
+			"acuerdo": "20090883",
+			"mapaCurricular": [
+				{
+					"periodo": "PRIMER CUATRIMESTRE",
+					"materias": [
+						"Introducción a la Gastronomía",
+						"Sanidad e Higiene",
+						"Metodología de la investigación",
+						"Informática",
+						"Bases Culinarias",
+						"Inglés I"
+					]
+				},
+				{
+					"periodo": "SEGUNDO CUATRIMESTRE",
+					"materias": [
+						"Preparación de Alimentos I",
+						"Manejo de los Alimentos",
+						"Normas de Información Financiera",
+						"Software para la Administración",
+						"Introducción al Derecho",
+						"Inglés II"
+					]
+				},
+				{
+					"periodo": "TERCER CUATRIMESTRE",
+					"materias": [
+						"Preparación de Alimentos II",
+						"Nutrición Básica",
+						"Contabilidad Financiera",
+						"Gastronomía y Turismo",
+						"Derecho Mercantil",
+						"Inglés III"
+					]
+				},
+				{
+					"periodo": "CUARTO CUATRIMESTRE",
+					"materias": [
+						"Química de los Alimentos",
+						"Compras y Almacén de Alimentos y Bebidas",
+						"Contabilidad de Costos",
+						"Técnicas de Servicio",
+						"Fundamentos de Administración",
+						"Inglés IV"
+					]
+				},
+				{
+					"periodo": "QUINTO CUATRIMESTRE",
+					"materias": [
+						"Gastronomía Mexicana I",
+						"Equipo y Mantenimiento",
+						"Centros de Esparcimiento Turístico y Alimentos y Bebidas",
+						"Enología",
+						"Administración de Recursos Humanos",
+						"Inglés V"
+					]
+				},
+				{
+					"periodo": "SEXTO CUATRIMESTRE",
+					"materias": [
+						"Gastronomía Mexicana II",
+						"Alimentos y Bebidas en la Hotelería y el Turismo",
+						"Panadería",
+						"Estudio de las Bebidas",
+						"Psicología Organizacional",
+						"Francés I"
+					]
+				},
+				{
+					"periodo": "SEPTIMO CUATRIMESTRE",
+					"materias": [
+						"Gastronomía Italiana",
+						"Ingeniería de Menús",
+						"Coctelería",
+						"Repostería",
+						"Análisis e Interpretación de Estados Financieros",
+						"Francés II"
+					]
+				},
+				{
+					"periodo": "OCTAVO CUATRIMESTRE",
+					"materias": [
+						"Gastronomía Francesa",
+						"Catering",
+						"Servicio de Comedor",
+						"Gastronomía Internacional I",
+						"Liderazgo",
+						"Francés III"
+					]
+				},
+				{
+					"periodo": "NOVENO CUATRIMESTRE",
+					"materias": [
+						"Gastronomía Contemporánea",
+						"Calidad en el Servicio",
+						"Marketing de Restaurantes",
+						"Gastronomía Internacional II",
+						"Administración de Restaurantes",
+						"Francés IV"
+					]
+				},
+				{
+					"periodo": "DÉCIMO CUATRIMESTRE",
+					"materias": [
+						"Gastronomía Del Mar",
+						"Ética Profesional",
+						"Seminario de Tesis",
+						"Planeación y Dirección de Proyectos",
+						"Relaciones Públicas"
+					]
+				}
+			]
+		}
+	},
+	{
+		"carrera": "Licenciatura en Pedagogía",
+		"nivel": "Licenciatura",
+		"costo": 1250,
+		"imagenes": ["img1", "img2", "img3"],
+		"plan": {
+			"duracion": "8 Semestres",
+			"creditos": 342,
+			"acuerdo": "944817",
+			"mapaCurricular": [
+				{
+					"periodo": "PRIMER SEMESTRE",
+					"materias": [
+						"Introducción a la Epistemología",
+						"Psicología Educativa I",
+						"Historia General de la Educación I",
+						"Sociología de la Educación I",
+						"Filosofía de la Educación I",
+						"Teoría Pedagógica I",
+						"Introducción a la Estadística"
+					]
+				},
+				{
+					"periodo": "SEGUNDO SEMESTRE",
+					"materias": [
+						"Metodología de las Ciencias Sociales",
+						"Psicología Educativa II",
+						"Historia General de la Educación II",
+						"Sociología de la Educación II",
+						"Filosofía de la Educación II",
+						"Teoría Pedagógica II",
+						"Estadística Aplicada a la Educación I"
+					]
+				},
+				{
+					"periodo": "TERCER SEMESTRE",
+					"materias": [
+						"Iniciación a la Investigación Pedagógica",
+						"Conocimiento de la Infancia",
+						"Historia de la Educación en México I",
+						"Didáctica General I",
+						"Psicotécnica Pedagógica I",
+						"Comunicación y Pedagogía I",
+						"Estadística Aplicada a la Educación II"
+					]
+				},
+				{
+					"periodo": "CUARTO SEMESTRE",
+					"materias": [
+						"Política Educativa",
+						"Conocimiento de la Adolescencia I",
+						"Historia de la Educación en México II",
+						"Didáctica General II",
+						"Psicotécnica Pedagógica II",
+						"Comunicación y Pedagogía II",
+						"Informática Aplicada a la Educación I"
+					]
+				},
+				{
+					"periodo": "QUINTO SEMESTRE",
+					"materias": [
+						"Orientación Educativa I",
+						"Conocimiento de la Adolescencia II",
+						"Pedagogía Experimental I",
+						"Laboratorio de Didáctica I",
+						"Organización Educativa I",
+						"Psicofisiología del Aprendizaje",
+						"Informática Aplicada a la Educación II"
+					]
+				},
+				{
+					"periodo": "SEXTO SEMESTRE",
+					"materias": [
+						"Orientación Educativa II",
+						"Desarrollo de la Comunidad",
+						"Pedagogía Experimental II",
+						"Laboratorio de Didáctica II",
+						"Organización Educativa II",
+						"Psicopatología del Escolar",
+						"Informática Aplicada a la Educación III"
+					]
+				},
+				{
+					"periodo": "SEPTIMO SEMESTRE",
+					"materias": [
+						"Orientación Educativa III",
+						"Educación de Adultos I",
+						"Evaluación Educativa",
+						"Taller de Didáctica I",
+						"Capacitación y Desarrollo I",
+						"Sistemas de Educación Especial I",
+						"Economía de la Educación"
+					]
+				},
+				{
+					"periodo": "OCTAVO SEMESTRE",
+					"materias": [
+						"Introducción a la Práctica Profesional II",
+						"Educación de Adultos II",
+						"Seminario de Diseño Curricular",
+						"Taller de Didáctica II",
+						"Capacitación y Desarrollo II",
+						"Sistemas de Educación Especial II",
+						"Planeación Educativa"
+					]
+				}
+			]
+		}
+	},
+	{
+		"carrera": "Licenciatura en Psicología",
+		"nivel": "Licenciatura",
+		"costo": 1250,
+		"imagenes": ["img1", "img2", "img3"],
+		"plan": {
+			"duracion": "9 Semestres",
+			"creditos": 316,
+			"acuerdo": "982081",
+			"mapaCurricular": [
+				{
+					"periodo": "PRIMER SEMESTRE",
+					"materias": [
+						"Bases Biológicas de la Conducta",
+						"Introducción a la Psicología Científica",
+						"Lógica Simbólica y Semántica",
+						"Filosofía de la Ciencia",
+						"Informática I",
+						"Problemas Sociales de México"
+					]
+				},
+				{
+					"periodo": "SEGUNDO SEMESTRE",
+					"materias": [
+						"Anatomía y Fisiología del Sistema Nervioso",
+						"Teorías y Sistemas en Psicología",
+						"Introducción a las Teorías de la Personalidad",
+						"Motivación y Emoción",
+						"Informática II"
+					]
+				},
+				{
+					"periodo": "TERCER SEMESTRE",
+					"materias": [
+						"Neurofisiología",
+						"Aprendizaje y Memoria",
+						"Métodos de Estadística Descriptiva en Psicología",
+						"Organización Familiar",
+						"Sensopercepción y Estados de Conciencia"
+					]
+				},
+				{
+					"periodo": "CUARTO SEMESTRE",
+					"materias": [
+						"Psicofisiología",
+						"Desarrollo Psicológico I",
+						"Métodos de Estadística Inferencial en Psicología",
+						"Pensamiento, Lenguaje y Creatividad",
+						"Psicopatología I"
+					]
+				},
+				{
+					"periodo": "QUINTO SEMESTRE",
+					"materias": [
+						"Análisis Experimental de la Conducta",
+						"Desarrollo Psicológico II",
+						"Psicometría I",
+						"Psicología del Mexicano",
+						"Psicopatología II"
+					]
+				},
+				{
+					"periodo": "SEXTO SEMESTRE",
+					"materias": [
+						"Psicología Educativa",
+						"Psicología del Trabajo",
+						"Psicometría II",
+						"Psicología Social",
+						"Psicología Clínica"
+					]
+				},
+				{
+					"periodo": "SEPTIMO SEMESTRE",
+					"materias": [
+						"Didáctica de la Psicología",
+						"Teoría y Técnica de la Entrevista",
+						"Psicodinámica de Grupos I",
+						"Modificación de la Conducta"
+					]
+				},
+				{
+					"periodo": "OCTAVO SEMESTRE",
+					"materias": [
+						"Introducción a la Psicoterapia",
+						"Técnicas de Evaluación Laboral y Selección de Personal",
+						"Psicodinámica de Grupos II",
+						"Prevención Primaria en Psicología"
+					]
+				},
+				{
+					"periodo": "NOVENO SEMESTRE",
+					"materias": [
+						"Intervención Psicológica en Niños",
+						"Elaboración, Integración y Abordaje de Casos Clínicos",
+						"Dinámica de Pareja y Familia",
+						"Psicocriminología"
+					]
+				}
+			]
+		}
+	},
+	{
+		"carrera": "Licenciatura en Arquitectura",
+		"nivel": "Licenciatura",
+		"costo": 1250,
+		"imagenes": ["img1", "img2", "img3"],
+		"plan": {
+			"duracion": "9 Semestres",
+			"creditos": 353,
+			"acuerdo": "944818",
+			"mapaCurricular": [
+				{
+					"periodo": "PRIMER SEMESTRE",
+					"materias": [
+						"Taller de Arquitectura I",
+						"Teoría del Diseño I",
+						"Teoría de la Arquitectura I",
+						"Representación Gráfica I",
+						"Contexto de la Arquitectura I",
+						"Matemáticas I",
+						"Geometría Descriptiva I",
+						"Historia de la Arquitectura I"
+					]
+				},
+				{
+					"periodo": "SEGUNDO SEMESTRE",
+					"materias": [
+						"Taller de Arquitectura II",
+						"Teoría del Diseño II",
+						"Teoría de la Arquitectura II",
+						"Representación Gráfica II",
+						"Contexto de la Arquitectura II",
+						"Matemáticas II",
+						"Geometría Descriptiva II",
+						"Historia de la Arquitectura II"
+					]
+				},
+				{
+					"periodo": "TERCER SEMESTRE",
+					"materias": [
+						"Taller de Arquitectura III",
+						"Teoría de la Arquitectura III",
+						"Representación Gráfica III",
+						"Estática",
+						"Edificación I",
+						"Historia de la Arquitectura III"
+					]
+				},
+				{
+					"periodo": "CUARTO SEMESTRE",
+					"materias": [
+						"Taller de Arquitectura IV",
+						"Administración de Proyectos y Obras I",
+						"Técnicas de Representación",
+						"Resistencia de Materiales",
+						"Edificación II",
+						"Historia de la Arquitectura en México"
+					]
+				},
+				{
+					"periodo": "QUINTO SEMESTRE",
+					"materias": [
+						"Taller de Arquitectura V",
+						"Urbanismo I",
+						"Administración de Proyectos y Obras II",
+						"Instalaciones",
+						"Análisis y Diseño Estructural I",
+						"Edificación III"
+					]
+				},
+				{
+					"periodo": "SEXTO SEMESTRE",
+					"materias": [
+						"Taller de Arquitectura VI",
+						"Urbanismo II",
+						"Costos Generales",
+						"Análisis y Diseño Estructural II",
+						"Prefabricación",
+						"Financiamiento y Economía",
+						"Iniciación al Diseño Urbano"
+					]
+				},
+				{
+					"periodo": "SEPTIMO SEMESTRE",
+					"materias": ["Taller Integral de Arquitectura I"]
+				},
+				{
+					"periodo": "OCTAVO SEMESTRE",
+					"materias": ["Taller Integral de Arquitectura II"]
+				},
+				{
+					"periodo": "NOVENO SEMESTRE",
+					"materias": ["Taller Evaluativo de Arquitectura"]
+				}
+			]
+		}
+	},
+	{
+		"carrera": "Licenciatura en Contaduría",
+		"nivel": "Licenciatura",
+		"costo": 1250,
+		"imagenes": ["img1", "img2", "img3"],
+		"plan": {
+			"duracion": "9 Semestres",
+			"creditos": 348,
+			"acuerdo": "944820",
+			"mapaCurricular": [
+				{
+					"periodo": "PRIMER SEMESTRE",
+					"materias": [
+						"Introducción a la Contaduría",
+						"Introducción a la Administración",
+						"Matemáticas Básicas",
+						"Fundamentos de Derecho",
+						"Fundamentos de Sociología"
+					]
+				},
+				{
+					"periodo": "SEGUNDO SEMESTRE",
+					"materias": [
+						"Fundamentos de Contabilidad",
+						"Proceso Administrativo",
+						"Matemáticas Financieras",
+						"Derecho Mercantil",
+						"Sociología del trabajo"
+					]
+				},
+				{
+					"periodo": "TERCER SEMESTRE",
+					"materias": [
+						"Proceso Contable",
+						"Diseño de Estructuras y Procedimientos Administrativos",
+						"Estadística",
+						"Derecho Fiscal",
+						"Macroeconomía",
+						"Sistemas de Información"
+					]
+				},
+				{
+					"periodo": "CUARTO SEMESTRE",
+					"materias": [
+						"Costos I",
+						"Fundamentos de Administración de Personal",
+						"Contabilidad de Activo Circulante y Pasivo a Corto Plazo",
+						"Derecho Laboral",
+						"Microeconomía"
+					]
+				},
+				{
+					"periodo": "QUINTO SEMESTRE",
+					"materias": [
+						"Costos II",
+						"Presupuestos",
+						"Contabilidad de Activo No Circulante y Pasivo a Largo Plazo",
+						"Contabilidad Fiscal I",
+						"Informática I"
+					]
+				},
+				{
+					"periodo": "SEXTO SEMESTRE",
+					"materias": [
+						"Costos III",
+						"Investigación de Operaciones",
+						"Contabilidad Fiscal II",
+						"Comunicación y Empresa",
+						"Informática II"
+					]
+				},
+				{
+					"periodo": "SEPTIMO SEMESTRE",
+					"materias": [
+						"Finanzas I",
+						"Fundamentos de Mercadotecnia",
+						"Auditoría de Estados Financieros I",
+						"Dirección Empresarial",
+						"Problemas Políticos y Económicos de México",
+						"Informática III"
+					]
+				},
+				{
+					"periodo": "OCTAVO SEMESTRE",
+					"materias": [
+						"Fianzas II",
+						"Contabilidades Especiales I",
+						"Auditoría de Estados Financieros II",
+						"Evaluación de Proyectos de Inversión",
+						"Metodología de la investigación"
+					]
+				},
+				{
+					"periodo": "NOVENO SEMESTRE",
+					"materias": [
+						"Seminario de Casos de Finanzas",
+						"Contabilidades Especiales II",
+						"Auditoría de Estados Financieros III",
+						"Contabilidad Corporativa",
+						"Seminario de Tesis"
+					]
+				}
+			]
+		}
+	},
+	{
+		"carrera": "Licenciatura en Derecho",
+		"nivel": "Licenciatura",
+		"costo": 1250,
+		"imagenes": ["img1", "img2", "img3"],
+		"plan": {
+			"duracion": "10 Cuatrimestres",
+			"creditos": 336,
+			"acuerdo": "944819",
+			"mapaCurricular": [
+				{
+					"periodo": "PRIMER CUATRIMESTRE",
+					"materias": [
+						"Introducción al Estudio del Derecho",
+						"Derecho Romano I",
+						"Historia del Pensamiento Económico",
+						"Sociología",
+						"Metodología de la investigación"
+					]
+				},
+				{
+					"periodo": "SEGUNDO CUATRIMESTRE",
+					"materias": [
+						"Derecho Civil I",
+						"Derecho Romano II",
+						"Teoría Económica",
+						"Derecho Penal I"
+					]
+				},
+				{
+					"periodo": "TERCER CUATRIMESTRE",
+					"materias": [
+						"Derecho Civil II",
+						"Derecho Penal II",
+						"Teoría General del Proceso",
+						"Teoría General del Estado"
+					]
+				},
+				{
+					"periodo": "CUARTO CUATRIMESTRE",
+					"materias": [
+						"Derecho Civil III",
+						"Derecho Constitucional",
+						"Derecho Procesal Civil",
+						"Derecho Económico",
+						"Taller de Práctica Forense Civil"
+					]
+				},
+				{
+					"periodo": "QUINTO CUATRIMESTRE",
+					"materias": [
+						"Derecho Civil IV",
+						"Ciencia Política",
+						"Derecho Procesal Penal",
+						"Derecho Internacional Público",
+						"Taller de Práctica Forense Penal"
+					]
+				},
+				{
+					"periodo": "SEXTO CUATRIMESTRE",
+					"materias": [
+						"Derecho Administrativo I",
+						"Derecho del Trabajo I",
+						"Derecho Mercantil I",
+						"Derecho Internacional Privado",
+						"Informática Jurídica I"
+					]
+				},
+				{
+					"periodo": "SEPTIMO CUATRIMESTRE",
+					"materias": [
+						"Derecho Administrativo II",
+						"Garantías Individuales y Sociales",
+						"Derecho del Trabajo II",
+						"Derecho Mercantil II",
+						"Informática Jurídica II"
+					]
+				},
+				{
+					"periodo": "OCTAVO CUATRIMESTRE",
+					"materias": [
+						"Contratos Mercantiles",
+						"Derecho Fiscal",
+						"Derecho de la Seguridad Social",
+						"Amparo",
+						"Optativa I"
+					]
+				},
+				{
+					"periodo": "NOVENO CUATRIMESTRE",
+					"materias": [
+						"Derecho Agrario",
+						"Clínica Procesal del Derecho Privado",
+						"Clínica Procesal del Derecho Administrativo",
+						"Clínica Procesal del Derecho del Trabajo",
+						"Optativa II"
+					]
+				},
+				{
+					"periodo": "DÉCIMO CUATRIMESTRE",
+					"materias": [
+						"Filosofía y Ética del Derecho",
+						"Clínica Procesal del Derecho Penal",
+						"Clínica Procesal del Derecho Fiscal",
+						"Seminario de Tesis",
+						"Optativa III"
+					]
+				},
+				{
+					"periodo": "OPTATIVA OCTAVO",
+					"materias": ["Criminología", "Derecho Notarial y Registral"]
+				},
+				{
+					"periodo": "OPTATIVA NOVENO",
+					"materias": ["Derecho Municipal", "Medicina Legal"]
+				},
+				{
+					"periodo": "OPTATIVA DÉCIMO",
+					"materias": ["Derecho Penitenciario", "Delitos Especiales"]
+				}
+			]
+		}
+	},
+	{
+		"carrera": "Especialidad en Formación Docente",
+		"nivel": "Especialidad",
+		"costo": 1300,
+		"imagenes": ["img1", "img2", "img3"],
+		"plan": {
+			"duracion": "2 Semestres",
+			"creditos": 50,
+			"acuerdo": "2006234",
+			"mapaCurricular": [
+				{
+					"periodo": "MATERIAS",
+					"materias": [
+						"Formación Docente en México",
+						"Política Educativa",
+						"Teorías del Aprendizaje",
+						"Didáctica",
+						"Evaluación Educativa",
+						"Dimensiones de la Práctica Docente",
+						"Constructivismo y Aprendizaje",
+						"Diseño Curricular",
+						"Práctica Docente",
+						"Tecnologías de Información"
+					]
+				}
+			]
+		}
+	},
+	{
+		"carrera": "Especialidad en Costos de la Construcción",
+		"nivel": "Especialidad",
+		"costo": 1300,
+		"imagenes": ["img1", "img2", "img3"],
+		"plan": {
+			"duracion": "2 Semestres",
+			"creditos": 50,
+			"acuerdo": "20160677",
+			"mapaCurricular": [
+				{
+					"periodo": "MATERIAS",
+					"materias": [
+						"Investigación de Mercado de Materiales",
+						"Costos de Mano de Obra",
+						"Maquinaria, Herramienta y Equipo",
+						"Conceptos Básicos de Análisis de Precios Unitarios",
+						"Conformación de Precios Unitarios",
+						"Conformación de Catalogo de Especificaciones para Presupuesto",
+						"Soporte Técnico para la Elaboración de Matrices de Precios Unitarios",
+						"Costos Directos, Indirectos y Utilidad",
+						"Programación de Obra",
+						"Concurso de Obra, Formas de Contratación y Contratos"
+					]
+				}
+			]
+		}
+	},
+	{
+		"carrera": "Especialidad en Psicología Educativa",
+		"nivel": "Especialidad",
+		"costo": 1300,
+		"imagenes": ["img1", "img2", "img3"],
+		"plan": {
+			"duracion": "2 Semestres",
+			"creditos": 50,
+			"acuerdo": "20100801",
+			"mapaCurricular": [
+				{
+					"periodo": "MATERIAS",
+					"materias": [
+						"Historia de la Educación",
+						"Educación Contemporánea",
+						"Psicología Educativa",
+						"Tecnología Educativa",
+						"Diseño y Análisis de investigación Educativa",
+						"Educación Especial",
+						"Niveles Educativos",
+						"Orientación Vocacional",
+						"Psicología Social de la Educación",
+						"Técnicas de Evaluación en Educación"
+					]
+				}
+			]
+		}
+	},
+	{
+		"carrera": "Especialidad en Derecho de Amparo",
+		"nivel": "Especialidad",
+		"costo": 1300,
+		"imagenes": ["img1", "img2", "img3"],
+		"plan": {
+			"duracion": "2 Semestres",
+			"creditos": 50,
+			"acuerdo": "2006233",
+			"mapaCurricular": [
+				{
+					"periodo": "MATERIAS",
+					"materias": [
+						"Metodología de la investigación",
+						"Ética Profesional del Especialista en Derecho de Amparo",
+						"Derecho Constitucional y Garantías Individuales",
+						"Autoridades Competentes para Conocer el Juicio de Amparo",
+						"Formalidades en el Juicio de Amparo",
+						"Sujetos de Amparo",
+						"Términos, Notificaciones e Incidentes en el Juicio de Amparo",
+						"Juicio de Amparo",
+						"Sentencia y Recursos en el Amparo",
+						"Suspensión del Acto Reclamado en el Amparo"
+					]
+				}
+			]
+		}
+	}
+]
