@@ -110,26 +110,20 @@ const Hero = () => {
 										</Text>
 									</Flex>
 									<Flex justifyContent="center" flexWrap="wrap">
-										<Link
-											href={item.link1}
-											bg={styles.background.light}
-											_hover={{ bg: "#0055FF" }}
-											py="3"
-											m={["5", "10"]}
-											w="200px"
-										>
-											INSCRIBIRME
-										</Link>
-										<Link
-											href={item.link2}
-											_hover={{ bg: "whiteAlpha.300" }}
-											border="1px"
-											py="3"
-											m={["2", "10"]}
-											w="200px"
-										>
-											OFERTA EDUCATIVA
-										</Link>
+										{item.button &&
+											item.button.map((option, index) => (
+												<Link
+													href={option.link}
+													bg={option.bg}
+													border={option.border}
+													borderColor={option.borderColor}
+													py="2.5"
+													m={["5", "8"]}
+													w="200px"
+												>
+													{option.text}
+												</Link>
+											))}
 									</Flex>
 								</Flex>
 							</Flex>
@@ -142,7 +136,7 @@ const Hero = () => {
 					position="absolute"
 					w="100%"
 					pt="30px"
-					top={["3.5%", "8%", "8%", "14%"]}
+					top={["4%", "8%", "10%", "11.5%"]}
 				>
 					<Button
 						h="100px"

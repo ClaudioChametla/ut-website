@@ -7,8 +7,11 @@
 		"heroTwoTitle": "52px",
 		"title": "32px",
 		"subtitle": "18px",
+		"labelCost": "16px",
 		"text": "16px",
-		"fontFamily": "Montserrat"
+		"littleText": "12px",
+		"fontFamily": "Montserrat",
+		"color": "#999999"
 	},
 	"background": {
 		"light": "#00489E",

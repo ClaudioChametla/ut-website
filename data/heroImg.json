@@ -5,15 +5,43 @@
 			"title": "SE FAMILIA UT",
 			"subtitle": "Forja un espiritu de perseverancia, disciplina y trabajo. En Universidad Tollancingo, siempre tenemos un lugar para TI.",
 			"text": "En Universidad Tollancingo, siempre tenemos un lugar para TI.",
-			"link1": "#",
-			"link2": "#"
+			"button": [
+				{
+					"text": "INSCRIBETE",
+					"link": "#",
+					"bg": "#00489E",
+					"border": "none",
+					"borderColor": "none"
+				},
+				{
+					"text": "OFERTA EDUCATIVA",
+					"link": "/oferta",
+					"bg": "none",
+					"border": "solid",
+					"borderColor": "white"
+				}
+			]
 		},
 		{
 			"src": "/images/Hero2.jpg",
 			"title": "INSCRIBETE YA",
 			"subtitle": "Que nada trunque tus ganas de seguir estudiando.",
-			"link1": "#",
-			"link2": "#"
+			"button": [
+				{
+					"text": "INSCRIBETE",
+					"link": "#",
+					"bg": "#00489E",
+					"border": "none",
+					"borderColor": "none"
+				},
+				{
+					"text": "OFERTA EDUCATIVA",
+					"link": "/oferta",
+					"bg": "none",
+					"border": "solid",
+					"borderColor": "white"
+				}
+			]
 		}
 	]
 }
