@@ -43,7 +43,6 @@ const Navbar = () => {
 		if (global.document.documentElement.scrollTop < 45) {
 			navcontainer.current.style.transform = "translateY(0px)";
 			navbar2.current.style.backgroundColor = "#00489E";
-			navcontainer.current.style.position = "fixed";
 		}
 	}
 	useEffect(() => {
@@ -52,7 +51,7 @@ const Navbar = () => {
 
 	return (
 		<Box>
-			<Box overflow="hidden" w="100%" zIndex={99} ref={navcontainer}>
+			<Box overflow="hidden" w="100%" zIndex={99} ref={navcontainer} position="fixed">
 				<Center w="100%" maxW="100%" bg={styles.background.navBgLight}>
 					<Box w={styles.container.width} fontFamily="Montserrat">
 						<Box w={styles.container.width} fontFamily="Montserrat">
@@ -110,7 +109,7 @@ const Navbar = () => {
 									justifyContent="flex-start"
 									color="#CCCCCC"
 								>
-									<Link
+									<Box
 										href="#"
 										d="flex"
 										justifyContent="center"
@@ -129,7 +128,7 @@ const Navbar = () => {
 											filter="invert(93%) sepia(0%) saturate(0%) hue-rotate(166deg) brightness(90%) contrast(91%)"
 											_hover={{ transform: "scale(1.2)" }}
 										/>
-									</Link>
+									</Box>
 									<Text p="1" fontSize="12px" fontWeight="bold">
 										EMAIL: <br />
 										INFO@UNIVERSIDADTOLLANCINGO.COM

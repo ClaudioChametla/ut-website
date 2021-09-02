@@ -15,7 +15,7 @@
 		},
 		{
 			"name": "OFERTA EDUCATIVA",
-			"link": "#2",
+			"link": "/oferta",
 			"filter": "invert(93%) sepia(0%) saturate(0%) hue-rotate(166deg) brightness(90%) contrast(91%)",
 			"icon": "/icons/angle-right.svg",
 			"options": [
