@@ -1,6 +1,6 @@
 {
 	"container": {
-		"width": "70vw"
+		"width": ["90vw", "85vw", "75vw", "70vw"]
 	},
 	"font": {
 		"heroOneTitle": "72px",

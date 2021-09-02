@@ -7,7 +7,7 @@ import cardsinfo from "../../data/cardsinfo.json";
 const Cards = () => {
 	const infocards = cardsinfo.cards;
 	return (
-		<Center w="100%" mt={["10px", "10px", "20px", "-40px"]}>
+		<Center w="100%" mt={["10px", "10px", "20px", "-40px"]} zIndex="10">
 			<Grid templateColumns={["", "", "", "repeat(3, 1fr)"]} w={["95%", "95%", "95%", "85%"]}>
 				{infocards &&
 					infocards.map((item, index) => (
