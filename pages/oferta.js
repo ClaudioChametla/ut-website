@@ -2,6 +2,7 @@ import Head from "next/head";
 import { Flex } from "@chakra-ui/react";
 import Container from "../components/Container";
 import { SubHero } from "../components/Hero";
+import Tabs from "../components/Tabs";
 
 export default function Home() {
 	return (
@@ -13,6 +14,7 @@ export default function Home() {
 			</Head>
 			<Container>
 				<SubHero title="OFERTA EDUCATIVA" src="/images/subHero1.jpeg" />
+				<Tabs />
 			</Container>
 		</Flex>
 	);
