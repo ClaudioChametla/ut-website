@@ -1,10 +1,10 @@
 import { Box, Grid, Image, Flex, Text, Center, Link } from "@chakra-ui/react";
 import { useEffect, useState } from "react";
 import styles from "../../styles/styles.json";
-import CareerCard from "../../data/example.json";
+import careerCard from "../../data/educativeOffer.json";
 
 const CareerCards = ({ data }) => {
-	const careercards = CareerCard.carreras;
+	const careercards = careerCard;
 	const stars = [1, 2, 3, 4, 5];
 	const [dataCards, setDataCards] = useState(null);
 
@@ -31,7 +31,7 @@ const CareerCards = ({ data }) => {
 				>
 					{dataCards &&
 						dataCards.map((item) => (
-							<Link href={item.link}>
+							<Link href="#">
 								<Box
 									key={`CareerCards-${item}`}
 									w="100%"
@@ -45,7 +45,6 @@ const CareerCards = ({ data }) => {
 								>
 									<Flex w="100%" alignItems="flex-end" flexDir="column">
 										<Flex
-											flexDir="column"
 											bg={styles.background.light}
 											clipPath="polygon(100% 0, 100% 51%, 100% 100%, 0 100%, 14% 51%, 0 0);"
 											w="90px"
@@ -53,6 +52,7 @@ const CareerCards = ({ data }) => {
 											color="white"
 											textAlign="center"
 											justifyContent="center"
+											alignItems="center"
 											fontSize={styles.font.labelCost}
 											zIndex="20"
 											position="absolute"
@@ -60,7 +60,8 @@ const CareerCards = ({ data }) => {
 											fontFamily="sans-serif"
 											fontWeight="solid"
 										>
-											{item.cost}
+											<p>$</p>
+											{item.costo}
 										</Flex>
 									</Flex>
 									<Box overflow="hidden" h="65%">
@@ -80,7 +81,7 @@ const CareerCards = ({ data }) => {
 										textAlign="center"
 										justifyContent="center !important"
 									>
-										<Text>{item.name}</Text>
+										<Text>{item.carrera}</Text>
 									</Flex>
 									<Flex
 										bg="#F3F3F3"
