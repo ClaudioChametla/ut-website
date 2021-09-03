@@ -3,6 +3,7 @@
 		"carrera": "Licenciatura en Gastronomía",
 		"nivel": "Licenciatura",
 		"costo": 1750,
+		"src": "/images/Gastronomia.jpg",
 		"imagenes": ["img1", "img2", "img3"],
 		"plan": {
 			"duracion": "10 Cuatrimestres",
@@ -125,6 +126,7 @@
 		"carrera": "Licenciatura en Pedagogía",
 		"nivel": "Licenciatura",
 		"costo": 1250,
+		"src": "/images/Pedagogia.jpg",
 		"imagenes": ["img1", "img2", "img3"],
 		"plan": {
 			"duracion": "8 Semestres",
@@ -234,6 +236,7 @@
 		"carrera": "Licenciatura en Psicología",
 		"nivel": "Licenciatura",
 		"costo": 1250,
+		"src": "/images/Psicologia.jpg",
 		"imagenes": ["img1", "img2", "img3"],
 		"plan": {
 			"duracion": "9 Semestres",
@@ -335,6 +338,7 @@
 		"carrera": "Licenciatura en Arquitectura",
 		"nivel": "Licenciatura",
 		"costo": 1250,
+		"src": "/images/Arquitectura.jpg",
 		"imagenes": ["img1", "img2", "img3"],
 		"plan": {
 			"duracion": "9 Semestres",
@@ -431,6 +435,7 @@
 		"carrera": "Licenciatura en Contaduría",
 		"nivel": "Licenciatura",
 		"costo": 1250,
+		"src": "/images/Contaduria.jpg",
 		"imagenes": ["img1", "img2", "img3"],
 		"plan": {
 			"duracion": "9 Semestres",
@@ -536,6 +541,7 @@
 		"carrera": "Licenciatura en Derecho",
 		"nivel": "Licenciatura",
 		"costo": 1250,
+		"src": "/images/Derecho.jpg",
 		"imagenes": ["img1", "img2", "img3"],
 		"plan": {
 			"duracion": "10 Cuatrimestres",
@@ -659,6 +665,7 @@
 		"carrera": "Especialidad en Formación Docente",
 		"nivel": "Especialidad",
 		"costo": 1300,
+		"src": "/images/FDocente.jpg",
 		"imagenes": ["img1", "img2", "img3"],
 		"plan": {
 			"duracion": "2 Semestres",
@@ -687,6 +694,7 @@
 		"carrera": "Especialidad en Costos de la Construcción",
 		"nivel": "Especialidad",
 		"costo": 1300,
+		"src": "/images/Construcción.jpg",
 		"imagenes": ["img1", "img2", "img3"],
 		"plan": {
 			"duracion": "2 Semestres",
@@ -715,6 +723,7 @@
 		"carrera": "Especialidad en Psicología Educativa",
 		"nivel": "Especialidad",
 		"costo": 1300,
+		"src": "/images/PsicologiaEducativa.jpg",
 		"imagenes": ["img1", "img2", "img3"],
 		"plan": {
 			"duracion": "2 Semestres",
@@ -743,6 +752,7 @@
 		"carrera": "Especialidad en Derecho de Amparo",
 		"nivel": "Especialidad",
 		"costo": 1300,
+		"src": "/images/DerechoAmp.jpg",
 		"imagenes": ["img1", "img2", "img3"],
 		"plan": {
 			"duracion": "2 Semestres",

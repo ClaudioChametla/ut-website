@@ -11,7 +11,7 @@ import {
 	Image,
 } from "@chakra-ui/react";
 import { useRef } from "react";
-import navbar from "../../data/links.json";
+import PropTypes from "prop-types";
 
 const MenuComponent = ({ item }) => {
 	const { isOpen, onOpen, onClose } = useDisclosure();
@@ -231,5 +231,11 @@ const MenuComponent = ({ item }) => {
 		</Flex>
 	);
 };
+MenuComponent.propTypes = {
+	item: PropTypes.objectOf(PropTypes.any),
+};
 
+MenuComponent.defaultProps = {
+	item: {},
+};
 export default MenuComponent;

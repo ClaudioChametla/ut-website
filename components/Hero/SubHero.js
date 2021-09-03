@@ -1,4 +1,5 @@
 import { Box, Center, Divider, Text } from "@chakra-ui/react";
+import PropTypes from "prop-types";
 import styles from "../../styles/styles.json";
 
 const SubHero = ({ title, src }) => (
@@ -35,4 +36,13 @@ const SubHero = ({ title, src }) => (
 		</Center>
 	</Box>
 );
+SubHero.propTypes = {
+	title: PropTypes.string,
+	src: PropTypes.string,
+};
+
+SubHero.defaultProps = {
+	title: "",
+	src: "",
+};
 export default SubHero;
