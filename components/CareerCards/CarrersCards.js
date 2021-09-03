@@ -1,4 +1,5 @@
-import { Box, Grid, Image, Flex, Text, Center, Link } from "@chakra-ui/react";
+import { Box, Grid, Image, Flex, Text, Center } from "@chakra-ui/react";
+import Link from "next/link";
 import { useEffect, useState } from "react";
 import styles from "../../styles/styles.json";
 import careerCard from "../../data/educativeOffer.json";
@@ -17,25 +18,27 @@ const CareerCards = ({ data }) => {
 	}, [data]);
 
 	return (
-		<Center w="100%" zIndex="10" bg="white">
-			<Box w={styles.container.width} align="center">
+		<Box w="100%" align="center">
+			<Center w="100%" zIndex="10">
 				<Grid
+					w="100%"
 					templateColumns={[
-						"repeat(1, 100%)",
-						"repeat(1,100%)",
-						"repeat(2, 50%)",
-						"repeat(3, 300px)",
+						"repeat(1, 1fr)",
+						"repeat(1, 1fr)",
+						"repeat(2, 1fr)",
+						"repeat(3, 1fr)",
 					]}
 					gap={6}
 					my="10"
+					alignItems="center"
 				>
 					{dataCards &&
 						dataCards.map((item) => (
-							<Link href="#">
+							<Link href={`${item.href}${item.id}`}>
 								<Box
 									key={`CareerCards-${item}`}
-									w="100%"
-									h={["500px", "600px", "400px", "400px"]}
+									w="95%"
+									h={["500px", "600px", "400px", "500px"]}
 									border="solid"
 									borderColor="#F3F3F3"
 									overflow="hidden"
@@ -125,8 +128,8 @@ const CareerCards = ({ data }) => {
 							</Link>
 						))}
 				</Grid>
-			</Box>
-		</Center>
+			</Center>
+		</Box>
 	);
 };
 

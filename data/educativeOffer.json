@@ -1,10 +1,12 @@
 [
 	{
+		"id": "licenciatura-gastronomia",
 		"carrera": "Licenciatura en Gastronomía",
 		"nivel": "Licenciatura",
 		"costo": 1750,
 		"src": "/images/Gastronomia.jpg",
 		"imagenes": ["img1", "img2", "img3"],
+		"href": "/ofertaEducativa/",
 		"plan": {
 			"duracion": "10 Cuatrimestres",
 			"creditos": 403,
@@ -123,11 +125,13 @@
 		}
 	},
 	{
+		"id": "licenciatura-pedagogia",
 		"carrera": "Licenciatura en Pedagogía",
 		"nivel": "Licenciatura",
 		"costo": 1250,
 		"src": "/images/Pedagogia.jpg",
 		"imagenes": ["img1", "img2", "img3"],
+		"href": "/ofertaEducativa/",
 		"plan": {
 			"duracion": "8 Semestres",
 			"creditos": 342,
@@ -233,11 +237,13 @@
 		}
 	},
 	{
+		"id": "licenciatura-psicologia",
 		"carrera": "Licenciatura en Psicología",
 		"nivel": "Licenciatura",
 		"costo": 1250,
 		"src": "/images/Psicologia.jpg",
 		"imagenes": ["img1", "img2", "img3"],
+		"href": "/ofertaEducativa/",
 		"plan": {
 			"duracion": "9 Semestres",
 			"creditos": 316,
@@ -335,11 +341,13 @@
 		}
 	},
 	{
+		"id": "licenciatura-arquitectura",
 		"carrera": "Licenciatura en Arquitectura",
 		"nivel": "Licenciatura",
 		"costo": 1250,
 		"src": "/images/Arquitectura.jpg",
 		"imagenes": ["img1", "img2", "img3"],
+		"href": "/ofertaEducativa/",
 		"plan": {
 			"duracion": "9 Semestres",
 			"creditos": 353,
@@ -432,11 +440,13 @@
 		}
 	},
 	{
+		"id": "licenciatura-contaduria",
 		"carrera": "Licenciatura en Contaduría",
 		"nivel": "Licenciatura",
 		"costo": 1250,
 		"src": "/images/Contaduria.jpg",
 		"imagenes": ["img1", "img2", "img3"],
+		"href": "/ofertaEducativa/",
 		"plan": {
 			"duracion": "9 Semestres",
 			"creditos": 348,
@@ -538,11 +548,13 @@
 		}
 	},
 	{
+		"id": "licenciatura-derecho",
 		"carrera": "Licenciatura en Derecho",
 		"nivel": "Licenciatura",
 		"costo": 1250,
 		"src": "/images/Derecho.jpg",
 		"imagenes": ["img1", "img2", "img3"],
+		"href": "/ofertaEducativa/",
 		"plan": {
 			"duracion": "10 Cuatrimestres",
 			"creditos": 336,
@@ -662,11 +674,13 @@
 		}
 	},
 	{
+		"id": "especialidad-formacion-docente",
 		"carrera": "Especialidad en Formación Docente",
 		"nivel": "Especialidad",
 		"costo": 1300,
 		"src": "/images/FDocente.jpg",
 		"imagenes": ["img1", "img2", "img3"],
+		"href": "/ofertaEducativa/",
 		"plan": {
 			"duracion": "2 Semestres",
 			"creditos": 50,
@@ -691,11 +705,13 @@
 		}
 	},
 	{
+		"id": "especialidad-costos-construccion",
 		"carrera": "Especialidad en Costos de la Construcción",
 		"nivel": "Especialidad",
 		"costo": 1300,
 		"src": "/images/Construcción.jpg",
 		"imagenes": ["img1", "img2", "img3"],
+		"href": "/ofertaEducativa/",
 		"plan": {
 			"duracion": "2 Semestres",
 			"creditos": 50,
@@ -720,11 +736,13 @@
 		}
 	},
 	{
+		"id": "especialidad-psicologia-educativa",
 		"carrera": "Especialidad en Psicología Educativa",
 		"nivel": "Especialidad",
 		"costo": 1300,
 		"src": "/images/PsicologiaEducativa.jpg",
 		"imagenes": ["img1", "img2", "img3"],
+		"href": "/ofertaEducativa/",
 		"plan": {
 			"duracion": "2 Semestres",
 			"creditos": 50,
@@ -749,11 +767,13 @@
 		}
 	},
 	{
+		"id": "especialidad-derecho-amparo",
 		"carrera": "Especialidad en Derecho de Amparo",
 		"nivel": "Especialidad",
 		"costo": 1300,
 		"src": "/images/DerechoAmp.jpg",
 		"imagenes": ["img1", "img2", "img3"],
+		"href": "/ofertaEducativa/",
 		"plan": {
 			"duracion": "2 Semestres",
 			"creditos": 50,

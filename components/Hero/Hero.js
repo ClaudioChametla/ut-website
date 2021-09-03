@@ -111,8 +111,9 @@ const Hero = () => {
 									</Flex>
 									<Flex justifyContent="center" flexWrap="wrap">
 										{item.button &&
-											item.button.map((option, index) => (
+											item.button.map((option, subIndex) => (
 												<Link
+													key={`LinkHero${subIndex}`}
 													href={option.link}
 													bg={option.bg}
 													border={option.border}
