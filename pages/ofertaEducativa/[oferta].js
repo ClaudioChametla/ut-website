@@ -2,7 +2,7 @@ import Head from "next/head";
 import { Flex } from "@chakra-ui/react";
 import { useRouter } from "next/router";
 import Container from "../../components/Container";
-import { SubHero } from "../../components/Hero";
+import { HeroDynamic } from "../../components/Hero";
 import List from "../../components/List";
 import educativeOffer from "../../data/educativeOffer.json";
 
@@ -21,10 +21,7 @@ export default function Home() {
 				<link rel="icon" href="/favicon.ico" />
 			</Head>
 			<Container>
-				<SubHero
-					title={pageData ? pageData.carrera : "La página no existe"}
-					src="/images/bg_oferta.jpg"
-				/>
+				<HeroDynamic title={pageData ? pageData.carrera : "La página no existe"} />
 				<List pageData={pageData} />
 			</Container>
 		</Flex>

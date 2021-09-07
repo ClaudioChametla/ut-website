@@ -1,6 +1,7 @@
 import { Box, Grid, Image, Flex, Text, Center } from "@chakra-ui/react";
 import Link from "next/link";
 import { useEffect, useState } from "react";
+import PropTypes from "prop-types";
 import styles from "../../styles/styles.json";
 import careerCard from "../../data/educativeOffer.json";
 
@@ -28,17 +29,16 @@ const CareerCards = ({ data }) => {
 						"repeat(2, 1fr)",
 						"repeat(3, 1fr)",
 					]}
-					gap={6}
+					gap={4}
 					my="10"
 					alignItems="center"
 				>
 					{dataCards &&
 						dataCards.map((item) => (
-							<Link href={`${item.href}${item.id}`}>
+							<Link key={`CareerCards-${item.id}`} href={`${item.href}${item.id}`}>
 								<Box
-									key={`CareerCards-${item}`}
-									w="95%"
-									h={["500px", "600px", "400px", "500px"]}
+									w="100%"
+									h={["400px", "400px", "400px", "450px", "400px"]}
 									border="solid"
 									borderColor="#F3F3F3"
 									overflow="hidden"
@@ -113,8 +113,9 @@ const CareerCards = ({ data }) => {
 										</Flex>
 										<Flex mr="10">
 											{stars.map &&
-												stars.map(() => (
+												stars.map((item2) => (
 													<Image
+														key={`stars-${item2}`}
 														ml="0.5"
 														src="/icons/star.svg"
 														w="13px"
@@ -131,6 +132,13 @@ const CareerCards = ({ data }) => {
 			</Center>
 		</Box>
 	);
+};
+CareerCards.propTypes = {
+	data: PropTypes.arrayOf(PropTypes.any),
+};
+
+CareerCards.defaultProps = {
+	data: [],
 };
 
 export default CareerCards;

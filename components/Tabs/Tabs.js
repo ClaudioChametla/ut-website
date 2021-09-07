@@ -10,7 +10,7 @@ function tabs() {
 	return (
 		<Center marginTop="100px" marginBottom="100px" w="100%">
 			<Box align="center" w={styles.container.width}>
-				<Tabs size="sm" variant="unstyled" align="center">
+				<Tabs size="sm" variant="unstyled" align="center" id="tabContainer">
 					<TabList>
 						<Tab
 							w="100px"
