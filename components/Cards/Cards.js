@@ -1,7 +1,6 @@
 /* eslint-disable react/no-array-index-key */
 import { Box, Grid, Image, Flex, Text, Center } from "@chakra-ui/react";
 import styles from "../../styles/styles.json";
-import stylesTwo from "../../styles/stylesTwo.json";
 import cardsinfo from "../../data/cardsinfo.json";
 
 const Cards = () => {

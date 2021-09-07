@@ -29,7 +29,6 @@ const Hero = () => {
 	};
 
 	const anterior = () => {
-		console.log("anterior");
 		if (slideShow.current.children.length > 0) {
 			const index = slideShow.current.children.length - 1;
 			const ultimoElemento = slideShow.current.children[index];
