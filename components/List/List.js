@@ -1,3 +1,4 @@
+/* eslint-disable react/no-array-index-key */
 import {
 	Box,
 	Accordion,
@@ -16,7 +17,7 @@ import styles from "../../styles/styles.json";
 
 const List = ({ pageData }) => (
 	<Center fontFamily={styles.font.fontFamily} my="10">
-		<Flex w={styles.container.width} flexDir="column">
+		<Flex w={["90vw", "85vw", "53vw", "48vw"]} flexDir="column">
 			<Box fontWeight="bold">
 				<Text>Carrera: {pageData && pageData.carrera}</Text>
 				<Text>Duración: {pageData && pageData.plan.duracion}</Text>
@@ -24,11 +25,11 @@ const List = ({ pageData }) => (
 				<Text>Acuerdo de la SEP: N° {pageData && pageData.plan.acuerdo}</Text>
 
 				<Box>
-					{pageData.plan.mapaCurricular &&
-						pageData.plan.mapaCurricular.map((mapa) => (
+					{pageData &&
+						pageData.plan.mapaCurricular.map((mapa, index) => (
 							<Accordion
 								allowToggle
-								key={`List-Accordion-${mapa}`}
+								key={`List-Accordion-${pageData.id}${index}`}
 								w={["100%", "100%", "100%", "60%"]}
 								my="2"
 								border="1px"
@@ -73,11 +74,11 @@ const List = ({ pageData }) => (
 );
 
 List.propTypes = {
-	pageData: PropTypes.string,
+	pageData: PropTypes.objectOf(PropTypes.any),
 };
 
 List.defaultProps = {
-	pageData: "",
+	pageData: null,
 };
 
 export default List;

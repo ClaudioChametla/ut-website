@@ -13,6 +13,7 @@ import {
 	Grid,
 } from "@chakra-ui/react";
 import { useState } from "react";
+import PropTypes from "prop-types";
 import styles from "../../styles/styles.json";
 import footerSN from "../../data/footerSN.json";
 
@@ -79,6 +80,18 @@ const minimap = () => {
 			<Modalcomponent dataModal={dataModal} isOpen={isOpen} onClose={onClose} />
 		</Box>
 	);
+};
+
+Modalcomponent.propTypes = {
+	dataModal: PropTypes.objectOf(PropTypes.any),
+	isOpen: PropTypes.bool,
+	onClose: PropTypes.func,
+};
+
+Modalcomponent.defaultProps = {
+	dataModal: {},
+	isOpen: false,
+	onClose: null,
 };
 
 export default minimap;

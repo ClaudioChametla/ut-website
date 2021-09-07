@@ -1,3 +1,3 @@
-import subcontent from "./SubContent";
+import SubContent from "./SubContent";
 
-export default subcontent;
+export default SubContent;

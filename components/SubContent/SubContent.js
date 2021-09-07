@@ -3,10 +3,10 @@ import styles from "../../styles/styles.json";
 import MiniMap from "./MiniMap";
 import footerSN from "../../data/footerSN.json";
 
-const subcontent = () => {
+const SubContent = () => {
 	const { socialNetworks } = footerSN;
 	return (
-		<Flex marginLeft="25px">
+		<Flex>
 			<Stack>
 				<Text fontSize="18px" color="#999999">
 					Redes Sociales
@@ -48,7 +48,7 @@ const subcontent = () => {
 							/>
 							<Text w="200px" fontSize={styles.font.text}>
 								<Link
-									href="#"
+									href="#1"
 									_hover={{ textDecoration: "none", color: "blue.500" }}
 								>
 									LICENCIATURA EN CONTADURIA
@@ -61,9 +61,9 @@ const subcontent = () => {
 								src="/images/30-Gast-76x65.jpg"
 								boxSize={["50px", "60px", "60px", "60px"]}
 							/>
-							<Text w={["", "200px", "200px", "200px"]} fontSize={styles.font.text}>
+							<Text w="200px" fontSize={styles.font.text}>
 								<Link
-									href="#"
+									href="#1"
 									_hover={{ textDecoration: "none", color: "blue.500" }}
 								>
 									ESPECIALIDAD EN GASTRONOMÍA
@@ -78,7 +78,7 @@ const subcontent = () => {
 							/>
 							<Text w="200px" fontSize={styles.font.text}>
 								<Link
-									href="#"
+									href="#1"
 									_hover={{ textDecoration: "none", color: "blue.500" }}
 								>
 									INSCRIPCIONES
@@ -87,7 +87,7 @@ const subcontent = () => {
 						</HStack>
 					</VStack>
 				</Box>
-				<Box w={["100%", "80%", "60%", "40%"]}>
+				<Box w={["95%", "300px", "300px", "300px"]}>
 					<Text fontSize="18px" color="#999999">
 						Noticias Recientes
 					</Text>
@@ -144,4 +144,4 @@ const subcontent = () => {
 		</Flex>
 	);
 };
-export default subcontent;
+export default SubContent;
