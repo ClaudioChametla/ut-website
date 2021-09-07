@@ -1,6 +1,10 @@
 {
 	"container": {
-		"width": ["90vw", "85vw", "75vw", "70vw"]
+		"width": ["90vw", "85vw", "75vw", "70vw"],
+		"grid": {
+			"column": ["repeat(1,1fr)", "repeat(1,1fr)", "repeat(1,1fr)", "repeat(2,1fr)"],
+			"row": ["repeat(3,auto)", "repeat(3,auto)", "repeat(3,auto)", "repeat(2,auto)"]
+		}
 	},
 	"font": {
 		"heroOneTitle": "72px",
