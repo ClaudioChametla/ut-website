@@ -1,4 +1,14 @@
-import { Tabs, TabList, TabPanels, Tab, TabPanel, Center, Divider, Box } from "@chakra-ui/react";
+import {
+	Tabs,
+	TabList,
+	TabPanels,
+	Tab,
+	TabPanel,
+	Center,
+	Divider,
+	Box,
+	useMediaQuery,
+} from "@chakra-ui/react";
 import CarrersCards from "../CareerCards/CarrersCards";
 import educativeOffer from "../../data/educativeOffer.json";
 import styles from "../../styles/styles.json";
@@ -7,6 +17,8 @@ function tabs() {
 	const especialidad = educativeOffer.filter((value) => value.nivel === "Especialidad");
 	const licenciatura = educativeOffer.filter((value) => value.nivel === "Licenciatura");
 	const posgrado = educativeOffer.filter((value) => value.nivel === "Posgrado");
+	const [isLargerThan768] = useMediaQuery("(min-width: 768px)");
+
 	return (
 		<Center marginTop="100px" marginBottom="100px" w="100%">
 			<Box align="center" w={styles.container.width}>
@@ -33,7 +45,7 @@ function tabs() {
 							_hover={{ color: "white", bg: "#0047A1" }}
 							_selected={{ color: "white", bg: "#0047A1" }}
 						>
-							Especialidad
+							{isLargerThan768 ? "Especialidad" : "Esp."}
 						</Tab>
 						<Center height="50px">
 							<Divider orientation="vertical" />
@@ -46,7 +58,7 @@ function tabs() {
 							_hover={{ color: "white", bg: "#0047A1" }}
 							_selected={{ color: "white", bg: "#0047A1" }}
 						>
-							Licenciatura
+							{isLargerThan768 ? "Licenciatura" : "Lic."}
 						</Tab>
 						<Center height="50px">
 							<Divider orientation="vertical" />
@@ -59,7 +71,7 @@ function tabs() {
 							_hover={{ color: "white", bg: "#0047A1" }}
 							_selected={{ color: "white", bg: "#0047A1" }}
 						>
-							Posgrados
+							{isLargerThan768 ? "Posgrados" : "Pos."}
 						</Tab>
 					</TabList>
 					<TabPanels>
