@@ -10,6 +10,7 @@ import {
 	useDisclosure,
 	Image,
 } from "@chakra-ui/react";
+
 import { useRef } from "react";
 import PropTypes from "prop-types";
 
@@ -23,7 +24,7 @@ const MenuComponent = ({ item }) => {
 		<Flex color="white">
 			<Box alignSelf="center" h="100%" align="center">
 				<Menu id="Menu-inMenuComponent" isOpen={isOpen} isLazy>
-					<Link href={item.link}>
+					<Link href={item.link} _hover={{ textDecoration: "none" }}>
 						<MenuButton
 							ref={finalRef}
 							role="button"
@@ -35,6 +36,9 @@ const MenuComponent = ({ item }) => {
 							onMouseEnter={onOpen}
 							onMouseLeave={onClose}
 							w="100%"
+							_focus={{
+								boxShadow: "none",
+							}}
 						>
 							{item.name}
 						</MenuButton>
@@ -79,6 +83,10 @@ const MenuComponent = ({ item }) => {
 												ref={finalRef}
 												onMouseEnter={index === 0 ? onM2Open : onM4Open}
 												onMouseLeave={index === 0 ? onM2Close : onM4Close}
+												_focus={{
+													boxShadow: "none",
+												}}
+												_hover={{ textDecoration: "none" }}
 											>
 												{option.name}
 												<br />
@@ -123,7 +131,12 @@ const MenuComponent = ({ item }) => {
 															}
 														>
 															<Menu isOpen={isM3Open} isLazy>
-																<Link href={subOption.link}>
+																<Link
+																	href={subOption.link}
+																	_hover={{
+																		textDecoration: "none",
+																	}}
+																>
 																	<MenuButton
 																		role="button"
 																		id={`IDMenuButton-${option.name}-${index2}`}
@@ -134,6 +147,9 @@ const MenuComponent = ({ item }) => {
 																		onMouseEnter={onM3Open}
 																		onMouseLeave={onM3Close}
 																		w="100%"
+																		_focus={{
+																			boxShadow: "none",
+																		}}
 																	>
 																		{subOption.name}
 																		<br />
@@ -188,6 +204,14 @@ const MenuComponent = ({ item }) => {
 																						href={
 																							lastOption.link
 																						}
+																						_focus={{
+																							boxShadow:
+																								"none",
+																						}}
+																						_hover={{
+																							textDecoration:
+																								"none",
+																						}}
 																					>
 																						{
 																							lastOption.name

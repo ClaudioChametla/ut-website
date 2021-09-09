@@ -147,6 +147,7 @@ const Navbar = () => {
 									{iconsImg &&
 										iconsImg.map((item) => (
 											<Link
+												style={{ textDecoration: "none" }}
 												key={`LinkNav-${item.name}`}
 												href={item.link}
 												target="_blank"
@@ -195,7 +196,15 @@ const Navbar = () => {
 								fontWeight="bold"
 								justifyContent="center"
 							>
-								<Link alignSelf="center" href="/" marginRight="2">
+								<Link
+									_focus={{
+										boxShadow: "none",
+									}}
+									alignSelf="center"
+									href="/"
+									marginRight="2"
+									_hover={{ textDecoration: "none" }}
+								>
 									INICIO
 								</Link>
 								{links.navbar.map((item) => (
@@ -204,7 +213,15 @@ const Navbar = () => {
 							</Box>
 
 							<Flex w="10%" justifyContent="center" alignSelf="center">
-								<Link href="/" h="100%" d="flex" justifyContent="center">
+								<Link
+									href="/"
+									h="100%"
+									d="flex"
+									justifyContent="center"
+									_focus={{
+										boxShadow: "none",
+									}}
+								>
 									<Image
 										src="/images/logo_UT_FFF_100.png"
 										alt="Logo"
@@ -229,6 +246,10 @@ const Navbar = () => {
 										href={item.link}
 										marginRight="8"
 										key={`Links-2Navbar-${index}`}
+										_focus={{
+											boxShadow: "none",
+										}}
+										_hover={{ textDecoration: "none" }}
 									>
 										{item.name}
 									</Link>

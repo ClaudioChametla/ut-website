@@ -2,7 +2,7 @@
 	"navbar": [
 		{
 			"name": "CONOCENOS",
-			"link": "#1",
+			"link": "/conocenos",
 			"filter": "invert(16%) sepia(14%) saturate(313%) hue-rotate(193deg) brightness(91%) contrast(93%)",
 			"icon": "/icons/angle-right.svg",
 			"options": [
@@ -26,12 +26,12 @@
 					"icon": "/icons/angle-right.svg",
 					"filter": "invert(16%) sepia(14%) saturate(313%) hue-rotate(193deg) brightness(91%) contrast(93%)",
 					"options": [
-						{ "name": "PEDAGOGIA" },
-						{ "name": "GASTRONOMÍA" },
-						{ "name": "PSICOLOGÍA" },
-						{ "name": "CONTADURÍA" },
-						{ "name": "ARQUITECTURA" },
-						{ "name": "DERECHO" }
+						{ "name": "PEDAGOGIA", "link": "#1" },
+						{ "name": "GASTRONOMÍA", "link": "#2" },
+						{ "name": "PSICOLOGÍA", "link": "#3" },
+						{ "name": "CONTADURÍA", "link": "#4" },
+						{ "name": "ARQUITECTURA", "link": "#5" },
+						{ "name": "DERECHO", "link": "#6" }
 					]
 				},
 				{

@@ -3,6 +3,7 @@ import { Flex } from "@chakra-ui/react";
 import Container from "../components/Container";
 import { SubHero } from "../components/Hero";
 import BarRoute from "../components/BarRoute/BarRoute";
+import History from "../components/History";
 
 export default function Home() {
 	return (
@@ -13,8 +14,9 @@ export default function Home() {
 				<link rel="icon" href="/favicon.ico" />
 			</Head>
 			<Container>
-				<SubHero title="CONOCENOS" src="/images/bg_oferta.jpg" />
+				<SubHero title="CONOCENOS" src="/images/banner_mural_negro-scaled.jpg" />
 				<BarRoute />
+				<History />
 			</Container>
 		</Flex>
 	);
