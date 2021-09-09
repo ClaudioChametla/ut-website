@@ -1,6 +1,7 @@
 import { Box, Grid, Image, Flex, Text, Center } from "@chakra-ui/react";
 import Link from "next/link";
 import { useEffect, useState } from "react";
+import PropTypes from "prop-types";
 import styles from "../../styles/styles.json";
 import careerCard from "../../data/educativeOffer.json";
 
@@ -85,7 +86,7 @@ const CareerCards = ({ data }) => {
 										textAlign="center"
 										justifyContent="center !important"
 									>
-										<Text>{item.carrera}</Text>
+										<Text textAlign="">{item.carrera}</Text>
 									</Flex>
 									<Flex
 										bg="#F3F3F3"
@@ -132,6 +133,14 @@ const CareerCards = ({ data }) => {
 			</Center>
 		</Box>
 	);
+};
+
+CareerCards.propTypes = {
+	data: PropTypes.objectOf(PropTypes.any),
+};
+
+CareerCards.defaultProps = {
+	data: {},
 };
 
 export default CareerCards;

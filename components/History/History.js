@@ -21,9 +21,11 @@ import {
 	useDisclosure,
 } from "@chakra-ui/react";
 import { useState } from "react";
+import PropTypes from "prop-types";
 import styles from "../../styles/styles.json";
 import history from "../../data/history.json";
 import images from "../../data/images.json";
+import Gallery from "../Gallery";
 
 const Modalcomponent = ({ dataModal, isOpen, onClose }) => (
 	<div>
@@ -41,13 +43,7 @@ const Modalcomponent = ({ dataModal, isOpen, onClose }) => (
 					_focus={{ border: 0 }}
 				/>
 				<ModalBody>
-					<Image
-						objectFit="cover"
-						src={dataModal.src ? dataModal.src : ""}
-						w="800px"
-						h="400px"
-						p="2"
-					/>
+					<Image objectFit="cover" src={dataModal || ""} w="800px" h="400px" p="2" />
 				</ModalBody>
 			</ModalContent>
 		</Modal>
@@ -57,7 +53,6 @@ const Modalcomponent = ({ dataModal, isOpen, onClose }) => (
 const History = () => {
 	const rectoria = history.msjRectoria;
 	const historia = history.Historia;
-	const img = images.imagenes;
 	const { identidad } = history;
 	const { isOpen, onOpen, onClose } = useDisclosure();
 	const [dataModal, setDataModal] = useState({});
@@ -90,8 +85,8 @@ const History = () => {
 								</Text>
 							</Box>
 						))}
-					<Box w={["100%", "100%", "50%", "50%"]} h="300px" my="5" bg="grey">
-						Galeria Brandon
+					<Box w={["100%", "100%", "50%", "50%"]} h="auto" m="20px">
+						<Gallery pageData={images} variant="small" />
 					</Box>
 				</Flex>
 			</Flex>
@@ -278,8 +273,8 @@ const History = () => {
 						gridRowGap={2}
 						alignContent="center"
 					>
-						{img &&
-							img.map((itemImg) => (
+						{images &&
+							images.imagenes.map((itemImg) => (
 								<Flex
 									zIndex="0"
 									key={`historyCards-${itemImg}`}
@@ -292,7 +287,7 @@ const History = () => {
 									onClick={onOpen}
 								>
 									<Image
-										src={itemImg.src}
+										src={itemImg}
 										h="400px"
 										w="100%"
 										_hover={{ filter: "brightness(60%)" }}
@@ -306,6 +301,18 @@ const History = () => {
 			<Modalcomponent dataModal={dataModal} isOpen={isOpen} onClose={onClose} />
 		</Box>
 	);
+};
+
+Modalcomponent.propTypes = {
+	dataModal: PropTypes.objectOf(PropTypes.any),
+	isOpen: PropTypes.bool,
+	onClose: PropTypes.func,
+};
+
+Modalcomponent.defaultProps = {
+	dataModal: {},
+	isOpen: false,
+	onClose: null,
 };
 
 export default History;

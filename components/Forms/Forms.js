@@ -1,12 +1,10 @@
+/* eslint-disable react/no-array-index-key */
 import {
 	Text,
 	Stack,
 	FormControl,
-	FormErrorMessage,
-	FormHelperText,
 	Input,
 	Select,
-	Box,
 	Image,
 	Center,
 	Flex,
