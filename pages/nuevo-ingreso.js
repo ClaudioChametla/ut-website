@@ -2,7 +2,6 @@ import Head from "next/head";
 import { Flex } from "@chakra-ui/react";
 import Container from "../components/Container";
 import { SubHero } from "../components/Hero";
-import Tabs from "../components/Tabs";
 import BarRoute from "../components/BarRoute/BarRoute";
 
 export default function Home() {
