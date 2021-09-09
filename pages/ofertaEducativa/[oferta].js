@@ -7,6 +7,7 @@ import List from "../../components/List";
 import educativeOffer from "../../data/educativeOffer.json";
 import SubContent from "../../components/SubContent";
 import styles from "../../styles/styles.json";
+import Gallery from "../../components/Gallery";
 
 export default function Home() {
 	const router = useRouter();
@@ -29,9 +30,10 @@ export default function Home() {
 						h="auto"
 						templateColumns={styles.container.grid.column}
 						templateRows={styles.container.grid.row}
+						columnGap={5}
 					>
-						<GridItem h="auto" rowStart={1} bg="green.100">
-							<Flex minH="200px" />
+						<GridItem h="auto" rowStart={1}>
+							<Gallery pageData={pageData} />
 						</GridItem>
 						<GridItem h="auto" rowStart={2}>
 							<List pageData={pageData} />
@@ -43,7 +45,7 @@ export default function Home() {
 							rowStart={[3, 3, 3, 1]}
 							h="auto"
 						>
-							<Center w="100%" h="100%">
+							<Center w="100%">
 								<SubContent />
 							</Center>
 						</GridItem>

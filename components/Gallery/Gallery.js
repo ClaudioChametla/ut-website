@@ -1,17 +1,16 @@
 /* eslint-disable react/no-array-index-key */
-import { Image, Grid, Box } from "@chakra-ui/react";
-import { useEffect, useState } from "react";
+import { Image, Flex, Box, useMediaQuery } from "@chakra-ui/react";
+import { useState } from "react";
 import PropTypes from "prop-types";
-import { motion, useAnimation } from "framer-motion";
-import Styles from "../../styles/styles.json";
+import { motion } from "framer-motion";
 
 const Gallery = ({ pageData }) => {
 	const MotionImage = motion(Image);
 	const { imagenes } = pageData;
-	let slideIndex = 1;
-	const controls = useAnimation();
+	const [isLargerThan768] = useMediaQuery("(min-width: 768px)");
+
 	const icon = {
-		hidden: { opacity: 0, scale: 0, x: "-100%" },
+		hidden: { opacity: 0, scale: 1, x: isLargerThan768 ? "-100%" : "-20px" },
 		visible: {
 			opacity: 1,
 			scale: 1,
@@ -24,43 +23,17 @@ const Gallery = ({ pageData }) => {
 	};
 	const [currentImg, setCurrentImg] = useState(0);
 
-	function showSlides(n) {
-		const slides = global.document.getElementsByClassName("mySlides");
-		if (n > slides.length) {
-			slideIndex = 1;
-		}
-		if (n < 1) {
-			slideIndex = slides.length;
-		}
-		for (let i = 0; i < slides.length; i++) {
-			slides[i].style.display = "none";
-			slides[i].style.initial = "hidden";
-		}
-		slides[slideIndex - 1].style.display = "block";
-		slides[slideIndex - 1].style.animate = "visible";
-	}
-
-	useEffect(() => {
-		// showSlides(slideIndex);
-	}, []);
-
-	function currentSlide(index) {
-		// showSlides((slideIndex = n));
-		setCurrentImg(index);
-	}
-
 	return (
-		<Box align="center" w={Styles.container.width} pos="relative" bg="blue">
-			<Box pt="30px" align="center" variants={icon} pos="relative" h="430px" bg="red">
+		<Box align="center" pos="relative" h="650px">
+			<Box align="center" variants={icon} pos="relative" h="500px">
 				{imagenes &&
 					imagenes.map((item, index) => (
 						<MotionImage
 							key={`galeriaimagenes-${index}`}
 							src={item}
 							alt="img"
-							w="60%"
-							h="400px"
-							left="150px"
+							w="100%"
+							h="500px"
 							pos="absolute"
 							objectFit="fill"
 							display="block"
@@ -71,22 +44,26 @@ const Gallery = ({ pageData }) => {
 						/>
 					))}
 			</Box>
-			<Grid templateColumns="repeat(5, 1fr)" w="60%" m="auto" gap={2} mt="5px">
+			<Flex w="100%" mt="5px" direction="row" overflowX="hidden">
 				{imagenes &&
 					imagenes.map((item, index) => (
-						<MotionImage
+						<Image
 							key={`gridimagenes-${index}`}
 							src={item}
 							alt="img"
-							w="100%"
-							id="demo"
-							onClick={() => currentSlide(index)}
-							_hover={{ filter: "brightness(60%)", cursor: "pointer" }}
-							whileHover={{ scale: 1.05 }}
-							whileTap={{ scale: 1 }}
+							m="5px"
+							fallbackSrc={item}
+							w="150px"
+							h="90px"
+							onClick={() => setCurrentImg(index)}
+							_hover={{
+								filter: "brightness(60%)",
+								cursor: "pointer",
+							}}
+							transition="all 200ms ease-in-out"
 						/>
 					))}
-			</Grid>
+			</Flex>
 		</Box>
 	);
 };

@@ -6,10 +6,10 @@
 		"costo": 1750,
 		"src": "/images/Gastronomia.jpg",
 		"imagenes": [
-			"/images/Gastronomia.jpg",
+			"/images/gastronomia.jpg",
 			"/images/Contaduria.jpg",
-			"/images/Gastronomia.jpg",
-			"/images/Gastronomia.jpg"
+			"/images/gastronomia.jpg",
+			"/images/Contaduria.jpg"
 		],
 		"href": "/ofertaEducativa/",
 		"plan": {

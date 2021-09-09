@@ -61,7 +61,7 @@ const Hero = () => {
 
 	return (
 		<>
-			<Box h={["45vh", "100vh"]} bg="black" overflow="hidden">
+			<Box h={["45vh", "100%"]} bg="black" overflow="hidden">
 				<Flex w="100%" h="100%" flexWrap="nowrap" ref={slideShow} position="relative">
 					{img &&
 						img.map((item, index) => (
