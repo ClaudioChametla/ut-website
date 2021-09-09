@@ -24,8 +24,13 @@ const Gallery = ({ pageData }) => {
 	const [currentImg, setCurrentImg] = useState(0);
 
 	return (
-		<Box align="center" pos="relative" h="650px">
-			<Box align="center" variants={icon} pos="relative" h="500px">
+		<Box align="center" pos="relative" h={["300px", "400px", "500px", "650px"]}>
+			<Box
+				align="center"
+				variants={icon}
+				pos="relative"
+				h={["200px", "300px", "400px", "500px"]}
+			>
 				{imagenes &&
 					imagenes.map((item, index) => (
 						<MotionImage
@@ -33,7 +38,7 @@ const Gallery = ({ pageData }) => {
 							src={item}
 							alt="img"
 							w="100%"
-							h="500px"
+							h={["200px", "300px", "400px", "500px"]}
 							pos="absolute"
 							objectFit="fill"
 							display="block"

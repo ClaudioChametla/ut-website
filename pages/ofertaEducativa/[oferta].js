@@ -24,7 +24,7 @@ export default function Home() {
 			</Head>
 			<Container>
 				<HeroDynamic title={pageData ? pageData.carrera : "La página no existe"} />
-				<Center w="100%" mt="100px" mb="50px">
+				<Center w="100%" mt={["20px", "50px", "100px", "100px"]} mb="50px">
 					<Grid
 						w={styles.container.width}
 						h="auto"
