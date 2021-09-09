@@ -5,7 +5,12 @@
 		"nivel": "Licenciatura",
 		"costo": 1750,
 		"src": "/images/Gastronomia.jpg",
-		"imagenes": ["img1", "img2", "img3"],
+		"imagenes": [
+			"/images/Gastronomia.jpg",
+			"/images/Contaduria.jpg",
+			"/images/Gastronomia.jpg",
+			"/images/Gastronomia.jpg"
+		],
 		"href": "/ofertaEducativa/",
 		"plan": {
 			"duracion": "10 Cuatrimestres",

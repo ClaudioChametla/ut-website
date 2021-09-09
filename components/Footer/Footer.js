@@ -9,7 +9,6 @@ import {
 	Divider,
 	Link,
 	Image,
-	WrapItem,
 	Modal,
 	ModalOverlay,
 	ModalContent,
@@ -19,6 +18,7 @@ import {
 	Grid,
 } from "@chakra-ui/react";
 import { useState } from "react";
+import PropTypes from "prop-types";
 import styles from "../../styles/styles.json";
 import stylesTwo from "../../styles/stylesTwo.json";
 import footerSN from "../../data/footerSN.json";
@@ -138,7 +138,7 @@ const Footer = () => {
 										fontSize={styles.font.text}
 									>
 										<Link
-											href="#"
+											href="/"
 											color="whiteAlpha.700"
 											_hover={{ textDecoration: "none", color: "blue.500" }}
 										>
@@ -154,7 +154,7 @@ const Footer = () => {
 									/>
 									<Text w="200px" fontSize={styles.font.text}>
 										<Link
-											href="#"
+											href="/"
 											color="whiteAlpha.700"
 											_hover={{ textDecoration: "none", color: "blue.500" }}
 										>
@@ -170,7 +170,7 @@ const Footer = () => {
 									/>
 									<Text w="200px" fontSize={styles.font.text}>
 										<Link
-											href="#"
+											href="/"
 											color="whiteAlpha.700"
 											_hover={{ textDecoration: "none", color: "blue.500" }}
 										>
@@ -200,7 +200,7 @@ const Footer = () => {
 									/>
 									<Center>
 										<Link
-											href="#"
+											href="/"
 											color="whiteAlpha.700"
 											ml="6px"
 											_hover={{ textDecoration: "none", color: "blue.500" }}
@@ -220,7 +220,7 @@ const Footer = () => {
 									/>
 									<Center>
 										<Link
-											href="#"
+											href="/"
 											color="whiteAlpha.700"
 											ml="6px"
 											_hover={{ textDecoration: "none", color: "blue.500" }}
@@ -239,7 +239,7 @@ const Footer = () => {
 									/>
 									<Center>
 										<Link
-											href="#"
+											href="/"
 											color="whiteAlpha.700"
 											ml="5px"
 											_hover={{ textDecoration: "none", color: "blue.500" }}
@@ -295,7 +295,7 @@ const Footer = () => {
 			>
 				<Text textAlign="center" color="whiteAlpha.500" fontSize={styles.font.text}>
 					©2020 UNIVERSIDAD TOLLANCINGO | TODOS LOS DERECHOS RESERVADOS. | POWERED BY
-					<Link href="#" color="blue.400">
+					<Link href="/" color="blue.400">
 						{" "}
 						ZENIAQ TECHNOLOGIES
 					</Link>
@@ -305,6 +305,18 @@ const Footer = () => {
 			<Modalcomponent dataModal={dataModal} isOpen={isOpen} onClose={onClose} />
 		</div>
 	);
+};
+
+Modalcomponent.propTypes = {
+	dataModal: PropTypes.objectOf(PropTypes.any),
+	isOpen: PropTypes.bool,
+	onClose: PropTypes.func,
+};
+
+Modalcomponent.defaultProps = {
+	dataModal: {},
+	isOpen: "False",
+	onClose: "",
 };
 
 export default Footer;
