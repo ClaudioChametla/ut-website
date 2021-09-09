@@ -1,0 +1,44 @@
+{
+	"msjRectoria": [
+		{
+			"nombre": "MENSAJE DE RECTORÍA",
+			"contenido": "Actualmente la U.T. compila toda la experiencia adquirida durante su trayectoria y asume con responsabilidad el reto de la nueva normalidad incorporando nuevas tecnologías para el trabajo colaborativo y sistemas actualizados de comunicación asociados a la práctica pedagógica. Hoy el espíritu UT se manifiesta a través del ser PERSEVERANTE, la DISCIPLINA y el TRABAJO."
+		}
+	],
+	"Historia": [
+		{
+			"nombre": "FUNDACIÓN",
+			"contenido": "La Universidad Tollancingo fue creada el 14 de mayo de 1992, por iniciativa del empresario José Francisco Marroquín Sosa, atendiendo a la necesidad de formación profesional del municipio de Tulancingo y considerando que en la región solo existía una opción académica de Nivel Superior."
+		},
+		{
+			"nombre": "OFERTA EDUCATIVA INICIAL",
+			"contenido": "El Centro de Estudios Universitarios Tollancingo, ofreció seis licenciaturas que frenaron la migración del talento local hacía otros estados: Administración de Empresas, Arquitectura, Contaduría, Derecho, Informática y Pedagogía, con un total. Para 1997 al incorporar la Licenciatura en Psicología, se obtiene el grado de Universidad o “Universidad Tollancingo” como hoy la conocemos. En el año 2006 se abre la división académica de posgrados con las especialidades en Derecho de Amparo y en Formación Docente."
+		},
+		{
+			"nombre": "LEGADO",
+			"contenido": "En 2009 se abren la Licenciatura en Gastronomía y la Especialidad en Psicología Educativa. Finalmente para el año 2017, se apertura la Especialidad en Costos en la Construcción. Completando la oferta educativa de esta máxima casa de estudios. Durante los 28 años que le anteceden la U.T. ha trabajado incansablemente, a pesar de las adversidades climatológicas y medioambientales como las inundaciones, los sismos, las pandemias e incluso el deceso del fundador. El legado que deja Don Francisco Marroquín a sus alumnos es precisamente el de no detenerse ante ninguna adversidad."
+		}
+	],
+	"identidad": [
+		{
+			"nombre": "MISIÓN",
+			"contenido": [
+				"Transformar la experiencia de aprendizaje de cada estudiante, cada docente y cada colaborador, así como inspirar a que logren alcanzar su máximo potencial."
+			]
+		},
+		{
+			"nombre": "VISIÓN",
+			"contenido": [
+				"Forjar un espíritu de perseverancia, disciplina y trabajo para consolidar el desarrollo personal, la independencia y la capacidad de crear oportunidades que aporten al crecimiento económico de la nación."
+			]
+		},
+		{
+			"nombre": "VALORES",
+			"contenido": [
+				"Perseverancia: Si las cosas no están funcionando cambia el plan, pero no cambies la meta. “Haz lo necesario para lograrlo y que perdure a través del tiempo”.",
+				"Disciplina: Para lograr las metas, no existen pretextos. “Haz algo bien y haz que funcione”.",
+				"Trabajo: Es hacer cosas extraordinarias producto del esfuerzo sostenido a través del tiempo. “Aquí la gripe no existe, te la tienes que partir porque te la tienes que partir”."
+			]
+		}
+	]
+}

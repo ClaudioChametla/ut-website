@@ -120,6 +120,7 @@ const Hero = () => {
 													py="2.5"
 													m={["5", "8"]}
 													w="200px"
+													_hover={{ textDecoration: "none" }}
 												>
 													{option.text}
 												</Link>
