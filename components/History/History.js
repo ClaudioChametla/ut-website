@@ -1,3 +1,4 @@
+/* eslint-disable react/no-array-index-key */
 import {
 	Box,
 	Center,
@@ -71,8 +72,9 @@ const History = () => {
 					m="2"
 				>
 					{rectoria &&
-						rectoria.map((item) => (
+						rectoria.map((item, index) => (
 							<Box
+								key={`BoxRectoria-${index}`}
 								w={["100%", "100%", "50%", "50%"]}
 								fontFamily={styles.font.fontFamily}
 								textAlign={["center", "center", "left", "left"]}
@@ -117,10 +119,10 @@ const History = () => {
 					alignContent="center"
 				>
 					{historia &&
-						historia.map((itemTwo) => (
+						historia.map((itemTwo, indexTwo) => (
 							<Flex
 								zIndex="0"
-								key={`historyCards-${itemTwo}`}
+								key={`historyCards-${indexTwo}`}
 								w="100%"
 								borderLeft="1px"
 								borderColor="#F3F3F3"
@@ -192,28 +194,32 @@ const History = () => {
 							p={["0", "0", "5", "10"]}
 							w={["100%", "100%", "50%", "50%"]}
 						>
-							<Accordion allowToggle>
+							<Accordion allowToggle id="Accordion-history">
 								{identidad &&
-									identidad.map((itemThree) => (
-										<AccordionItem mb="1">
-											<h2>
-												<AccordionButton
-													_expanded={{ color: "#333" }}
-													color="#666"
-													bg="#ebebeb"
-													fontSize="10px"
-													fontWeight="bold"
-													py="3"
-													_focus={{
-														boxShadow: "none",
-													}}
-												>
-													<Box flex="1" textAlign="left">
-														{itemThree.nombre}
-													</Box>
-													<AccordionIcon />
-												</AccordionButton>
-											</h2>
+									identidad.map((itemThree, index) => (
+										<AccordionItem
+											id={`IDAccordion-item-${index}`}
+											mb="1"
+											key={`Accordion-item-${index}`}
+										>
+											<AccordionButton
+												id={`AccordionButton-${index}`}
+												key={`AccordionButtonK-${index}`}
+												_expanded={{ color: "#333" }}
+												color="#666"
+												bg="#ebebeb"
+												fontSize="10px"
+												fontWeight="bold"
+												py="3"
+												_focus={{
+													boxShadow: "none",
+												}}
+											>
+												<Box flex="1" textAlign="left">
+													<h2>{itemThree.nombre}</h2>
+												</Box>
+												<AccordionIcon />
+											</AccordionButton>
 											<AccordionPanel pb={4}>
 												<UnorderedList
 													listStyleType="none"
@@ -274,10 +280,10 @@ const History = () => {
 						alignContent="center"
 					>
 						{images &&
-							images.imagenes.map((itemImg) => (
+							images.imagenes.map((itemImg, index) => (
 								<Flex
 									zIndex="0"
-									key={`historyCards-${itemImg}`}
+									key={`historyCards-02-${index}`}
 									w="100%"
 									borderLeft="1px"
 									borderColor="#F3F3F3"
