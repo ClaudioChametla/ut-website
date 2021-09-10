@@ -21,7 +21,7 @@
 			"options": [
 				{
 					"name": "LICENCIATURA",
-					"link": "#1",
+					"link": "/oferta",
 					"as": "list",
 					"icon": "/icons/angle-right.svg",
 					"filter": "invert(16%) sepia(14%) saturate(313%) hue-rotate(193deg) brightness(91%) contrast(93%)",
@@ -43,7 +43,7 @@
 					"options": [
 						{
 							"name": "ESPECIALIDAD",
-							"link": "#",
+							"link": "/oferta",
 							"as": "list",
 							"icon": "/icons/angle-right.svg",
 							"filter": "invert(16%) sepia(14%) saturate(313%) hue-rotate(193deg) brightness(91%) contrast(93%)",
@@ -76,7 +76,7 @@
 	"navbar2": [
 		{
 			"name": "NUEVO INGRESO",
-			"link": "#1"
+			"link": "/nuevo-ingreso"
 		},
 		{
 			"name": "BLOG",
