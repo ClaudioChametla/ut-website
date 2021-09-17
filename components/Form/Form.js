@@ -1,21 +1,27 @@
+/* eslint-disable no-console */
+/* eslint-disable react/jsx-props-no-spreading */
 /* eslint-disable no-lone-blocks */
 /* eslint-disable react/no-array-index-key */
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Select, Flex, Input, Button, Text, Box } from "@chakra-ui/react";
 import { useForm } from "react-hook-form";
 import educativeOffer from "../../data/educativeOffer.json";
 import styles from "../../styles/styles.json";
 
 const form = () => {
-	const [validation, setValidation] = useState(null);
+	const [validation, setValidation] = useState();
 	const carrera = educativeOffer;
 	const {
 		register,
 		handleSubmit,
-		watch,
 		formState: { errors },
 	} = useForm();
 	const onSubmit = (data) => {
+		console.log(data);
+		setValidation(true);
+	};
+
+	useEffect(() => {
 		if (
 			errors.telefono ||
 			errors.nombre ||
@@ -23,10 +29,17 @@ const form = () => {
 			errors.segundoApellido ||
 			errors.correo
 		) {
+			// console.log(data);
 			return setValidation(false);
 		}
-		return setValidation(true);
-	};
+		return null;
+	}, [
+		errors.telefono,
+		errors.nombre,
+		errors.primerApellido,
+		errors.segundoApellido,
+		errors.correo,
+	]);
 
 	return (
 		<Flex fontFamily={styles.font.fontFamily}>
@@ -57,6 +70,7 @@ const form = () => {
 					id="email"
 					{...register("correo", { required: true })}
 					variant="flushed"
+					type="email"
 					placeholder="* Correo: "
 				/>
 				{errors.correo && <Text color="red"> Este campo es requerido.</Text>}
@@ -89,24 +103,17 @@ const form = () => {
 				>
 					Registrarme
 				</Button>
-				{!validation == null && (
+				{validation === false && (
 					<Box bgColor="red" m="5" w="300px" h="50px">
 						<Text color="#666">
-							{" "}
 							Uno o más campos tienen un error. Por favor revíselo y reinténtelo.
 						</Text>
 					</Box>
 				)}
-				{validation !== null && validation && (
-					<Box bgColor="blue" m="5" w="300px" h="50px">
-						<Text color="#666">
-							{" "}
-							Uno o más campos tienen un error. Por favor revíselo y reinténtelo.
-						</Text>
+				{validation === true && (
+					<Box bgColor="blue.200" m="5" w="300px" h="50px">
+						<Text color="#666">Todo bien</Text>
 					</Box>
-				)}
-				{watch.telefono && (
-					<Text> Gracias por tu mensaje. El mensaje ha sido enviado. </Text>
 				)}
 				<Text color="#666">
 					Al hacer clic en “REGISTRARME”, reconoces haber leído las
