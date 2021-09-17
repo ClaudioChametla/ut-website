@@ -6,11 +6,11 @@
 			"filter": "invert(16%) sepia(14%) saturate(313%) hue-rotate(193deg) brightness(91%) contrast(93%)",
 			"icon": "/icons/angle-right.svg",
 			"options": [
-				{ "name": "MENSAJE DE RECTORÍA", "as": "text", "link": "#1" },
-				{ "name": "HISTORIA", "as": "text", "link": "#2" },
-				{ "name": "IDENTIDAD", "as": "text", "link": "#3" },
-				{ "name": "MISIÓN Y VISIÓN", "as": "text", "link": "#4" },
-				{ "name": "INSTALACIONES", "as": "text", "link": "#5" }
+				{ "name": "MENSAJE DE RECTORÍA", "as": "text", "link": "/conocenos/#msjRectoria" },
+				{ "name": "HISTORIA", "as": "text", "link": "/conocenos/#historia" },
+				{ "name": "IDENTIDAD", "as": "text", "link": "/conocenos/#identidad" },
+				{ "name": "MISIÓN Y VISIÓN", "as": "text", "link": "/conocenos/#identidad" },
+				{ "name": "INSTALACIONES", "as": "text", "link": "/conocenos/#instalaciones" }
 			]
 		},
 		{
@@ -26,18 +26,30 @@
 					"icon": "/icons/angle-right.svg",
 					"filter": "invert(16%) sepia(14%) saturate(313%) hue-rotate(193deg) brightness(91%) contrast(93%)",
 					"options": [
-						{ "name": "PEDAGOGIA", "link": "#1" },
-						{ "name": "GASTRONOMÍA", "link": "#2" },
-						{ "name": "PSICOLOGÍA", "link": "#3" },
-						{ "name": "CONTADURÍA", "link": "#4" },
-						{ "name": "ARQUITECTURA", "link": "#5" },
-						{ "name": "DERECHO", "link": "#6" }
+						{ "name": "PEDAGOGIA", "link": "/ofertaEducativa/licenciatura-pedagogia" },
+						{
+							"name": "GASTRONOMÍA",
+							"link": "/ofertaEducativa/licenciatura-gastronomia"
+						},
+						{
+							"name": "PSICOLOGÍA",
+							"link": "/ofertaEducativa/licenciatura-psicologia"
+						},
+						{
+							"name": "CONTADURÍA",
+							"link": "/ofertaEducativa/licenciatura-contaduria"
+						},
+						{
+							"name": "ARQUITECTURA",
+							"link": "/ofertaEducativa/licenciatura-arquitectura"
+						},
+						{ "name": "DERECHO", "link": "/ofertaEducativa/licenciatura-derecho" }
 					]
 				},
 				{
 					"name": "POSGRADO",
 					"as": "list",
-					"link": "#2",
+					"link": "/oferta",
 					"icon": "/icons/angle-right.svg",
 					"filter": "invert(93%) sepia(0%) saturate(0%) hue-rotate(166deg) brightness(90%) contrast(91%)",
 					"options": [
@@ -48,11 +60,22 @@
 							"icon": "/icons/angle-right.svg",
 							"filter": "invert(16%) sepia(14%) saturate(313%) hue-rotate(193deg) brightness(91%) contrast(93%)",
 							"options": [
-								{ "name": "DERECHO DE AMPARO", "link": "#1" },
-								{ "name": "FORMACIÓN DOCENTE", "link": "#2" },
-								{ "name": "PSICOLOGIA EDUCATIVA", "link": "#3" },
-								{ "name": "DERECHO DE AMPARO", "link": "#4" },
-								{ "name": "COSTOS DE LA CONSTRUCCIÓN", "link": "#5" }
+								{
+									"name": "FORMACIÓN DOCENTE",
+									"link": "/ofertaEducativa/especialidad-formacion-docente"
+								},
+								{
+									"name": "PSICOLOGIA EDUCATIVA",
+									"link": "/ofertaEducativa/especialidad-psicologia-educativa"
+								},
+								{
+									"name": "DERECHO DE AMPARO",
+									"link": "/ofertaEducativa/especialidad-derecho-amparo"
+								},
+								{
+									"name": "COSTOS DE LA CONSTRUCCIÓN",
+									"link": "/ofertaEducativa/especialidad-costos-construccion"
+								}
 							]
 						}
 					]

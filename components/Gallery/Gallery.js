@@ -24,13 +24,8 @@ const Gallery = ({ pageData }) => {
 	const [currentImg, setCurrentImg] = useState(0);
 
 	return (
-		<Box align="center" pos="relative" h={["300px", "400px", "500px", "650px"]}>
-			<Box
-				align="center"
-				variants={icon}
-				pos="relative"
-				h={["200px", "300px", "400px", "500px"]}
-			>
+		<Box h="100%" w="100%" align="center">
+			<Box align="center" variants={icon} pos="relative" h="75%">
 				{imagenes &&
 					imagenes.map((item, index) => (
 						<MotionImage
@@ -38,7 +33,7 @@ const Gallery = ({ pageData }) => {
 							src={item}
 							alt="img"
 							w="100%"
-							h={["200px", "300px", "400px", "500px"]}
+							h="100%"
 							pos="absolute"
 							objectFit="fill"
 							display="block"
@@ -49,17 +44,17 @@ const Gallery = ({ pageData }) => {
 						/>
 					))}
 			</Box>
-			<Flex w="100%" mt="5px" direction="row" overflowX="hidden">
+			<Flex h="25%" w="100%" mt="5px" direction="row" overflowX="hidden">
 				{imagenes &&
 					imagenes.map((item, index) => (
 						<Image
 							key={`gridimagenes-${index}`}
 							src={item}
 							alt="img"
-							m="5px"
+							mr="5px"
 							fallbackSrc={item}
-							w="150px"
-							h="90px"
+							w="33.3%"
+							h="auto"
 							onClick={() => setCurrentImg(index)}
 							_hover={{
 								filter: "brightness(60%)",

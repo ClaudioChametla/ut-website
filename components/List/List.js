@@ -11,6 +11,7 @@ import {
 	Text,
 	UnorderedList,
 	ListItem,
+	Button,
 } from "@chakra-ui/react";
 import PropTypes from "prop-types";
 import styles from "../../styles/styles.json";
@@ -69,6 +70,14 @@ const List = ({ pageData }) => (
 						))}
 				</Box>
 			</Box>
+			<Button
+				bg={styles.background.light}
+				_hover={{ filter: "brightness(130%)" }}
+				color="white"
+				w={["100%", "100%", "60%", "60%"]}
+			>
+				Descargar Mapa Curricular
+			</Button>
 		</Flex>
 	</Center>
 );

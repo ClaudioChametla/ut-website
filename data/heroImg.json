@@ -8,7 +8,7 @@
 			"button": [
 				{
 					"text": "INSCRIBETE",
-					"link": "#",
+					"link": "nuevo-ingreso",
 					"bg": "#00489E",
 					"border": "none",
 					"borderColor": "none"
@@ -29,7 +29,7 @@
 			"button": [
 				{
 					"text": "INSCRIBETE",
-					"link": "#",
+					"link": "/nuevo-ingreso",
 					"bg": "#00489E",
 					"border": "none",
 					"borderColor": "none"

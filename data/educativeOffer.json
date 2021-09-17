@@ -6,10 +6,12 @@
 		"costo": 1750,
 		"src": "/images/Gastronomia.jpg",
 		"imagenes": [
-			"/images/gastronomia.jpg",
-			"/images/Contaduria.jpg",
-			"/images/gastronomia.jpg",
-			"/images/Contaduria.jpg"
+			"/images/gastronomia-lic.jpg",
+			"/images/derecho-lic.jpg",
+			"/images/psicologia-lic.jpg",
+			"/images/psicologia-lic.jpg",
+			"/images/psicologia-lic.jpg",
+			"/images/psicologia-lic.jpg"
 		],
 		"href": "/ofertaEducativa/",
 		"plan": {
@@ -135,7 +137,7 @@
 		"nivel": "Licenciatura",
 		"costo": 1250,
 		"src": "/images/Pedagogia.jpg",
-		"imagenes": ["img1", "img2", "img3"],
+		"imagenes": ["/images/pedagogia-lic.jpg"],
 		"href": "/ofertaEducativa/",
 		"plan": {
 			"duracion": "8 Semestres",
@@ -247,7 +249,7 @@
 		"nivel": "Licenciatura",
 		"costo": 1250,
 		"src": "/images/Psicologia.jpg",
-		"imagenes": ["img1", "img2", "img3"],
+		"imagenes": ["/images/psicologia-lic.jpg"],
 		"href": "/ofertaEducativa/",
 		"plan": {
 			"duracion": "9 Semestres",
@@ -351,7 +353,7 @@
 		"nivel": "Licenciatura",
 		"costo": 1250,
 		"src": "/images/Arquitectura.jpg",
-		"imagenes": ["img1", "img2", "img3"],
+		"imagenes": ["/images/arquitectura-lic.jpg"],
 		"href": "/ofertaEducativa/",
 		"plan": {
 			"duracion": "9 Semestres",
@@ -450,7 +452,7 @@
 		"nivel": "Licenciatura",
 		"costo": 1250,
 		"src": "/images/Contaduria.jpg",
-		"imagenes": ["img1", "img2", "img3"],
+		"imagenes": ["/images/contaduria-lic.jpg"],
 		"href": "/ofertaEducativa/",
 		"plan": {
 			"duracion": "9 Semestres",
@@ -558,7 +560,7 @@
 		"nivel": "Licenciatura",
 		"costo": 1250,
 		"src": "/images/Derecho.jpg",
-		"imagenes": ["img1", "img2", "img3"],
+		"imagenes": ["/images/derecho-lic.jpg"],
 		"href": "/ofertaEducativa/",
 		"plan": {
 			"duracion": "10 Cuatrimestres",
@@ -684,7 +686,7 @@
 		"nivel": "Especialidad",
 		"costo": 1300,
 		"src": "/images/FDocente.jpg",
-		"imagenes": ["img1", "img2", "img3"],
+		"imagenes": ["/images/formacion-docente-esp.jpg"],
 		"href": "/ofertaEducativa/",
 		"plan": {
 			"duracion": "2 Semestres",
@@ -715,7 +717,7 @@
 		"nivel": "Especialidad",
 		"costo": 1300,
 		"src": "/images/Construcción.jpg",
-		"imagenes": ["img1", "img2", "img3"],
+		"imagenes": ["/images/costos-constr-esp.jpg"],
 		"href": "/ofertaEducativa/",
 		"plan": {
 			"duracion": "2 Semestres",
@@ -746,7 +748,7 @@
 		"nivel": "Especialidad",
 		"costo": 1300,
 		"src": "/images/PsicologiaEducativa.jpg",
-		"imagenes": ["img1", "img2", "img3"],
+		"imagenes": ["/images/psicologia-educativa-esp.jpg"],
 		"href": "/ofertaEducativa/",
 		"plan": {
 			"duracion": "2 Semestres",
@@ -777,7 +779,7 @@
 		"nivel": "Especialidad",
 		"costo": 1300,
 		"src": "/images/DerechoAmp.jpg",
-		"imagenes": ["img1", "img2", "img3"],
+		"imagenes": ["/images/derecho-amparo-esp.jpg"],
 		"href": "/ofertaEducativa/",
 		"plan": {
 			"duracion": "2 Semestres",

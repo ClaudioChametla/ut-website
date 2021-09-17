@@ -27,12 +27,19 @@ import styles from "../../styles/styles.json";
 import history from "../../data/history.json";
 import images from "../../data/images.json";
 import Gallery from "../Gallery";
+import imgGallery from "../../data/gallerySmall.json";
 
 const Modalcomponent = ({ dataModal, isOpen, onClose }) => (
 	<div>
-		<Modal isOpen={isOpen} onClose={onClose} size="xl" isCentered>
+		<Modal isOpen={isOpen} onClose={onClose} size={["xl", "xl", "xl", "large"]} isCentered>
 			<ModalOverlay />
-			<ModalContent w="auto" h="auto" borderRadius="0">
+			<ModalContent
+				w="auto"
+				h="auto"
+				p="2"
+				bgColor="rgba(255, 255, 255, .8)"
+				borderRadius="5"
+			>
 				<ModalCloseButton
 					position="absolute"
 					top="0"
@@ -44,7 +51,13 @@ const Modalcomponent = ({ dataModal, isOpen, onClose }) => (
 					_focus={{ border: 0 }}
 				/>
 				<ModalBody>
-					<Image objectFit="cover" src={dataModal || ""} w="800px" h="400px" p="2" />
+					<Image
+						objectFit="cover"
+						src={dataModal || ""}
+						w={["400px", "400px", "500px", "800px"]}
+						h={["300px", "400px", "400px", "600px"]}
+						p="2"
+					/>
 				</ModalBody>
 			</ModalContent>
 		</Modal>
@@ -63,13 +76,14 @@ const History = () => {
 	};
 	return (
 		<Box>
-			<Flex my="5%" w="100%" justifyContent="center">
+			<Flex my="5%" w="100%" id="msjRectoria" justifyContent="center">
 				<Flex
 					justifyContent="center"
 					flexDir={["column", "column", "row", "row"]}
 					h="100%"
 					w={["100%", "100%", "100%", styles.container.width, styles.container.width]}
 					m="2"
+					id="msjRectoria"
 				>
 					{rectoria &&
 						rectoria.map((item, index) => (
@@ -80,19 +94,24 @@ const History = () => {
 								textAlign={["center", "center", "left", "left"]}
 							>
 								<Text fontWeight="bold" fontSize={styles.font.text}>
-									{item.nombre}
+									MENSAJE DE RECTORÍA
 								</Text>
 								<Text fontSize="14px" color={styles.font.color}>
 									{item.contenido}
 								</Text>
 							</Box>
 						))}
-					<Box w={["100%", "100%", "50%", "50%"]} h="auto" m="20px">
-						<Gallery pageData={images} variant="small" />
+					<Box
+						w={["100%", "100%", "50%", "50%"]}
+						h="320px"
+						my={["10px", "10px", "0px", "0px"]}
+					>
+						<Gallery pageData={imgGallery} variant="small" />
 					</Box>
 				</Flex>
 			</Flex>
-			<Box w="100%" textAlign="center">
+
+			<Box w="100%" id="historia" textAlign="center">
 				<Text fontSize={styles.font.title} fontWeight="bold">
 					HISTORIA
 				</Text>
@@ -166,7 +185,7 @@ const History = () => {
 				</Grid>
 			</Box>
 			<Box w="100%" textAlign="center">
-				<Text fontSize={styles.font.title} fontWeight="bold">
+				<Text id="identidad" fontSize={styles.font.title} fontWeight="bold">
 					IDENTIDAD
 				</Text>
 				<Flex justifyContent="center" alignItems="center">
@@ -196,30 +215,26 @@ const History = () => {
 						>
 							<Accordion allowToggle id="Accordion-history">
 								{identidad &&
-									identidad.map((itemThree, index) => (
-										<AccordionItem
-											id={`IDAccordion-item-${index}`}
-											mb="1"
-											key={`Accordion-item-${index}`}
-										>
-											<AccordionButton
-												id={`AccordionButton-${index}`}
-												key={`AccordionButtonK-${index}`}
-												_expanded={{ color: "#333" }}
-												color="#666"
-												bg="#ebebeb"
-												fontSize="10px"
-												fontWeight="bold"
-												py="3"
-												_focus={{
-													boxShadow: "none",
-												}}
-											>
-												<Box flex="1" textAlign="left">
-													<h2>{itemThree.nombre}</h2>
-												</Box>
-												<AccordionIcon />
-											</AccordionButton>
+									identidad.map((itemThree) => (
+										<AccordionItem mb="1" key={`Accordion-${itemThree}`}>
+											<h2>
+												<AccordionButton
+													_expanded={{ color: "#333" }}
+													color="#666"
+													bg="#ebebeb"
+													fontSize="10px"
+													fontWeight="bold"
+													py="3"
+													_focus={{
+														boxShadow: "none",
+													}}
+												>
+													<Box flex="1" textAlign="left">
+														{itemThree.nombre}
+													</Box>
+													<AccordionIcon />
+												</AccordionButton>
+											</h2>
 											<AccordionPanel pb={4}>
 												<UnorderedList
 													listStyleType="none"
@@ -245,7 +260,7 @@ const History = () => {
 					</Flex>
 				</Center>
 			</Box>
-			<Box w="100%" textAlign="center">
+			<Box id="instalaciones" w="100%" textAlign="center">
 				<Text fontSize={styles.font.title} fontWeight="bold">
 					NUESTRAS INSTALACIONES
 				</Text>
@@ -275,32 +290,87 @@ const History = () => {
 						]}
 						my="10"
 						p={["2", "2", "10", "10"]}
-						gridColumnGap={7}
+						gridColumnGap={5}
 						gridRowGap={2}
 						alignContent="center"
 					>
-						{images &&
-							images.imagenes.map((itemImg, index) => (
-								<Flex
-									zIndex="0"
-									key={`historyCards-02-${index}`}
-									w="100%"
-									borderLeft="1px"
-									borderColor="#F3F3F3"
-									flexDirection="column"
-									alignItems="center"
-									h="auto"
-									onClick={onOpen}
-								>
+						<Flex
+							zIndex="0"
+							w="100%"
+							flexDirection="column"
+							alignItems="center"
+							onClick={onOpen}
+						>
+							{images &&
+								images.imagenesCol1.map((itemImg) => (
 									<Image
 										src={itemImg}
-										h="400px"
-										w="100%"
+										key={`imageCol1-${itemImg}`}
+										h="742px"
+										w={["100%", "100%", "100%", "438px"]}
+										objectFit="cover"
 										_hover={{ filter: "brightness(60%)" }}
 										onClick={() => action(itemImg)}
+										mt="5"
 									/>
-								</Flex>
-							))}
+								))}{" "}
+						</Flex>
+						<Flex
+							zIndex="0"
+							w="100%"
+							flexDirection="column"
+							alignItems="center"
+							onClick={onOpen}
+						>
+							{" "}
+							{images &&
+								images.imagenesCol2small.map((itemImg) => (
+									<Image
+										src={itemImg}
+										key={`imageSmall-${itemImg}`}
+										h="371px"
+										w={["100%", "100%", "100%", "438px"]}
+										objectFit="cover"
+										_hover={{ filter: "brightness(60%)" }}
+										onClick={() => action(itemImg)}
+										mt="5"
+									/>
+								))}{" "}
+							{images &&
+								images.imagenesCol2.map((itemImg) => (
+									<Image
+										src={itemImg}
+										key={`imageCol2-${itemImg}`}
+										h="742px"
+										w={["100%", "100%", "100%", "438px"]}
+										objectFit="cover"
+										_hover={{ filter: "brightness(60%)" }}
+										onClick={() => action(itemImg)}
+										mt="5"
+									/>
+								))}{" "}
+						</Flex>
+						<Flex
+							zIndex="0"
+							w="100%"
+							flexDirection="column"
+							alignItems="center"
+							onClick={onOpen}
+						>
+							{images &&
+								images.imagenesCol3.map((itemImg) => (
+									<Image
+										src={itemImg}
+										key={`imageCol3-${itemImg}`}
+										h="742px"
+										w={["100%", "100%", "100%", "438px"]}
+										objectFit="cover"
+										_hover={{ filter: "brightness(60%)" }}
+										onClick={() => action(itemImg)}
+										mt="5"
+									/>
+								))}{" "}
+						</Flex>
 					</Grid>
 				</Center>
 			</Box>

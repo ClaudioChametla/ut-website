@@ -32,7 +32,7 @@ export default function Home() {
 						templateRows={styles.container.grid.row}
 						columnGap={5}
 					>
-						<GridItem h="auto" rowStart={1}>
+						<GridItem h={["250px", "300px", "400px", "500px"]} rowStart={1}>
 							<Gallery pageData={pageData} />
 						</GridItem>
 						<GridItem h="auto" rowStart={2}>
