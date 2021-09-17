@@ -3,7 +3,7 @@ import { Flex } from "@chakra-ui/react";
 import Container from "../components/Container";
 import { SubHero } from "../components/Hero";
 import BarRoute from "../components/BarRoute/BarRoute";
-import Forms from "../components/Forms/Forms";
+import NuevoContent from "../components/Form/NuevoContent";
 
 export default function Home() {
 	return (
@@ -16,7 +16,7 @@ export default function Home() {
 			<Container>
 				<SubHero title="NUEVO INGRESO" src="/images/nuevoingresobg.jpg" />
 				<BarRoute />
-				<Forms />
+				<NuevoContent />
 			</Container>
 		</Flex>
 	);
