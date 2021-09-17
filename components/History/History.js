@@ -213,31 +213,26 @@ const History = () => {
 						>
 							<Accordion allowToggle>
 								{identidad &&
-									identidad.map((itemThree, index) => (
-										<AccordionItem
-											mb="1"
-											id={`IDAccordion-item-${index}`}
-											key={`Accordion-item-${index}`}
-										>
-											<AccordionButton
-												id={`AccordionButton-${index}`}
-												key={`AccordionButtonK-${index}`}
-												_expanded={{ color: "#333" }}
-												color="#666"
-												bg="#ebebeb"
-												fontSize="10px"
-												fontWeight="bold"
-												py="3"
-												_focus={{
-													boxShadow: "none",
-												}}
-											>
-												<Box flex="1" textAlign="left">
-													<h2>{itemThree.nombre}</h2>
-												</Box>
-												<AccordionIcon />
-											</AccordionButton>
-
+									identidad.map((itemThree) => (
+										<AccordionItem mb="1" key={`Accordion-${itemThree}`}>
+											<h2>
+												<AccordionButton
+													_expanded={{ color: "#333" }}
+													color="#666"
+													bg="#ebebeb"
+													fontSize="10px"
+													fontWeight="bold"
+													py="3"
+													_focus={{
+														boxShadow: "none",
+													}}
+												>
+													<Box flex="1" textAlign="left">
+														{itemThree.nombre}
+													</Box>
+													<AccordionIcon />
+												</AccordionButton>
+											</h2>
 											<AccordionPanel pb={4}>
 												<UnorderedList
 													listStyleType="none"
@@ -245,8 +240,8 @@ const History = () => {
 													m="0"
 													fontSize="13px"
 												>
-													{index.contenido &&
-														index.contenido.map((item) => (
+													{itemThree.contenido &&
+														itemThree.contenido.map((item) => (
 															<ListItem
 																key={`ListContenido-${item}`}
 																my="2"
