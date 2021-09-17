@@ -44,7 +44,13 @@ const MenuComponent = ({ item }) => {
 						</MenuButton>
 					</Link>
 					<Portal>
-						<MenuList border="none" bg="none" color="white" boxShadow="none">
+						<MenuList
+							border="none"
+							zIndex="70"
+							bg="none"
+							color="white"
+							boxShadow="none"
+						>
 							{item.options &&
 								item.options.map((option, index) => (
 									<Flex
@@ -59,7 +65,6 @@ const MenuComponent = ({ item }) => {
 										transform="translate(0%, -17px)"
 										onMouseEnter={onOpen}
 										onMouseLeave={onClose}
-										zIndex="20"
 										_hover={{
 											borderLeft: "solid",
 											borderColor: "blue",
@@ -114,7 +119,7 @@ const MenuComponent = ({ item }) => {
 															bg="#2C2D32"
 															p="2"
 															w="100%"
-															zIndex="40"
+															zIndex="80"
 															color="whiteAlpha.800"
 															flexDirection="row"
 															transform="translate(99%, 0px)"
