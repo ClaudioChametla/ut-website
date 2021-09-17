@@ -89,7 +89,7 @@ const Hero = () => {
 									color="white"
 									fontWeight="bold"
 									position="absolute"
-									top={["25%", "35%"]}
+									top={["30%", "28%", "25%", "35%"]}
 									justifyContent="center"
 									w={["90%", "90%", "90%", "90%", "50%"]}
 								>
@@ -117,8 +117,8 @@ const Hero = () => {
 													bg={option.bg}
 													border={option.border}
 													borderColor={option.borderColor}
-													py="2.5"
-													m={["5", "8"]}
+													py={["1.5", "2", "2.5", "2.5"]}
+													m={["2", "4", "6", "8"]}
 													w="200px"
 													_hover={{ textDecoration: "none" }}
 												>
@@ -137,7 +137,7 @@ const Hero = () => {
 					position="absolute"
 					w="100%"
 					pt="30px"
-					top={["4%", "8%", "10%", "11.5%"]}
+					top={["3%", "8%", "7%", "13%"]}
 				>
 					<Button
 						h="100px"
