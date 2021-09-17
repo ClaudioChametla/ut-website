@@ -1,16 +1,21 @@
 {
-	"imagenes": [
+	"imagenesCol1": [
 		"/images/img1.jpg",
 		"/images/img2.jpg",
 		"/images/img3.jpg",
-		"/images/img4.jpg",
+		"/images/img4.jpg"
+	],
+	"imagenesCol2small": [
 		"/images/img5.jpg",
 		"/images/img6.jpg",
 		"/images/img7.jpg",
-		"/images/img8.jpg",
-		"/images/foo(7).jpg",
-		"/images/foo(8).jpg",
-		"/images/foo(5).jpg",
-		"/images/foo(6).jpg"
+		"/images/img8.jpg"
+	],
+	"imagenesCol2": ["/images/img9.jpg", "/images/img10.jpg"],
+	"imagenesCol3": [
+		"/images/img11.jpg",
+		"/images/img12.jpg",
+		"/images/img13.jpg",
+		"/images/img14.jpg"
 	]
 }

@@ -365,6 +365,7 @@ const Navbar = () => {
 									bg={styles.background.navBgSolid}
 									py="4"
 									boxShadow="none"
+									zIndex="70"
 								>
 									<Flex
 										h="auto"
