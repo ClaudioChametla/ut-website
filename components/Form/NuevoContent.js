@@ -35,10 +35,14 @@ const nuevoContent = () => (
 
 				<Text marginTop="8%" color="#666">
 					Al hacer clic en “REGISTRARME”, reconoces haber leído las{" "}
-					<a href="https://www.universidadtollancingo.com/politicas-de-privacidad/">
+					<Text
+						as="a"
+						href="https://www.universidadtollancingo.com/politicas-de-privacidad/"
+						color="#0D47A1"
+					>
 						{" "}
-						<Text color="#0D47A1"> Políticas de Privacidad </Text>{" "}
-					</a>{" "}
+						Políticas de Privacidad{" "}
+					</Text>{" "}
 					y confirmas estar de acuerdo con el uso de ellas.{" "}
 				</Text>
 			</Box>
