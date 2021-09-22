@@ -1,0 +1,24 @@
+{
+	"logosU": [
+		{
+			"id": "Singuilucan",
+			"img": "/images/1Sin.jpg"
+		},
+		{
+			"id": "Acaxochitlan",
+			"img": "/images/2Aca.jpg"
+		},
+		{
+			"id": "Santiago",
+			"img": "/images/3San.jpg"
+		},
+		{
+			"id": "STSAT",
+			"img": "/images/4Sat.jpg"
+		},
+		{
+			"id": "SNTE",
+			"img": "/images/5Snte.png"
+		}
+	]
+}
