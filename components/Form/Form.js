@@ -3,20 +3,21 @@
 /* eslint-disable no-lone-blocks */
 /* eslint-disable react/no-array-index-key */
 import { useState, useEffect } from "react";
-import { Select, Flex, Input, Button, Text, Box } from "@chakra-ui/react";
+import { Select, Flex, Input, Button, Text, Center } from "@chakra-ui/react";
 import { useForm } from "react-hook-form";
 import educativeOffer from "../../data/educativeOffer.json";
 import styles from "../../styles/styles.json";
 
 const form = () => {
-	const [validation, setValidation] = useState();
 	const carrera = educativeOffer;
+	const [validation, setValidation] = useState();
 	const {
 		register,
 		handleSubmit,
 		formState: { errors },
 	} = useForm();
-	const onSubmit = (data) => {
+	const onSubmit = (data, e) => {
+		e.target.reset();
 		console.log(data);
 		setValidation(true);
 	};
@@ -46,6 +47,7 @@ const form = () => {
 			<form onSubmit={handleSubmit(onSubmit)}>
 				<Input
 					id="name"
+					type="text"
 					{...register("nombre", { required: true })}
 					variant="flushed"
 					placeholder="* Nombre Completo: "
@@ -54,6 +56,7 @@ const form = () => {
 				{errors.nombre && <Text color="red"> Este campo es requerido.</Text>}
 				<Input
 					id="lastName"
+					type="text"
 					{...register("primerApellido", { required: true })}
 					variant="flushed"
 					placeholder="* Apellido Paterno: "
@@ -61,6 +64,7 @@ const form = () => {
 				{errors.primerApellido && <Text color="red"> Este campo es requerido.</Text>}
 				<Input
 					id="secondLastName"
+					type="text"
 					{...register("segundoApellido", { required: true })}
 					variant="flushed"
 					placeholder="* Apellido Materno: "
@@ -76,6 +80,7 @@ const form = () => {
 				{errors.correo && <Text color="red"> Este campo es requerido.</Text>}
 				<Input
 					id="phone"
+					type="number"
 					{...register("telefono", { required: true })}
 					variant="flushed"
 					placeholder="* WhatsApp(10 Dígitos): "
@@ -85,7 +90,7 @@ const form = () => {
 				<Select variant="flushed" placeholder="---">
 					{carrera.map((item, index) => (
 						<option
-							{...register("carrera", { required: false })}
+							{...register("Select", { required: false })}
 							key={`option-${index}`}
 						>
 							{item.carrera}
@@ -104,24 +109,19 @@ const form = () => {
 					Registrarme
 				</Button>
 				{validation === false && (
-					<Box bgColor="red" m="5" w="300px" h="50px">
-						<Text color="#666">
+					<Center h={["10%", "10%", "10%", "10%"]} bgColor="yellow">
+						<Text>
 							Uno o más campos tienen un error. Por favor revíselo y reinténtelo.
 						</Text>
-					</Box>
+					</Center>
 				)}
 				{validation === true && (
-					<Box bgColor="blue.200" m="5" w="300px" h="50px">
-						<Text color="#666">Todo bien</Text>
-					</Box>
+					<Center h={["15%", "15%", "10%", "10%"]} bgColor="green ">
+						<Text color="white">
+							Gracias por tu mensaje. El mensaje ha sido enviado.
+						</Text>
+					</Center>
 				)}
-				<Text color="#666">
-					Al hacer clic en “REGISTRARME”, reconoces haber leído las
-					<a href="https://www.universidadtollancingo.com/politicas-de-privacidad/">
-						<Text color="#0D47A1">Políticas de Privacidad</Text>
-					</a>
-					y confirmas estar de acuerdo con el uso de ellas.
-				</Text>
 			</form>
 		</Flex>
 	);
