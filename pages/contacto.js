@@ -11,7 +11,6 @@ import {
 	Image,
 	HStack,
 	Button,
-	Select,
 	Input,
 } from "@chakra-ui/react";
 import { useState, useEffect } from "react";
@@ -28,8 +27,7 @@ export default function Contacto() {
 		handleSubmit,
 		formState: { errors },
 	} = useForm();
-	const onSubmit = (data) => {
-		console.log(data);
+	const onSubmit = () => {
 		setValidation(true);
 	};
 
