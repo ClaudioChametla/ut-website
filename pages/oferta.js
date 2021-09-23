@@ -1,5 +1,5 @@
 import Head from "next/head";
-import { Flex, Spinner, Box } from "@chakra-ui/react";
+import { Flex, Spinner } from "@chakra-ui/react";
 import { useEffect } from "react";
 import Container from "../components/Container";
 import { SubHero } from "../components/Hero";
