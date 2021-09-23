@@ -84,7 +84,7 @@
 		},
 		{
 			"name": "VINCULACIÓN",
-			"link": "#3",
+			"link": "/vinculacion",
 			"filter": "invert(16%) sepia(14%) saturate(313%) hue-rotate(193deg) brightness(91%) contrast(93%)",
 			"icon": "/icons/angle-right.svg",
 			"options": [
