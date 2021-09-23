@@ -93,11 +93,7 @@ const SubContent = () => {
 					</Text>
 					<Divider w="50px" />
 					<Stack marginTop="5" flexDirection="row">
-						<Image
-							marginRight="5"
-							boxSize="80px"
-							src="https://www.universidadtollancingo.com/wp-content/uploads/2021/07/mtra_nadia.png"
-						/>
+						<Image marginRight="5" boxSize="80px" src="/images/mtra_nadia.png" />
 						<Stack>
 							<Text fontSize="12px" color="#333333">
 								LA CRISIS Y LA RUPTURA EN LA SOCIEDAD A PARTIR DE LA PANDEMIA
@@ -119,11 +115,7 @@ const SubContent = () => {
 						</Stack>
 					</Stack>
 					<Stack flexDirection="row">
-						<Image
-							marginRight="5"
-							boxSize="80px"
-							src="https://www.universidadtollancingo.com/wp-content/uploads/2020/11/kdautoestima4.jpg"
-						/>
+						<Image marginRight="5" boxSize="80px" src="/images/kda.jpg" />
 						<Stack>
 							<Text fontSize="12px" color="#333333">
 								YO ME QUIERO Y ACEPTO COMO SOY: MANEJO DE AUTOESTIMA EN NIÑOS, NIÑAS
