@@ -19,7 +19,7 @@ function BasicUsage() {
 				padding="10"
 				_hover={{ cursor: "pointer", filter: "brightness(60%)" }}
 				onClick={onOpen}
-				src="/images/background_video.jpg"
+				src="/images/background_video.webp"
 			/>
 			<Modal isOpen={isOpen} onClose={onClose}>
 				<ModalOverlay />

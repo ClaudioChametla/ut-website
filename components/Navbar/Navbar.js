@@ -223,9 +223,9 @@ const Navbar = () => {
 									}}
 								>
 									<Image
-										src="/images/logo_UT_FFF_100.png"
+										src="/images/logo_UT_FFF_100.webp"
 										alt="Logo"
-										fallbackSrc="https://www.universidadtollancingo.com/wp-content/uploads/2020/07/logo_UT_FFF_100.png"
+										fallbackSrc="https://www.universidadtollancingo.com/wp-content/uploads/2020/07/logo_UT_FFF_100.webp"
 										h="80%"
 										w="70%"
 									/>
@@ -315,9 +315,9 @@ const Navbar = () => {
 					<Flex w="20%" justifyContent="center" alignSelf="center">
 						<Link href="/" h="100%" d="flex" justifyContent="center">
 							<Image
-								src="/images/logo_UT_FFF_100.png"
+								src="/images/logo_UT_FFF_100.webp"
 								alt="Logo"
-								fallbackSrc="https://www.universidadtollancingo.com/wp-content/uploads/2020/07/logo_UT_FFF_100.png"
+								fallbackSrc="https://www.universidadtollancingo.com/wp-content/uploads/2020/07/logo_UT_FFF_100.webp"
 								h="85%"
 								w="75%"
 							/>

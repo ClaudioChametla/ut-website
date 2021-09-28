@@ -22,7 +22,7 @@ export default function Home() {
 				<link rel="icon" href="/favicon.ico" />
 			</Head>
 			<Container>
-				<SubHero title="CONOCENOS" src="/images/banner_mural_negro-scaled.jpg" />
+				<SubHero title="CONOCENOS" src="/images/banner_mural_negro-scaled.webp" />
 				<BarRoute />
 				<History />
 				<Flex

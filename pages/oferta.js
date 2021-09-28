@@ -22,7 +22,7 @@ export default function Home() {
 				<link rel="icon" href="/favicon.ico" />
 			</Head>
 			<Container>
-				<SubHero title="OFERTA EDUCATIVA" src="/images/bg_oferta.jpg" />
+				<SubHero title="OFERTA EDUCATIVA" src="/images/bg_oferta.webp" />
 				<BarRoute />
 				<Tabs />
 				<Flex

@@ -47,7 +47,7 @@ const nuevoContent = () => (
 				</Text>
 			</Box>
 			<Wrap w={["100%", "100%", "50%", "50%"]} p="8">
-				<Image src="/images/nuevoingresoright.jpg" />
+				<Image src="/images/nuevoingresoright.webp" />
 			</Wrap>
 		</Flex>
 	</Center>

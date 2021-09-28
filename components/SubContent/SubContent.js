@@ -43,7 +43,7 @@ const SubContent = () => {
 					<VStack spacing={6} mt="6" w={["100%", "100%", "300px", "300px"]}>
 						<HStack w="100%">
 							<Image
-								src="/images/30-Conta-76x65.jpg"
+								src="/images/30-Conta-76x65.webp"
 								boxSize={["50px", "60px", "60px", "60px"]}
 							/>
 							<Text w="200px" fontSize={styles.font.text}>
@@ -58,7 +58,7 @@ const SubContent = () => {
 						<Divider />
 						<HStack w="100%">
 							<Image
-								src="/images/30-Gast-76x65.jpg"
+								src="/images/30-Gast-76x65.webp"
 								boxSize={["50px", "60px", "60px", "60px"]}
 							/>
 							<Text w="200px" fontSize={styles.font.text}>
@@ -73,7 +73,7 @@ const SubContent = () => {
 						<Divider />
 						<HStack w="100%">
 							<Image
-								src="/images/background_video-76x65.jpg"
+								src="/images/background_video-76x65.webp"
 								boxSize={["50px", "60px", "60px", "60px"]}
 							/>
 							<Text w="200px" fontSize={styles.font.text}>
@@ -93,7 +93,7 @@ const SubContent = () => {
 					</Text>
 					<Divider w="50px" />
 					<Stack marginTop="5" flexDirection="row">
-						<Image marginRight="5" boxSize="80px" src="/images/mtra_nadia.png" />
+						<Image marginRight="5" boxSize="80px" src="/images/mtra_nadia.webp" />
 						<Stack>
 							<Text fontSize="12px" color="#333333">
 								LA CRISIS Y LA RUPTURA EN LA SOCIEDAD A PARTIR DE LA PANDEMIA
@@ -115,7 +115,7 @@ const SubContent = () => {
 						</Stack>
 					</Stack>
 					<Stack flexDirection="row">
-						<Image marginRight="5" boxSize="80px" src="/images/kda.jpg" />
+						<Image marginRight="5" boxSize="80px" src="/images/kda.webp" />
 						<Stack>
 							<Text fontSize="12px" color="#333333">
 								YO ME QUIERO Y ACEPTO COMO SOY: MANEJO DE AUTOESTIMA EN NIÑOS, NIÑAS

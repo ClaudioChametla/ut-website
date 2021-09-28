@@ -1,7 +1,7 @@
 {
 	"images": [
 		{
-			"src": "/images/Hero1.jpg",
+			"src": "/images/Hero1.webp",
 			"title": "SE FAMILIA UT",
 			"subtitle": "Forja un espiritu de perseverancia, disciplina y trabajo. En Universidad Tollancingo, siempre tenemos un lugar para TI.",
 			"text": "En Universidad Tollancingo, siempre tenemos un lugar para TI.",
@@ -23,7 +23,7 @@
 			]
 		},
 		{
-			"src": "/images/Hero2.jpg",
+			"src": "/images/Hero2.webp",
 			"title": "INSCRIBETE YA",
 			"subtitle": "Que nada trunque tus ganas de seguir estudiando.",
 			"button": [

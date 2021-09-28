@@ -80,7 +80,7 @@ const Footer = () => {
 					<Wrap justify="center" m="20px" spacing={4}>
 						<VStack w="300px" h="auto" spacing={4} align="stretch">
 							<Image
-								src="/images/monograma-128x161.png"
+								src="/images/monograma-128x161.webp"
 								alt=""
 								w="128px"
 								h="161px"
@@ -130,7 +130,7 @@ const Footer = () => {
 							<VStack spacing={6} mt="6" w={["100%", "100%", "300px", "300px"]}>
 								<HStack w="100%">
 									<Image
-										src="/images/30-Gast-76x65.jpg"
+										src="/images/30-Gast-76x65.webp"
 										boxSize={["50px", "60px", "60px", "60px"]}
 									/>
 									<Text
@@ -149,7 +149,7 @@ const Footer = () => {
 								<Divider />
 								<HStack w="100%">
 									<Image
-										src="/images/30-Conta-76x65.jpg"
+										src="/images/30-Conta-76x65.webp"
 										boxSize={["50px", "60px", "60px", "60px"]}
 									/>
 									<Text w="200px" fontSize={styles.font.text}>
@@ -165,7 +165,7 @@ const Footer = () => {
 								<Divider />
 								<HStack w="100%">
 									<Image
-										src="/images/background_video-76x65.jpg"
+										src="/images/background_video-76x65.webp"
 										boxSize={["50px", "60px", "60px", "60px"]}
 									/>
 									<Text w="200px" fontSize={styles.font.text}>
