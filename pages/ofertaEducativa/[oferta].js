@@ -1,5 +1,15 @@
 import Head from "next/head";
-import { Flex, Center, Grid, GridItem, Spinner } from "@chakra-ui/react";
+import {
+	Flex,
+	Center,
+	Grid,
+	GridItem,
+	Spinner,
+	Text,
+	Image,
+	Divider,
+	Spacer,
+} from "@chakra-ui/react";
 import { useEffect } from "react";
 import { useRouter } from "next/router";
 import Container from "../../components/Container";
@@ -39,7 +49,50 @@ export default function Home() {
 						templateRows={styles.container.grid.row}
 						columnGap={5}
 					>
-						<GridItem h={["250px", "300px", "400px", "500px"]} rowStart={1}>
+						<GridItem
+							rowStart={1}
+							h={["200px", "300px", "400px", "600px"]}
+							mb={["200px", "120px", "140px", "140px"]}
+						>
+							<Flex d="column" mb="30px">
+								<Text fontSize={styles.font.title} mb="10px">
+									{pageData ? pageData.carrera : ""}
+								</Text>
+								<Divider />
+								<Flex align="center" mt="10px">
+									<Image
+										src="/icons/bookmark.svg"
+										boxSize="30px"
+										filter="contrast(20%)"
+									/>
+									<Flex d="column" align="center">
+										<Text
+											fontSize={styles.font.littleText}
+											fontWeight="bold"
+											filter="contrast(20%)"
+										>
+											Nivel
+										</Text>
+										<Text
+											fontSize={styles.font.littleText}
+											textTransform="uppercase"
+											fontWeight="bold"
+											filter="contrast(60%)"
+										>
+											{pageData ? pageData.nivel : ""}
+										</Text>
+									</Flex>
+									<Divider orientation="vertical" m="0 20px 0 20px" h="40px" />
+									<Spacer />
+									<Text
+										fontSize={styles.font.title}
+										color="#00489e"
+										fontWeight="semibold"
+									>
+										$ {pageData ? pageData.costo : ""}
+									</Text>
+								</Flex>
+							</Flex>
 							<Gallery pageData={pageData} />
 						</GridItem>
 						<GridItem h="auto" rowStart={2}>
