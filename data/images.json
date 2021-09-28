@@ -1,21 +1,21 @@
 {
 	"imagenesCol1": [
-		"/images/img1.jpg",
-		"/images/img2.jpg",
-		"/images/img3.jpg",
-		"/images/img4.jpg"
+		"/images/img1.webp",
+		"/images/img2.webp",
+		"/images/img3.webp",
+		"/images/img4.webp"
 	],
 	"imagenesCol2small": [
-		"/images/img5.jpg",
-		"/images/img6.jpg",
-		"/images/img7.jpg",
-		"/images/img8.jpg"
+		"/images/img5.webp",
+		"/images/img6.webp",
+		"/images/img7.webp",
+		"/images/img8.webp"
 	],
-	"imagenesCol2": ["/images/img9.jpg", "/images/img10.jpg"],
+	"imagenesCol2": ["/images/img9.webp", "/images/img10.webp"],
 	"imagenesCol3": [
-		"/images/img11.jpg",
-		"/images/img12.jpg",
-		"/images/img13.jpg",
-		"/images/img14.jpg"
+		"/images/img11.webp",
+		"/images/img12.webp",
+		"/images/img13.webp",
+		"/images/img14.webp"
 	]
 }

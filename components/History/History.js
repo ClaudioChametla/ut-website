@@ -208,7 +208,7 @@ const History = () => {
 							p={["0", "0", "5", "10"]}
 							mt={["5", "5", "0", "0"]}
 						>
-							<Image src="/images/fundador-optimized.jpg" />
+							<Image src="/images/fundador-optimized.webp" />
 						</Box>
 						<Box
 							my={["5", "5", "0", "0"]}

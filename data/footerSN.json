@@ -22,39 +22,39 @@
 	"instalaciones": [
 		{
 			"title": "INSTALACIONES",
-			"img": "/images/foo(1).jpg"
+			"img": "/images/foo(1).webp"
 		},
 		{
 			"title": "INSTALACIONES",
-			"img": "/images/foo(2).jpg"
+			"img": "/images/foo(2).webp"
 		},
 		{
 			"title": "INSTALACIONES",
-			"img": "/images/foo(3).jpg"
+			"img": "/images/foo(3).webp"
 		},
 		{
 			"title": "INSTALACIONES",
-			"img": "/images/foo(4).jpg"
+			"img": "/images/foo(4).webp"
 		},
 		{
 			"title": "UT",
-			"img": "/images/foo(5).jpg"
+			"img": "/images/foo(5).webp"
 		},
 		{
 			"title": "CENTRO DE CÓMPUTO",
-			"img": "/images/foo(6).jpg"
+			"img": "/images/foo(6).webp"
 		},
 		{
 			"title": "BIBLIOTECA",
-			"img": "/images/foo(7).jpg"
+			"img": "/images/foo(7).webp"
 		},
 		{
 			"title": "BIBLIOTECA",
-			"img": "/images/foo(8).jpg"
+			"img": "/images/foo(8).webp"
 		},
 		{
 			"title": "INSTALACIONES",
-			"img": "/images/foo(9).jpg"
+			"img": "/images/foo(9).webp"
 		}
 	]
 }

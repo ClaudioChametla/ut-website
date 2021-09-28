@@ -23,7 +23,7 @@ export default function Politicas() {
 				<link rel="icon" href="/favicon.ico" />
 			</Head>
 			<ContainerPage>
-				<SubHero title="POLITICAS DE PRIVACIDAD" src="/images/bg_politicas.jpg" />
+				<SubHero title="POLITICAS DE PRIVACIDAD" src="/images/bg_politicas.webp" />
 				<BarRoute />
 				<Politycs />
 				<Flex

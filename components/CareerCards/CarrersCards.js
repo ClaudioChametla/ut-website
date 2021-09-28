@@ -1,5 +1,4 @@
-import { Box, Grid, Image, Flex, Text, Center } from "@chakra-ui/react";
-import Link from "next/link";
+import { Box, Grid, Image, Flex, Text, Center, Link } from "@chakra-ui/react";
 import { useEffect, useState } from "react";
 import PropTypes from "prop-types";
 import styles from "../../styles/styles.json";

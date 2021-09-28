@@ -22,7 +22,7 @@ export default function Home() {
 				<link rel="icon" href="/favicon.ico" />
 			</Head>
 			<Container>
-				<SubHero title="NUEVO INGRESO" src="/images/nuevoingresobg.jpg" />
+				<SubHero title="NUEVO INGRESO" src="/images/nuevoingresobg.webp" />
 				<BarRoute />
 				<NuevoContent />
 				<Flex

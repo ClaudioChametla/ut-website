@@ -9,7 +9,7 @@ const HeroDynamic = ({ title }) => (
 		<Center
 			h="100%"
 			backgroundRepeat="no-repeat"
-			backgroundImage="/images/banner_mural_negro-scaled.jpg"
+			backgroundImage="/images/banner_mural_negro-scaled.webp"
 		>
 			<Flex
 				w={styles.container.width}
