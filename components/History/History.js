@@ -92,6 +92,7 @@ const History = () => {
 								w={["100%", "100%", "50%", "50%"]}
 								fontFamily={styles.font.fontFamily}
 								textAlign={["center", "center", "left", "left"]}
+								zIndex="15"
 							>
 								<Text fontWeight="bold" fontSize={styles.font.text}>
 									MENSAJE DE RECTORÍA
@@ -105,6 +106,7 @@ const History = () => {
 						w={["100%", "100%", "50%", "50%"]}
 						h="320px"
 						my={["10px", "10px", "0px", "0px"]}
+						zIndex="10"
 					>
 						<Gallery pageData={imgGallery} variant="small" />
 					</Box>

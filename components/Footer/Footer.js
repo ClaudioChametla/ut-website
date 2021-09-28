@@ -16,54 +16,36 @@ import {
 	ModalCloseButton,
 	useDisclosure,
 	Grid,
+	Button,
 } from "@chakra-ui/react";
 import { useState } from "react";
-import PropTypes from "prop-types";
 import styles from "../../styles/styles.json";
 import stylesTwo from "../../styles/stylesTwo.json";
 import footerSN from "../../data/footerSN.json";
 
-const Modalcomponent = ({ dataModal, isOpen, onClose }) => (
-	<div>
-		<Modal isOpen={isOpen} onClose={onClose} size="xl" isCentered>
-			<ModalOverlay />
-			<ModalContent w="auto" h="auto" borderRadius="0">
-				<ModalCloseButton
-					position="absolute"
-					top="0"
-					right={["0", "0", "-50px", "-50px"]}
-					boxSize="50px"
-					bg="#0053B8"
-					borderRadius="0"
-					color="white"
-					_focus={{ border: 0 }}
-				/>
-				<ModalBody maxH="90vh">
-					<Image
-						objectFit="cover"
-						src={dataModal.img ? dataModal.img : ""}
-						w="100%"
-						h="auto"
-					/>
-					<Text textAlign="center" fontSize={styles.font.text} fontWeight="bold">
-						{dataModal.title ? dataModal.title : ""}
-					</Text>
-				</ModalBody>
-			</ModalContent>
-		</Modal>
-	</div>
-);
-
 const Footer = () => {
 	const { socialNetworks, instalaciones } = footerSN;
 	const { isOpen, onOpen, onClose } = useDisclosure();
-	const [dataModal, setDataModal] = useState({});
-	const action = (item) => {
-		setDataModal(item);
-		return onOpen;
+	const [dataModal, setDataModal] = useState(0);
+
+	const nextScroll = () => {
+		if (dataModal === instalaciones.length - 1) {
+			setDataModal(0);
+		} else {
+			setDataModal(dataModal + 1);
+		}
 	};
+
+	const prevScroll = () => {
+		if (dataModal === 0) {
+			setDataModal(instalaciones.length - 1);
+		} else {
+			setDataModal(dataModal - 1);
+		}
+	};
+
 	return (
-		<div>
+		<>
 			<Center w="100%" bg="#25282e" fontSize={["85%", "", "", ""]}>
 				<Box
 					w={stylesTwo.containerFooter.width}
@@ -273,7 +255,7 @@ const Footer = () => {
 													src={item.img}
 													_hover={{ filter: "brightness(60%)" }}
 													boxSize={["80px", "85px", "85px", "85px"]}
-													onClick={() => action(item)}
+													onClick={() => setDataModal(index)}
 													objectFit="cover"
 												/>
 											</Box>
@@ -302,21 +284,77 @@ const Footer = () => {
 					.
 				</Text>
 			</Box>
-			<Modalcomponent dataModal={dataModal} isOpen={isOpen} onClose={onClose} />
-		</div>
+
+			{instalaciones[dataModal] && (
+				<Modal isOpen={isOpen} onClose={onClose} size="xl">
+					<ModalOverlay />
+					<ModalContent w="auto" h="auto" borderRadius="0">
+						<ModalCloseButton
+							position="absolute"
+							top="0"
+							right={["0", "0", "-50px", "-50px"]}
+							boxSize="50px"
+							bg="#0053B8"
+							borderRadius="0"
+							color="white"
+							_focus={{ border: 0 }}
+						/>
+						<ModalBody h="auto">
+							<Button
+								h="50%"
+								bg="none"
+								transition="none"
+								position="absolute"
+								_hover={{ bg: "rgba(0,0,0,.1)" }}
+								borderRadius="0deg"
+								onClick={() => prevScroll()}
+								_focus={{ boxShadow: "none" }}
+								left="20px"
+								top="25%"
+							>
+								<Image
+									transform="scale(2)"
+									src="/icons/chevron-left.svg"
+									filter="invert(94%) sepia(92%) saturate(6%) hue-rotate(195deg) brightness(104%) contrast(96%)"
+								/>
+							</Button>
+							<Button
+								h="50%"
+								bg="none"
+								transition="none"
+								position="absolute"
+								_hover={{ bg: "rgba(0,0,0,.1)" }}
+								borderRadius="0deg"
+								onClick={() => nextScroll()}
+								_focus={{ boxShadow: "none" }}
+								right="20px"
+								top="25%"
+							>
+								<Image
+									transform="scale(2)"
+									src="/icons/chevron-right.svg"
+									filter="invert(94%) sepia(92%) saturate(6%) hue-rotate(195deg) brightness(104%) contrast(96%)"
+								/>
+							</Button>
+							<Image
+								objectFit="cover"
+								src={
+									instalaciones[dataModal].img ? instalaciones[dataModal].img : ""
+								}
+								w="100%"
+								h="auto"
+							/>
+							<Text textAlign="center" fontSize={styles.font.text} fontWeight="bold">
+								{instalaciones[dataModal].title
+									? instalaciones[dataModal].title
+									: ""}
+							</Text>
+						</ModalBody>
+					</ModalContent>
+				</Modal>
+			)}
+		</>
 	);
-};
-
-Modalcomponent.propTypes = {
-	dataModal: PropTypes.objectOf(PropTypes.any),
-	isOpen: PropTypes.bool,
-	onClose: PropTypes.func,
-};
-
-Modalcomponent.defaultProps = {
-	dataModal: {},
-	isOpen: "False",
-	onClose: "",
 };
 
 export default Footer;
