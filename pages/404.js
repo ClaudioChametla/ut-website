@@ -1,3 +1,4 @@
+import Head from "next/head";
 import { Flex, Text, Image, Link } from "@chakra-ui/react";
 import Container from "../components/Container";
 import styles from "../styles/styles.json";
@@ -5,6 +6,11 @@ import styles from "../styles/styles.json";
 export default function Custom404() {
 	return (
 		<Container>
+			<Head>
+				<title>404 - Universidad Tollancingo </title>
+				<meta name="description" content="Universidad Tollancingo" />
+				<link rel="icon" href="/images/favicon.ico" />
+			</Head>
 			<Flex
 				h="90vh"
 				w="100%"

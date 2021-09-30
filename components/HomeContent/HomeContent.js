@@ -49,18 +49,18 @@ const HomeContent = () => (
 				<Box marginTop="50px">
 					<UnorderedList spacing={1}>
 						{contentList.contentList.map((item, index) => (
-							<Flex key={`FlexHomeContent-${index}`}>
-								<Image
-									boxSize="25px"
-									borderRadius="0%"
-									filter="invert(19%) sepia(73%) saturate(2298%) hue-rotate(207deg) brightness(94%) contrast(101%)"
-									src={contentList.Icon}
-									marginRight="10px"
-								/>
-								<List>
-									<ListItem key={`ListItem-${index}`}>{item}</ListItem>
-								</List>
-							</Flex>
+							<ListItem key={`ListItem-${index}`} style={{ listStyle: "none" }}>
+								<Flex key={`FlexHomeContent-${index}`}>
+									<Image
+										boxSize="25px"
+										borderRadius="0%"
+										filter="invert(19%) sepia(73%) saturate(2298%) hue-rotate(207deg) brightness(94%) contrast(101%)"
+										src={contentList.Icon}
+										marginRight="10px"
+									/>
+									{item}
+								</Flex>
+							</ListItem>
 						))}
 					</UnorderedList>
 				</Box>

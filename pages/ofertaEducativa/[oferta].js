@@ -27,7 +27,7 @@ export default function Home() {
 			<Head>
 				<title>UT - Oferta educativa</title>
 				<meta name="description" content="Universidad Tollancingo" />
-				<link rel="icon" href="/favicon.ico" />
+				<link rel="icon" href="/images/favicon.ico" />
 			</Head>
 			<Container>
 				<HeroDynamic title={pageData ? pageData.carrera : "La página no existe"} />

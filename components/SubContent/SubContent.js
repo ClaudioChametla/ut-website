@@ -6,8 +6,8 @@ import oferta from "../../data/educativeOffer.json";
 
 const SubContent = () => {
 	const { socialNetworks } = footerSN;
-	const i = Math.floor(Math.random() * (4 - 0)) + 0;
-	const i1 = Math.floor(Math.random() * (8 - 4)) + 4;
+	const i = Math.floor(Math.random() * (2 - 0)) + 0;
+	const i1 = Math.floor(Math.random() * (5 - 3)) + 3;
 	const i2 = Math.floor(Math.random() * (9 - 6)) + 6;
 
 	return (

@@ -2,7 +2,7 @@
 import {
 	Center,
 	Box,
-	Wrap,
+	Flex,
 	Text,
 	VStack,
 	HStack,
@@ -77,7 +77,7 @@ const Footer = () => {
 						href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap"
 						rel="stylesheet"
 					/>
-					<Wrap justify="center" m="20px" spacing={4}>
+					<Flex flexWrap="wrap" justify="center" m="20px" spacing={4}>
 						<VStack w="300px" h="auto" spacing={4} align="stretch">
 							<Image
 								src="/images/monograma-128x161.webp"
@@ -281,7 +281,7 @@ const Footer = () => {
 								</Grid>
 							</Center>
 						</Box>
-					</Wrap>
+					</Flex>
 				</Box>
 			</Center>
 			<Box

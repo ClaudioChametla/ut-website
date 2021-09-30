@@ -51,7 +51,7 @@ export default function Contacto() {
 			<Head>
 				<title>UT - Contacto</title>
 				<meta name="description" content="Universidad Tollancingo" />
-				<link rel="icon" href="/favicon.ico" />
+				<link rel="icon" href="/images/favicon.ico" />
 			</Head>
 			<ContainerPage>
 				<Center w="100%" pt={["80px", "80px", "80px", "150px"]} flexDir="column">

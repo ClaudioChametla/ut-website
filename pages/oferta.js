@@ -19,7 +19,7 @@ export default function Home() {
 			<Head>
 				<title>UT - Oferta educativa</title>
 				<meta name="description" content="Universidad Tollancingo" />
-				<link rel="icon" href="/favicon.ico" />
+				<link rel="icon" href="/images/favicon.ico" />
 			</Head>
 			<Container>
 				<SubHero title="OFERTA EDUCATIVA" src="/images/bg_oferta.webp" />
