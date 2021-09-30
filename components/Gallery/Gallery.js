@@ -11,14 +11,16 @@ import {
 	ModalBody,
 	ModalCloseButton,
 	useDisclosure,
+	Text,
 } from "@chakra-ui/react";
 import { useState } from "react";
 import PropTypes from "prop-types";
 import { motion } from "framer-motion";
+import styles from "../../styles/styles.json";
 
 const Gallery = ({ pageData }) => {
 	const MotionImage = motion(Image);
-	const { imagenes } = pageData;
+	const { imagenes, titles } = pageData;
 	const { isOpen, onOpen, onClose } = useDisclosure();
 	const [currentImg, setCurrentImg] = useState(0);
 	const [isLargerThan768] = useMediaQuery("(min-width: 768px)");
@@ -66,7 +68,13 @@ const Gallery = ({ pageData }) => {
 		<>
 			<Box h="100%" w="100%" align="center">
 				<Box align="center" variants={icon} pos="relative" h="75%">
-					<Box w="100%" h="100%" pos="relative">
+					<Box
+						w="100%"
+						h="100%"
+						pos="relative"
+						_hover={{ filter: "brightness(80%)" }}
+						animation="all 3s ease"
+					>
 						{imagenes &&
 							imagenes.map((item, index) => (
 								<MotionImage
@@ -227,6 +235,15 @@ const Gallery = ({ pageData }) => {
 								w="100%"
 								h="auto"
 							/>
+							{pageData.titles && (
+								<Text
+									textAlign="center"
+									fontSize={styles.font.text}
+									fontWeight="bold"
+								>
+									{titles[currentImg] ? titles[currentImg] : ""}
+								</Text>
+							)}
 						</ModalBody>
 					</ModalContent>
 				</Modal>
