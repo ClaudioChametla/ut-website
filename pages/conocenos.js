@@ -19,7 +19,7 @@ export default function Home() {
 			<Head>
 				<title>UT - Conocenos</title>
 				<meta name="description" content="Universidad Tollancingo" />
-				<link rel="icon" href="/favicon.ico" />
+				<link rel="icon" href="/images/favicon.ico" />
 			</Head>
 			<Container>
 				<SubHero title="CONOCENOS" src="/images/banner_mural_negro-scaled.webp" />

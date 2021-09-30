@@ -20,7 +20,7 @@ export default function Politicas() {
 			<Head>
 				<title>UT - Politicas de Privacidad</title>
 				<meta name="description" content="Universidad Tollancingo" />
-				<link rel="icon" href="/favicon.ico" />
+				<link rel="icon" href="/images/favicon.ico" />
 			</Head>
 			<ContainerPage>
 				<SubHero title="POLITICAS DE PRIVACIDAD" src="/images/bg_politicas.webp" />
