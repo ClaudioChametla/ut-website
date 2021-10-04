@@ -70,6 +70,7 @@ const CareerCards = ({ data }) => {
 									</Flex>
 									<Box overflow="hidden" h="65%">
 										<Image
+											loading="lazy"
 											src={item.src}
 											h="100%"
 											w="100%"
@@ -95,6 +96,7 @@ const CareerCards = ({ data }) => {
 									>
 										<Flex ml="10" w="50%" alignItems="center">
 											<Image
+												loading="lazy"
 												src="/icons/user-friends.svg"
 												w="15px"
 												h="15px"
@@ -103,6 +105,7 @@ const CareerCards = ({ data }) => {
 												0
 											</Text>
 											<Image
+												loading="lazy"
 												ml="1"
 												src="/icons/comments.svg"
 												w="15px"
@@ -116,6 +119,7 @@ const CareerCards = ({ data }) => {
 											{stars.map &&
 												stars.map(() => (
 													<Image
+														loading="lazy"
 														ml="0.5"
 														src="/icons/star.svg"
 														w="13px"

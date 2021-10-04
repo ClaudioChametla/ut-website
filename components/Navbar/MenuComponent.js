@@ -23,7 +23,7 @@ const MenuComponent = ({ item }) => {
 	return (
 		<Flex color="white">
 			<Box alignSelf="center" h="100%" align="center">
-				<Menu id="Menu-inMenuComponent" isOpen={isOpen} isLazy>
+				<Menu aria-labelledby="Menu-inMenuComponent" isOpen={isOpen} isLazy>
 					<Link href={item.link} _hover={{ textDecoration: "none" }}>
 						<MenuButton
 							ref={finalRef}
@@ -104,6 +104,7 @@ const MenuComponent = ({ item }) => {
 												border="none"
 												p="2"
 												boxShadow="none"
+												aria-labelledby="menu-list-Menu-02"
 											>
 												{option.options &&
 													option.options.map((subOption, index2) => (
@@ -168,6 +169,7 @@ const MenuComponent = ({ item }) => {
 																	border="none"
 																	p="2"
 																	boxShadow="none"
+																	aria-labelledby="menu-list-Menu-03"
 																	onMouseEnter={onM3Open}
 																	onMouseLeave={onM3Close}
 																>
@@ -228,6 +230,7 @@ const MenuComponent = ({ item }) => {
 																</MenuList>
 															</Menu>
 															<Image
+																loading="lazy"
 																key={`ImgIcon-${option.icon}`}
 																src={option.icon}
 																w="15px"
@@ -243,6 +246,7 @@ const MenuComponent = ({ item }) => {
 										</Menu>
 
 										<Image
+											loading="lazy"
 											src={item.icon}
 											w="15px"
 											h="20px"

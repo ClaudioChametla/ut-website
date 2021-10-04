@@ -16,74 +16,53 @@ import {
 	ModalCloseButton,
 	useDisclosure,
 	Grid,
+	Button,
 } from "@chakra-ui/react";
 import { useState } from "react";
-import PropTypes from "prop-types";
 import styles from "../../styles/styles.json";
 import stylesTwo from "../../styles/stylesTwo.json";
 import footerSN from "../../data/footerSN.json";
 
-const Modalcomponent = ({ dataModal, isOpen, onClose }) => (
-	<div>
-		<Modal isOpen={isOpen} onClose={onClose} size="xl" isCentered>
-			<ModalOverlay />
-			<ModalContent w="auto" h="auto" borderRadius="0">
-				<ModalCloseButton
-					position="absolute"
-					top="0"
-					right={["0", "0", "-50px", "-50px"]}
-					boxSize="50px"
-					bg="#0053B8"
-					borderRadius="0"
-					color="white"
-					_focus={{ border: 0 }}
-				/>
-				<ModalBody maxH="90vh">
-					<Image
-						objectFit="cover"
-						src={dataModal.img ? dataModal.img : ""}
-						w="100%"
-						h="auto"
-					/>
-					<Text textAlign="center" fontSize={styles.font.text} fontWeight="bold">
-						{dataModal.title ? dataModal.title : ""}
-					</Text>
-				</ModalBody>
-			</ModalContent>
-		</Modal>
-	</div>
-);
-
 const Footer = () => {
 	const { socialNetworks, instalaciones } = footerSN;
 	const { isOpen, onOpen, onClose } = useDisclosure();
-	const [dataModal, setDataModal] = useState({});
-	const action = (item) => {
-		setDataModal(item);
-		return onOpen;
+	const [dataModal, setDataModal] = useState(0);
+
+	const nextScroll = () => {
+		if (dataModal === instalaciones.length - 1) {
+			setDataModal(0);
+		} else {
+			setDataModal(dataModal + 1);
+		}
 	};
+
+	const prevScroll = () => {
+		if (dataModal === 0) {
+			setDataModal(instalaciones.length - 1);
+		} else {
+			setDataModal(dataModal - 1);
+		}
+	};
+
 	return (
-		<div>
+		<>
 			<Center w="100%" bg="#25282e" fontSize={["85%", "", "", ""]}>
 				<Box
 					w={stylesTwo.containerFooter.width}
 					h="auto"
 					bottom="0"
-					fontFamily="Montserrat"
+					fontFamily={styles.font.fontFamily}
 					pt="100px"
 					pb="70px"
 				>
-					<link
-						href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap"
-						rel="stylesheet"
-					/>
 					<Flex flexWrap="wrap" justify="center" m="20px" spacing={4}>
 						<VStack w="300px" h="auto" spacing={4} align="stretch">
 							<Image
+								loading="lazy"
 								src="/images/monograma-128x161.webp"
-								alt=""
-								w="128px"
-								h="161px"
+								alt="monograma"
+								htmlWidth="128px"
+								htmlHeight="161px"
 								m="auto"
 							/>
 							<Text
@@ -105,13 +84,15 @@ const Footer = () => {
 											_hover={{ bg: "whiteAlpha.800" }}
 										>
 											<Image
+												loading="lazy"
 												m="2"
 												key={`Img-${item.img}`}
 												src={item.img}
-												alt=""
-												h="20px"
-												w="20px"
+												alt="socialNetworks"
 												filter={item.filter}
+												boxSize="20px"
+												htmlHeight="20px"
+												htmlWidth="20px"
 											/>
 										</Link>
 									))}
@@ -130,8 +111,11 @@ const Footer = () => {
 							<VStack spacing={6} mt="6" w={["100%", "100%", "300px", "300px"]}>
 								<HStack w="100%">
 									<Image
+										loading="lazy"
 										src="/images/30-Gast-76x65.webp"
-										boxSize={["50px", "60px", "60px", "60px"]}
+										alt="gastronomia"
+										htmlHeight={["50px", "60px", "60px", "60px"]}
+										htmlWidth={["50px", "60px", "60px", "60px"]}
 									/>
 									<Text
 										w={["", "200px", "200px", "200px"]}
@@ -149,8 +133,11 @@ const Footer = () => {
 								<Divider />
 								<HStack w="100%">
 									<Image
+										loading="lazy"
 										src="/images/30-Conta-76x65.webp"
-										boxSize={["50px", "60px", "60px", "60px"]}
+										alt="conta"
+										htmlHeight={["50px", "60px", "60px", "60px"]}
+										htmlWidth={["50px", "60px", "60px", "60px"]}
 									/>
 									<Text w="200px" fontSize={styles.font.text}>
 										<Link
@@ -165,8 +152,11 @@ const Footer = () => {
 								<Divider />
 								<HStack w="100%">
 									<Image
+										loading="lazy"
 										src="/images/background_video-76x65.webp"
-										boxSize={["50px", "60px", "60px", "60px"]}
+										alt="bgVideo"
+										htmlHeight={["50px", "60px", "60px", "60px"]}
+										htmlWidth={["50px", "60px", "60px", "60px"]}
 									/>
 									<Text w="200px" fontSize={styles.font.text}>
 										<Link
@@ -193,10 +183,12 @@ const Footer = () => {
 							<HStack align="stretch" mt="25px">
 								<Center>
 									<Image
+										loading="lazy"
 										src="/icons/phone-alt.svg"
-										w="20px"
-										h="20px"
+										alt="phone"
 										filter={styles.icons.gray}
+										htmlHeight="20px"
+										htmlWidth="20px"
 									/>
 									<Center>
 										<Link
@@ -213,9 +205,11 @@ const Footer = () => {
 							<HStack align="stretch" mt="25px">
 								<Center>
 									<Image
+										loading="lazy"
 										src="/icons/phone-alt.svg"
-										w="20px"
-										h="20px"
+										alt="phone"
+										htmlHeight="20px"
+										htmlWidth="20px"
 										filter="invert(99%)"
 									/>
 									<Center>
@@ -233,9 +227,12 @@ const Footer = () => {
 							<HStack align="stretch" mt="25px">
 								<Center>
 									<Image
+										loading="lazy"
 										src="/icons/envelope.svg"
-										boxSize="20px"
+										alt="envelope"
 										filter="invert(99%)"
+										htmlHeight="20px"
+										htmlWidth="20px"
 									/>
 									<Center>
 										<Link
@@ -269,11 +266,16 @@ const Footer = () => {
 												key={`GridItemFooter-${item.title}-${index}`}
 											>
 												<Image
+													loading="lazy"
 													key={`ImgFooter-${item.title}-${index}`}
+													alt="carreras"
 													src={item.img}
+													h="80px"
+													w="80px"
+													htmlHeight="100px"
+													htmlWidth="100px"
 													_hover={{ filter: "brightness(60%)" }}
-													boxSize={["80px", "85px", "85px", "85px"]}
-													onClick={() => action(item)}
+													onClick={() => setDataModal(index)}
 													objectFit="cover"
 												/>
 											</Box>
@@ -289,7 +291,7 @@ const Footer = () => {
 				h="auto"
 				bottom="0"
 				bg="#1f2227"
-				fontFamily="Montserrat"
+				fontFamily={styles.font.fontFamily}
 				pt="50px"
 				pb="20px"
 			>
@@ -302,21 +304,83 @@ const Footer = () => {
 					.
 				</Text>
 			</Box>
-			<Modalcomponent dataModal={dataModal} isOpen={isOpen} onClose={onClose} />
-		</div>
+
+			{instalaciones[dataModal] && (
+				<Modal isOpen={isOpen} onClose={onClose} size="xl">
+					<ModalOverlay />
+					<ModalContent w="auto" h="auto" borderRadius="0">
+						<ModalCloseButton
+							position="absolute"
+							top="0"
+							right={["0", "0", "-50px", "-50px"]}
+							boxSize="50px"
+							bg="#0053B8"
+							borderRadius="0"
+							color="white"
+							_focus={{ border: 0 }}
+						/>
+						<ModalBody h="auto">
+							<Button
+								h="50%"
+								bg="none"
+								transition="none"
+								position="absolute"
+								_hover={{ bg: "rgba(0,0,0,.1)" }}
+								borderRadius="0deg"
+								onClick={() => prevScroll()}
+								_focus={{ boxShadow: "none" }}
+								left="20px"
+								top="25%"
+							>
+								<Image
+									loading="lazy"
+									transform="scale(2)"
+									alt="chevronLeft"
+									src="/icons/chevron-left.svg"
+									filter="invert(94%) sepia(92%) saturate(6%) hue-rotate(195deg) brightness(104%) contrast(96%)"
+								/>
+							</Button>
+							<Button
+								h="50%"
+								bg="none"
+								transition="none"
+								position="absolute"
+								_hover={{ bg: "rgba(0,0,0,.1)" }}
+								borderRadius="0deg"
+								onClick={() => nextScroll()}
+								_focus={{ boxShadow: "none" }}
+								right="20px"
+								top="25%"
+							>
+								<Image
+									loading="lazy"
+									transform="scale(2)"
+									alt="chevronRight"
+									src="/icons/chevron-right.svg"
+									filter="invert(94%) sepia(92%) saturate(6%) hue-rotate(195deg) brightness(104%) contrast(96%)"
+								/>
+							</Button>
+							<Image
+								loading="lazy"
+								objectFit="cover"
+								alt="instalaciones"
+								src={
+									instalaciones[dataModal].img ? instalaciones[dataModal].img : ""
+								}
+								w="100%"
+								h="auto"
+							/>
+							<Text textAlign="center" fontSize={styles.font.text} fontWeight="bold">
+								{instalaciones[dataModal].title
+									? instalaciones[dataModal].title
+									: ""}
+							</Text>
+						</ModalBody>
+					</ModalContent>
+				</Modal>
+			)}
+		</>
 	);
-};
-
-Modalcomponent.propTypes = {
-	dataModal: PropTypes.objectOf(PropTypes.any),
-	isOpen: PropTypes.bool,
-	onClose: PropTypes.func,
-};
-
-Modalcomponent.defaultProps = {
-	dataModal: {},
-	isOpen: "False",
-	onClose: "",
 };
 
 export default Footer;

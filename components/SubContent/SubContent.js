@@ -28,6 +28,7 @@ const SubContent = () => {
 									_hover={{ filter: "brightness(60%)" }}
 								>
 									<Image
+										loading="lazy"
 										m="2"
 										key={`Img-${item.img}`}
 										src={item.img}
@@ -47,7 +48,11 @@ const SubContent = () => {
 					<Divider w="50px" />
 					<VStack spacing={6} mt="6" w={["100%", "100%", "300px", "300px"]}>
 						<HStack w="100%">
-							<Image src={oferta[i].src} boxSize={["50px", "60px", "60px", "60px"]} />
+							<Image
+								loading="lazy"
+								src={oferta[i].src}
+								boxSize={["50px", "60px", "60px", "60px"]}
+							/>
 							<Text w="200px" fontSize={styles.font.text}>
 								<Link
 									href={oferta[i].href}
@@ -61,6 +66,7 @@ const SubContent = () => {
 						<Divider />
 						<HStack w="100%">
 							<Image
+								loading="lazy"
 								src={oferta[i1].src}
 								boxSize={["50px", "60px", "60px", "60px"]}
 							/>
@@ -77,6 +83,7 @@ const SubContent = () => {
 						<Divider />
 						<HStack w="100%">
 							<Image
+								loading="lazy"
 								src={oferta[i2].src}
 								boxSize={["50px", "60px", "60px", "60px"]}
 							/>
@@ -98,7 +105,12 @@ const SubContent = () => {
 					</Text>
 					<Divider w="50px" />
 					<Stack marginTop="5" flexDirection="row">
-						<Image marginRight="5" boxSize="80px" src="/images/mtra_nadia.webp" />
+						<Image
+							loading="lazy"
+							marginRight="5"
+							boxSize="80px"
+							src="/images/mtra_nadia.webp"
+						/>
 						<Stack>
 							<Text fontSize="12px" color="#333333">
 								LA CRISIS Y LA RUPTURA EN LA SOCIEDAD A PARTIR DE LA PANDEMIA
@@ -120,7 +132,12 @@ const SubContent = () => {
 						</Stack>
 					</Stack>
 					<Stack flexDirection="row">
-						<Image marginRight="5" boxSize="80px" src="/images/kda.webp" />
+						<Image
+							loading="lazy"
+							marginRight="5"
+							boxSize="80px"
+							src="/images/kda.webp"
+						/>
 						<Stack>
 							<Text fontSize="12px" color="#333333">
 								YO ME QUIERO Y ACEPTO COMO SOY: MANEJO DE AUTOESTIMA EN NIÑOS, NIÑAS

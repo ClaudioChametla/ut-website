@@ -40,7 +40,7 @@ export default function Contacto() {
 		return null;
 	}, [errors.nombre, errors.email, errors.asunto, errors.mensaje]);
 	useEffect(() => {
-		global.window.onload = function () {
+		global.window.onload = function spinn() {
 			const spinner = global.document.getElementById("spinner");
 			spinner.style.visibility = "hidden";
 			spinner.style.opacity = "0";
@@ -61,6 +61,7 @@ export default function Contacto() {
 						zIndex="0"
 					>
 						<iframe
+							loading="lazy"
 							title="UniversidadVideo"
 							src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2180.4971215831015!2d-98.36871086995131!3d20.07370352687888!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d056f1c38304d9%3A0x7baaa5e3333fe8dd!2sUniversidad%20Tollancingo.!5e0!3m2!1ses-419!2smx!4v1594598872889!5m2!1ses-419!2smx"
 							alt="demo"
@@ -257,6 +258,7 @@ export default function Contacto() {
 												bg={item.bg}
 											>
 												<Image
+													loading="lazy"
 													m="2"
 													key={`Img-${item.img}`}
 													src={item.img}

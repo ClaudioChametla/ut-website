@@ -9,7 +9,7 @@ import Politycs from "../components/Politycs/Politycs";
 
 export default function Politicas() {
 	useEffect(() => {
-		global.window.onload = function () {
+		global.window.onload = function spinn() {
 			const spinner = global.document.getElementById("spinner");
 			spinner.style.visibility = "hidden";
 			spinner.style.opacity = "0";

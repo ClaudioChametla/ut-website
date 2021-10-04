@@ -34,6 +34,7 @@ const Modalcomponent = ({ dataModal, isOpen, onClose }) => (
 				/>
 				<ModalBody maxH="90vh">
 					<Image
+						loading="lazy"
 						objectFit="cover"
 						src={dataModal.img ? dataModal.img : ""}
 						w="100%"
@@ -65,6 +66,7 @@ const minimap = () => {
 							instalaciones.map((item, index) => (
 								<Box onClick={onOpen} key={`GridItemFooter-${item.title}-${index}`}>
 									<Image
+										loading="lazy"
 										key={`ImgFooter-${item.title}-${index}`}
 										src={item.img}
 										_hover={{ filter: "brightness(60%)" }}

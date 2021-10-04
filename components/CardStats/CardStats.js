@@ -56,8 +56,11 @@ const CardStats = () => {
 								p="100px 0 30px 0"
 							>
 								<Image
+									loading="lazy"
 									src={item.icon}
-									boxSize="85px"
+									htmlHeight="60px"
+									htmlWidth="60px"
+									alt="icon"
 									filter="invert(17%) sepia(99%) saturate(2350%) hue-rotate(203deg) brightness(87%) contrast(100%)"
 								/>
 								<Text

@@ -79,9 +79,12 @@ const Hero = () => {
 							>
 								<Image
 									src={item.src}
+									alt="Hero"
 									position="relative"
 									verticalAlign="top"
-									w="100%"
+									width="100%"
+									htmlWidth="100%"
+									htmlHeight="300px"
 								/>
 
 								<Flex
@@ -140,31 +143,39 @@ const Hero = () => {
 					top={["3%", "8%", "7%", "13%"]}
 				>
 					<Button
-						h="100px"
-						_hover={{ bg: "rgba(0,0,0,.5)" }}
+						h="100%"
+						_hover={{ bg: "none" }}
 						bg="none"
 						onClick={anterior}
 						transition="none"
 						position="absolute"
+						aria-label="Center Align"
 					>
 						<Image
 							transform="scale(3)"
+							alt="Chevron-left"
 							src="/icons/chevron-left.svg"
+							htmlHeight="20px"
+							htmlWidth="10px"
 							filter="invert(94%) sepia(92%) saturate(6%) hue-rotate(195deg) brightness(104%) contrast(96%)"
 						/>
 					</Button>
 					<Button
-						h="100px"
+						h="100%"
 						bg="none"
-						_hover={{ bg: "rgba(0,0,0,0.5)" }}
+						_hover={{ bg: "none" }}
 						onClick={siguiente}
 						transition="none"
 						position="absolute"
 						right="0"
+						aria-label="Center Align"
 					>
 						<Image
 							transform="scale(3)"
+							alt="Chevron-Right"
 							src="/icons/chevron-right.svg"
+							htmlHeight="20px"
+							htmlWidth="10px"
 							filter="invert(94%) sepia(92%) saturate(6%) hue-rotate(195deg) brightness(104%) contrast(96%)"
 						/>
 					</Button>

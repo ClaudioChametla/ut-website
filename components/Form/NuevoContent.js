@@ -35,11 +35,7 @@ const nuevoContent = () => (
 
 				<Text marginTop="8%" color="#666">
 					Al hacer clic en “REGISTRARME”, reconoces haber leído las{" "}
-					<Text
-						as="a"
-						href="https://www.universidadtollancingo.com/politicas-de-privacidad/"
-						color="#0D47A1"
-					>
+					<Text as="a" href="/politicas-de-privacidad.js" color="#0D47A1">
 						{" "}
 						Políticas de Privacidad{" "}
 					</Text>{" "}
@@ -47,7 +43,7 @@ const nuevoContent = () => (
 				</Text>
 			</Box>
 			<Wrap w={["100%", "100%", "50%", "50%"]} p="8">
-				<Image src="/images/nuevoingresoright.webp" />
+				<Image loading="lazy" src="/images/nuevoingresoright.webp" />
 			</Wrap>
 		</Flex>
 	</Center>
