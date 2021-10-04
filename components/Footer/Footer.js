@@ -275,6 +275,7 @@ const Footer = () => {
 													htmlHeight="100px"
 													htmlWidth="100px"
 													_hover={{ filter: "brightness(60%)" }}
+
 													onClick={() => setDataModal(index)}
 													objectFit="cover"
 												/>
@@ -333,9 +334,11 @@ const Footer = () => {
 								top="25%"
 							>
 								<Image
+
 									loading="lazy"
 									transform="scale(2)"
 									alt="chevronLeft"
+
 									src="/icons/chevron-left.svg"
 									filter="invert(94%) sepia(92%) saturate(6%) hue-rotate(195deg) brightness(104%) contrast(96%)"
 								/>
@@ -353,17 +356,21 @@ const Footer = () => {
 								top="25%"
 							>
 								<Image
+
 									loading="lazy"
 									transform="scale(2)"
 									alt="chevronRight"
+
 									src="/icons/chevron-right.svg"
 									filter="invert(94%) sepia(92%) saturate(6%) hue-rotate(195deg) brightness(104%) contrast(96%)"
 								/>
 							</Button>
 							<Image
+
 								loading="lazy"
 								objectFit="cover"
 								alt="instalaciones"
+
 								src={
 									instalaciones[dataModal].img ? instalaciones[dataModal].img : ""
 								}
