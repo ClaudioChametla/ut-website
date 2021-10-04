@@ -9,7 +9,7 @@ import HomeContent from "../components/HomeContent";
 
 export default function Home() {
 	useEffect(() => {
-		global.window.onload = function () {
+		global.window.onload = function spin() {
 			const spinner = global.document.getElementById("spinner");
 			spinner.style.visibility = "hidden";
 			spinner.style.opacity = "0";

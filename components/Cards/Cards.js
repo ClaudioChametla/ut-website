@@ -19,7 +19,14 @@ const Cards = () => {
 								p="50px 0 30px 0"
 								_hover={{ bg: "#0053b8" }}
 							>
-								<Image src={item.icon} boxSize="70px" filter="invert(90%)" />
+								<Image
+									loading="lazy"
+									src={item.icon}
+									alt="icon"
+									filter="invert(90%)"
+									htmlHeight="50px"
+									htmlWidth="50px"
+								/>
 								<Text
 									w="100%"
 									textAlign="center"

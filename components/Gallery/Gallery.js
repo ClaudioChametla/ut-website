@@ -106,6 +106,7 @@ const Gallery = ({ pageData }) => {
 								left="0"
 							>
 								<Image
+									loading="lazy"
 									transform="scale(2)"
 									src="/icons/chevron-left.svg"
 									filter="invert(94%) sepia(92%) saturate(6%) hue-rotate(195deg) brightness(104%) contrast(96%)"
@@ -128,6 +129,7 @@ const Gallery = ({ pageData }) => {
 								right="0"
 							>
 								<Image
+									loading="lazy"
 									transform="scale(2)"
 									src="/icons/chevron-right.svg"
 									filter="invert(94%) sepia(92%) saturate(6%) hue-rotate(195deg) brightness(104%) contrast(96%)"
@@ -156,6 +158,7 @@ const Gallery = ({ pageData }) => {
 					{imagenes &&
 						imagenes.map((item, index) => (
 							<Image
+								loading="lazy"
 								key={`gridimagenes-${index}`}
 								id={`gallerySlide${index}`}
 								class="showcase-card"
@@ -206,6 +209,7 @@ const Gallery = ({ pageData }) => {
 								top="25%"
 							>
 								<Image
+									loading="lazy"
 									transform="scale(2)"
 									src="/icons/chevron-left.svg"
 									filter="invert(94%) sepia(92%) saturate(6%) hue-rotate(195deg) brightness(104%) contrast(96%)"
@@ -224,12 +228,14 @@ const Gallery = ({ pageData }) => {
 								top="25%"
 							>
 								<Image
+									loading="lazy"
 									transform="scale(2)"
 									src="/icons/chevron-right.svg"
 									filter="invert(94%) sepia(92%) saturate(6%) hue-rotate(195deg) brightness(104%) contrast(96%)"
 								/>
 							</Button>
 							<Image
+								loading="lazy"
 								objectFit="cover"
 								src={imagenes[currentImg] ? imagenes[currentImg] : ""}
 								w="100%"

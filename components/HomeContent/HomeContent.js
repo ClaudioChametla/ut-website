@@ -2,18 +2,17 @@
 import {
 	Text,
 	Stack,
-	List,
 	ListItem,
 	UnorderedList,
 	Box,
 	Center,
 	Flex,
 	Image,
+	AspectRatio,
 } from "@chakra-ui/react";
 import contentList from "../../data/homeContentList.json";
 // eslint-disable-next-line no-unused-vars
-import AModal from "./AModal";
-import BModal from "./BModal";
+
 import styles from "../../styles/styles.json";
 
 const HomeContent = () => (
@@ -23,7 +22,7 @@ const HomeContent = () => (
 				<Text
 					textAlign="center"
 					fontSize={styles.font.title}
-					fontFamily="Montserrat"
+					fontFamily={styles.font.fontFamily}
 					fontWeight="bold"
 					lineHeight="1.5"
 				>
@@ -32,9 +31,12 @@ const HomeContent = () => (
 				</Text>
 				<Center>
 					<Image
-						boxSize="50px"
+						loading="lazy"
+						alt="icon"
 						src="/icons/award-solid.svg"
 						filter="invert(80%) sepia(4%) saturate(0%) hue-rotate(138deg) brightness(107%) contrast(83%)"
+						htmlHeight="50px"
+						htmlWidth="50px"
 					/>
 				</Center>
 			</Stack>
@@ -52,11 +54,14 @@ const HomeContent = () => (
 							<ListItem key={`ListItem-${index}`} style={{ listStyle: "none" }}>
 								<Flex key={`FlexHomeContent-${index}`}>
 									<Image
-										boxSize="25px"
+										loading="lazy"
 										borderRadius="0%"
+										alt="Check"
 										filter="invert(19%) sepia(73%) saturate(2298%) hue-rotate(207deg) brightness(94%) contrast(101%)"
 										src={contentList.Icon}
 										marginRight="10px"
+										htmlHeight="25px"
+										htmlWidth="25px"
 									/>
 									{item}
 								</Flex>
@@ -65,7 +70,16 @@ const HomeContent = () => (
 					</UnorderedList>
 				</Box>
 				<Box w="90%">
-					<BModal />
+					<AspectRatio marginTop="50px" marginLeft="20px" maxW="560px" ratio={16 / 9}>
+						<iframe
+							loading="lazy"
+							title="universidadvideo"
+							src="https://www.youtube.com/embed/aFmjC5ViALk"
+							allowFullScreen
+							frameBorder="0"
+							allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+						/>
+					</AspectRatio>
 				</Box>
 			</Stack>
 		</Box>

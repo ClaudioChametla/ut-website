@@ -19,7 +19,7 @@ export default function Custom404() {
 				alignItems="center"
 				flexDir="column"
 			>
-				<Image src="images/logoBlack.webp" w="100px" h="110px" />
+				<Image src="images/logoBlack.webp" htmlWidth="100px" htmlHeight="110px" />
 				<Text fontSize="40px" _hover={{ color: "red" }} mb="3">
 					404 - Pagina No Encotrada
 				</Text>

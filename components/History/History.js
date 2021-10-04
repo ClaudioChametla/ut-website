@@ -52,6 +52,7 @@ const Modalcomponent = ({ dataModal, isOpen, onClose }) => (
 				/>
 				<ModalBody>
 					<Image
+						loading="lazy"
 						objectFit="cover"
 						src={dataModal || ""}
 						w={["400px", "400px", "500px", "800px"]}
@@ -120,6 +121,7 @@ const History = () => {
 				<Flex justifyContent="center" alignItems="center">
 					<Divider w={["40%", "40%", "10%", "10%"]} />{" "}
 					<Image
+						loading="lazy"
 						src="/icons/award-solid.svg"
 						w="30px"
 						h="30px"
@@ -162,6 +164,7 @@ const History = () => {
 									}}
 								>
 									<Image
+										loading="lazy"
 										src="/icons/arrow-right.svg"
 										w="100%"
 										h="100%"
@@ -193,6 +196,7 @@ const History = () => {
 				<Flex justifyContent="center" alignItems="center">
 					<Divider w={["40%", "40%", "10%", "10%"]} />
 					<Image
+						loading="lazy"
 						src="/icons/award-solid.svg"
 						w="30px"
 						h="30px"
@@ -208,7 +212,7 @@ const History = () => {
 							p={["0", "0", "5", "10"]}
 							mt={["5", "5", "0", "0"]}
 						>
-							<Image src="/images/fundador-optimized.webp" />
+							<Image loading="lazy" src="/images/fundador-optimized.webp" />
 						</Box>
 						<Box
 							my={["5", "5", "0", "0"]}
@@ -273,6 +277,7 @@ const History = () => {
 				<Flex justifyContent="center" alignItems="center">
 					<Divider w={["40%", "40%", "10%", "10%"]} />{" "}
 					<Image
+						loading="lazy"
 						src="/icons/image.svg"
 						w="30px"
 						h="30px"
@@ -306,6 +311,7 @@ const History = () => {
 							{images &&
 								images.imagenesCol1.map((itemImg) => (
 									<Image
+										loading="lazy"
 										src={itemImg}
 										key={`imageCol1-${itemImg}`}
 										h="742px"
@@ -328,6 +334,7 @@ const History = () => {
 							{images &&
 								images.imagenesCol2small.map((itemImg) => (
 									<Image
+										loading="lazy"
 										src={itemImg}
 										key={`imageSmall-${itemImg}`}
 										h="371px"
@@ -341,6 +348,7 @@ const History = () => {
 							{images &&
 								images.imagenesCol2.map((itemImg) => (
 									<Image
+										loading="lazy"
 										src={itemImg}
 										key={`imageCol2-${itemImg}`}
 										h="742px"
@@ -362,6 +370,7 @@ const History = () => {
 							{images &&
 								images.imagenesCol3.map((itemImg) => (
 									<Image
+										loading="lazy"
 										src={itemImg}
 										key={`imageCol3-${itemImg}`}
 										h="742px"

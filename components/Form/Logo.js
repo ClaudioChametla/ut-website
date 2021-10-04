@@ -16,7 +16,7 @@ const logo = () => (
 			bg={["none", "none", "pink.500", "pink.500"]}
 			boxSize={["70px", "80px", "90px", "90px"]}
 		>
-			<Image src="/icons/verify.svg" />
+			<Image loading="lazy" src="/icons/verify.svg" />
 		</Box>
 		<Text
 			color={["none", "none", "green.500", "green.500"]}

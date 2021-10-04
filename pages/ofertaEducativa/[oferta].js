@@ -26,7 +26,7 @@ export default function Home() {
 
 	const pageData = educativeOffer.find((item) => item.id === oferta);
 	useEffect(() => {
-		global.window.onload = function () {
+		global.window.onload = function spinn() {
 			const spinner = global.document.getElementById("spinner");
 			spinner.style.visibility = "hidden";
 			spinner.style.opacity = "0";
@@ -61,6 +61,7 @@ export default function Home() {
 								<Divider />
 								<Flex align="center" mt="10px">
 									<Image
+										loading="lazy"
 										src="/icons/bookmark.svg"
 										boxSize="30px"
 										filter="contrast(20%)"

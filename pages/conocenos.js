@@ -8,7 +8,7 @@ import History from "../components/History";
 
 export default function Home() {
 	useEffect(() => {
-		global.window.onload = function () {
+		global.window.onload = function spinn() {
 			const spinner = global.document.getElementById("spinner");
 			spinner.style.visibility = "hidden";
 			spinner.style.opacity = "0";

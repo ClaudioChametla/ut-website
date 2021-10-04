@@ -53,12 +53,8 @@ const Navbar = () => {
 		<Box>
 			<Box overflow="hidden" w="100%" zIndex={99} ref={navcontainer} position="fixed">
 				<Center w="100%" maxW="100%" bg={styles.background.navBgLight}>
-					<Box w={styles.container.width} fontFamily="Montserrat">
-						<Box w={styles.container.width} fontFamily="Montserrat">
-							<link
-								href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap"
-								rel="stylesheet"
-							/>
+					<Box w={styles.container.width} fontFamily={styles.font.fontFamily}>
+						<Box w={styles.container.width} fontFamily={styles.font.fontFamily}>
 							<Flex
 								bg={styles.background.navBgLight}
 								p="1"
@@ -160,6 +156,7 @@ const Navbar = () => {
 												h="45px"
 												alignItems="center"
 												p="1"
+												rel="noreferrer"
 											>
 												<Image
 													src={item.src}
@@ -180,7 +177,7 @@ const Navbar = () => {
 					</Box>
 				</Center>
 				<Center w="100%" maxW="100%" bg={styles.background.light} ref={navbar2}>
-					<Box w={styles.container.width} fontFamily="Montserrat">
+					<Box w={styles.container.width} fontFamily={styles.font.fontFamily}>
 						<Flex
 							w="100%"
 							h="90px"
@@ -222,13 +219,7 @@ const Navbar = () => {
 										boxShadow: "none",
 									}}
 								>
-									<Image
-										src="/images/logo_UT_FFF_100.webp"
-										alt="Logo"
-										fallbackSrc="https://www.universidadtollancingo.com/wp-content/uploads/2020/07/logo_UT_FFF_100.webp"
-										h="80%"
-										w="70%"
-									/>
+									<Image src="/images/favicon.ico" alt="Logo" h="80%" w="70%" />
 								</Link>
 							</Flex>
 
@@ -315,11 +306,11 @@ const Navbar = () => {
 					<Flex w="20%" justifyContent="center" alignSelf="center">
 						<Link href="/" h="100%" d="flex" justifyContent="center">
 							<Image
-								src="/images/logo_UT_FFF_100.webp"
+								src="/images/favicon.ico"
 								alt="Logo"
-								fallbackSrc="https://www.universidadtollancingo.com/wp-content/uploads/2020/07/logo_UT_FFF_100.webp"
-								h="85%"
-								w="75%"
+								htmlHeight={["60%", "65%", "65%", "85%"]}
+								htmlWidth={["60%", "75%", "55%", "75%"]}
+								loading="lazy"
 							/>
 						</Link>
 					</Flex>
@@ -348,9 +339,9 @@ const Navbar = () => {
 							>
 								<Image
 									src="/icons/bars.svg"
-									alt="mail"
-									h="60%"
-									w="60%"
+									alt="bars"
+									htmlHeight="60%"
+									htmlWidth="60%"
 									filter="invert(93%) sepia(0%) saturate(0%) hue-rotate(166deg) brightness(90%) contrast(91%)"
 									_hover={{ transform: "scale(1.2)" }}
 								/>
