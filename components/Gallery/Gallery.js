@@ -106,6 +106,9 @@ const Gallery = ({ pageData }) => {
 								left="0"
 							>
 								<Image
+									alt="icon-left"
+									htmlWidth="10px"
+									htmlHeight="25px"
 									loading="lazy"
 									transform="scale(2)"
 									src="/icons/chevron-left.svg"
@@ -129,6 +132,9 @@ const Gallery = ({ pageData }) => {
 								right="0"
 							>
 								<Image
+									alt="icon-right"
+									htmlWidth="10px"
+									htmlHeight="25px"
 									loading="lazy"
 									transform="scale(2)"
 									src="/icons/chevron-right.svg"
@@ -158,10 +164,12 @@ const Gallery = ({ pageData }) => {
 					{imagenes &&
 						imagenes.map((item, index) => (
 							<Image
+								htmlWidth="0"
+								htmlHeight="0"
 								loading="lazy"
 								key={`gridimagenes-${index}`}
 								id={`gallerySlide${index}`}
-								class="showcase-card"
+								className="showcase-card"
 								src={item}
 								alt="img"
 								mr="5px"
@@ -209,6 +217,7 @@ const Gallery = ({ pageData }) => {
 								top="25%"
 							>
 								<Image
+									alt="icon_left"
 									loading="lazy"
 									transform="scale(2)"
 									src="/icons/chevron-left.svg"
@@ -228,6 +237,9 @@ const Gallery = ({ pageData }) => {
 								top="25%"
 							>
 								<Image
+									alt="icon_right"
+									htmlWidth="0"
+									htmlHeight="0"
 									loading="lazy"
 									transform="scale(2)"
 									src="/icons/chevron-right.svg"
@@ -235,6 +247,8 @@ const Gallery = ({ pageData }) => {
 								/>
 							</Button>
 							<Image
+								htmlWidth="0"
+								htmlHeight="0"
 								loading="lazy"
 								objectFit="cover"
 								src={imagenes[currentImg] ? imagenes[currentImg] : ""}

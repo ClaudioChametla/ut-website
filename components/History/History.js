@@ -52,6 +52,9 @@ const Modalcomponent = ({ dataModal, isOpen, onClose }) => (
 				/>
 				<ModalBody>
 					<Image
+						alt="icon"
+						htmlWidth="0"
+						htmlHeight="0"
 						loading="lazy"
 						objectFit="cover"
 						src={dataModal || ""}
@@ -121,6 +124,9 @@ const History = () => {
 				<Flex justifyContent="center" alignItems="center">
 					<Divider w={["40%", "40%", "10%", "10%"]} />{" "}
 					<Image
+						alt="icon"
+						htmlWidth="0"
+						htmlHeight="0"
 						loading="lazy"
 						src="/icons/award-solid.svg"
 						w="30px"
@@ -164,6 +170,9 @@ const History = () => {
 									}}
 								>
 									<Image
+										alt="icon"
+										htmlWidth="0"
+										htmlHeight="0"
 										loading="lazy"
 										src="/icons/arrow-right.svg"
 										w="100%"
@@ -196,6 +205,9 @@ const History = () => {
 				<Flex justifyContent="center" alignItems="center">
 					<Divider w={["40%", "40%", "10%", "10%"]} />
 					<Image
+						alt="icon"
+						htmlWidth="0"
+						htmlHeight="0"
 						loading="lazy"
 						src="/icons/award-solid.svg"
 						w="30px"
@@ -212,7 +224,13 @@ const History = () => {
 							p={["0", "0", "5", "10"]}
 							mt={["5", "5", "0", "0"]}
 						>
-							<Image loading="lazy" src="/images/fundador-optimized.webp" />
+							<Image
+								alt="icon"
+								htmlWidth="0"
+								htmlHeight="0"
+								loading="lazy"
+								src="/images/fundador-optimized.webp"
+							/>
 						</Box>
 						<Box
 							my={["5", "5", "0", "0"]}
@@ -221,8 +239,8 @@ const History = () => {
 						>
 							<Accordion allowToggle id="Accordion-history">
 								{identidad &&
-									identidad.map((itemThree) => (
-										<AccordionItem mb="1" key={`Accordion-${itemThree}`}>
+									identidad.map((itemThree, index) => (
+										<AccordionItem mb="1" key={`Accordion-${index}`}>
 											<h2>
 												<AccordionButton
 													_expanded={{ color: "#333" }}
@@ -277,6 +295,9 @@ const History = () => {
 				<Flex justifyContent="center" alignItems="center">
 					<Divider w={["40%", "40%", "10%", "10%"]} />{" "}
 					<Image
+						alt="icon"
+						htmlWidth="0"
+						htmlHeight="0"
 						loading="lazy"
 						src="/icons/image.svg"
 						w="30px"
@@ -311,6 +332,9 @@ const History = () => {
 							{images &&
 								images.imagenesCol1.map((itemImg) => (
 									<Image
+										alt="icon"
+										htmlWidth="0"
+										htmlHeight="0"
 										loading="lazy"
 										src={itemImg}
 										key={`imageCol1-${itemImg}`}
@@ -334,6 +358,9 @@ const History = () => {
 							{images &&
 								images.imagenesCol2small.map((itemImg) => (
 									<Image
+										alt="icon"
+										htmlWidth="0"
+										htmlHeight="0"
 										loading="lazy"
 										src={itemImg}
 										key={`imageSmall-${itemImg}`}
@@ -348,6 +375,9 @@ const History = () => {
 							{images &&
 								images.imagenesCol2.map((itemImg) => (
 									<Image
+										alt="icon"
+										htmlWidth="0"
+										htmlHeight="0"
 										loading="lazy"
 										src={itemImg}
 										key={`imageCol2-${itemImg}`}
@@ -370,6 +400,9 @@ const History = () => {
 							{images &&
 								images.imagenesCol3.map((itemImg) => (
 									<Image
+										alt="icon"
+										htmlWidth="0"
+										htmlHeight="0"
 										loading="lazy"
 										src={itemImg}
 										key={`imageCol3-${itemImg}`}

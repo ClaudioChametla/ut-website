@@ -1,3 +1,4 @@
+/* eslint-disable react/no-array-index-key */
 import { Box, Grid, Image, Flex, Text, Center, Link } from "@chakra-ui/react";
 import { useEffect, useState } from "react";
 import PropTypes from "prop-types";
@@ -33,8 +34,8 @@ const CareerCards = ({ data }) => {
 					alignItems="center"
 				>
 					{dataCards &&
-						dataCards.map((item) => (
-							<Link href={`${item.href}${item.id}`}>
+						dataCards.map((item, index) => (
+							<Link href={`${item.href}${item.id}`} key={`dataCards-${index}`}>
 								<Box
 									zIndex="0"
 									key={`CareerCards-${item}`}
@@ -117,8 +118,9 @@ const CareerCards = ({ data }) => {
 										</Flex>
 										<Flex mr="10">
 											{stars.map &&
-												stars.map(() => (
+												stars.map((indexStar) => (
 													<Image
+														key={`StarsKey-${indexStar}`}
 														loading="lazy"
 														ml="0.5"
 														src="/icons/star.svg"
@@ -139,11 +141,11 @@ const CareerCards = ({ data }) => {
 };
 
 CareerCards.propTypes = {
-	data: PropTypes.objectOf(PropTypes.any),
+	data: PropTypes.arrayOf(PropTypes.any),
 };
 
 CareerCards.defaultProps = {
-	data: {},
+	data: [],
 };
 
 export default CareerCards;
