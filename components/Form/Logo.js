@@ -16,7 +16,13 @@ const logo = () => (
 			bg={["none", "none", "pink.500", "pink.500"]}
 			boxSize={["70px", "80px", "90px", "90px"]}
 		>
-			<Image loading="lazy" src="/icons/verify.svg" alt="Logo de formulario de registro" />
+			<Image
+				loading="lazy"
+				src="/icons/verify.svg"
+				alt="Logo de formulario de registro"
+				htmlWidth=""
+				htmlHeight=""
+			/>
 		</Box>
 		<Text
 			color={["none", "none", "green.500", "green.500"]}

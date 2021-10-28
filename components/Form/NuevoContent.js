@@ -39,6 +39,8 @@ const nuevoContent = () => (
 			<Wrap w={["100%", "100%", "50%", "50%"]} p="8">
 				<Image
 					loading="lazy"
+					htmlHeight="100%"
+					htmlWidth="100%"
 					src="/images/nuevoingresoright.webp"
 					alt="Imagen pagina de Nuevo Ingreso"
 				/>
