@@ -91,7 +91,7 @@ const Navbar = () => {
 											_hover={{ transform: "scale(1.2)" }}
 										/>
 									</Text>
-									<Text p="1" fontSize="12px" fontWeight="bold" marginRight="2">
+									<Text p="1" fontSize="12px" marginRight="2">
 										TEL: <br />
 										7757533974
 									</Text>
@@ -125,7 +125,7 @@ const Navbar = () => {
 											_hover={{ transform: "scale(1.2)" }}
 										/>
 									</Box>
-									<Text p="1" fontSize="12px" fontWeight="bold">
+									<Text p="1" fontSize="12px">
 										EMAIL: <br />
 										INFO@UNIVERSIDADTOLLANCINGO.COM
 									</Text>
@@ -161,8 +161,8 @@ const Navbar = () => {
 												<Image
 													src={item.src}
 													alt="mail"
-													h="60%"
-													w="60%"
+													h="50%"
+													w="50%"
 													filter="invert(93%) sepia(0%) saturate(0%) hue-rotate(166deg) brightness(90%) contrast(91%)"
 													_hover={{
 														filter: item.filter,
