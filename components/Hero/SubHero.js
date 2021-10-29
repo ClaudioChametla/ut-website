@@ -16,6 +16,7 @@ const SubHero = ({ title, src }) => (
 				borderWidth="2px"
 				opacity="100%"
 				d={["none", "none", "none", "block"]}
+				bg="white"
 			/>
 			<Text
 				mx={["5", "10"]}
@@ -30,8 +31,8 @@ const SubHero = ({ title, src }) => (
 				d={["none", "none", "none", "block"]}
 				w="70px"
 				borderWidth="2px"
-				bg="red"
 				opacity="100%"
+				bg="white"
 			/>
 		</Center>
 	</Box>
