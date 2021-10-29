@@ -20,8 +20,8 @@ const logo = () => (
 				loading="lazy"
 				src="/icons/verify.svg"
 				alt="Logo de formulario de registro"
-				htmlWidth=""
-				htmlHeight=""
+				htmlWidth="100%"
+				htmlHeight="100%"
 			/>
 		</Box>
 		<Text

@@ -13,8 +13,8 @@ const vinculacionMap = () => {
 							<Center as="a" href="/vinculacion" h="100%">
 								<Box>
 									<Image
-										htmlWidth=""
-										htmlHeight=""
+										htmlWidth="100%"
+										htmlHeight="100%"
 										loading="lazy"
 										src={item.img}
 										alt={item.id}
