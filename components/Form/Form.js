@@ -106,17 +106,27 @@ const form = () => {
 					marginBottom="25px"
 					type="submit"
 				>
-					Registrarme
+					REGISTRARME
 				</Button>
 				{validation === false && (
-					<Center h={["10%", "10%", "10%", "10%"]} bgColor="yellow">
+					<Center
+						h={["10%", "10%", "10%", "10%"]}
+						border="1px"
+						borderColor="orange"
+						bgColor="none"
+					>
 						<Text>
 							Uno o más campos tienen un error. Por favor revíselo y reinténtelo.
 						</Text>
 					</Center>
 				)}
 				{validation === true && (
-					<Center h={["15%", "15%", "10%", "10%"]} bgColor="green ">
+					<Center
+						h={["15%", "15%", "10%", "10%"]}
+						border="1px"
+						borderColor="orange"
+						bgColor="none"
+					>
 						<Text color="white">
 							Gracias por tu mensaje. El mensaje ha sido enviado.
 						</Text>

@@ -13,12 +13,6 @@ const nuevoContent = () => (
 			h={["50px", "50px", "none", "none"]}
 			borderTopRightRadius="full"
 			borderTopLeftRadius="full"
-			/* clipPath={[
-				"ellipse(50% 100% at 50% 95%);",
-				"ellipse(50% 100% at 50% 95%);",
-				"none",
-				"none",
-			]} */
 			bg={["gray.100", "gray.100", "none", "none"]}
 		>
 			<Logo />
@@ -43,7 +37,13 @@ const nuevoContent = () => (
 				</Text>
 			</Box>
 			<Wrap w={["100%", "100%", "50%", "50%"]} p="8">
-				<Image loading="lazy" src="/images/nuevoingresoright.webp" />
+				<Image
+					loading="lazy"
+					htmlHeight="100%"
+					htmlWidth="100%"
+					src="/images/nuevoingresoright.webp"
+					alt="Imagen pagina de Nuevo Ingreso"
+				/>
 			</Wrap>
 		</Flex>
 	</Center>

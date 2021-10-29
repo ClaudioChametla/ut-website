@@ -12,9 +12,15 @@ const vinculacionMap = () => {
 						<GridItem key={`GridItem-${index}`}>
 							<Center as="a" href="/vinculacion" h="100%">
 								<Box>
-									<Image loading="lazy" src={item.img} alt={item.id} />
+									<Image
+										htmlWidth=""
+										htmlHeight=""
+										loading="lazy"
+										src={item.img}
+										alt={item.id}
+									/>
 								</Box>
-								<Center m="2" height={["none", "none", "50%", "80%"]}>
+								<Center m="2" h={["none", "none", "50%", "80%"]}>
 									<Divider orientation="vertical" />
 								</Center>
 							</Center>
