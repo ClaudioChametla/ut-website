@@ -45,7 +45,7 @@ function tabs() {
 							_hover={{ color: "white", bg: "#0047A1" }}
 							_selected={{ color: "white", bg: "#0047A1" }}
 						>
-							{isLargerThan768 ? "Especialidad" : "Esp."}
+							{isLargerThan768 ? "Especialidad" : "Especialidad"}
 						</Tab>
 						<Center height="50px">
 							<Divider orientation="vertical" />
@@ -58,7 +58,7 @@ function tabs() {
 							_hover={{ color: "white", bg: "#0047A1" }}
 							_selected={{ color: "white", bg: "#0047A1" }}
 						>
-							{isLargerThan768 ? "Licenciatura" : "Lic."}
+							{isLargerThan768 ? "Licenciatura" : "Licenciatura"}
 						</Tab>
 						<Center height="50px">
 							<Divider orientation="vertical" />
@@ -71,7 +71,7 @@ function tabs() {
 							_hover={{ color: "white", bg: "#0047A1" }}
 							_selected={{ color: "white", bg: "#0047A1" }}
 						>
-							{isLargerThan768 ? "Posgrados" : "Pos."}
+							{isLargerThan768 ? "Posgrados" : "Posgrados"}
 						</Tab>
 					</TabList>
 					<TabPanels>

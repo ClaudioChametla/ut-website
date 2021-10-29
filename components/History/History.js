@@ -226,8 +226,8 @@ const History = () => {
 						>
 							<Image
 								alt="icon"
-								htmlWidth="0"
-								htmlHeight="0"
+								htmlWidth="100%"
+								htmlHeight="100%"
 								loading="lazy"
 								src="/images/fundador-optimized.webp"
 							/>

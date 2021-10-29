@@ -73,8 +73,8 @@ const CareerCards = ({ data }) => {
 										<Image
 											loading="lazy"
 											src={item.src}
-											h="100%"
-											w="100%"
+											htmlHeight="100%"
+											htmlWidth="100%"
 											position="relative"
 											zIndex="15"
 											_hover={{ transform: "scale(1.1)" }}
@@ -99,8 +99,8 @@ const CareerCards = ({ data }) => {
 											<Image
 												loading="lazy"
 												src="/icons/user-friends.svg"
-												w="15px"
-												h="15px"
+												htmlWidth="15px"
+												htmlHeight="15px"
 											/>
 											<Text mx="1" fontSize="12px">
 												0
@@ -109,8 +109,8 @@ const CareerCards = ({ data }) => {
 												loading="lazy"
 												ml="1"
 												src="/icons/comments.svg"
-												w="15px"
-												h="15px"
+												htmlWidth="15px"
+												htmlHeight="15px"
 											/>
 											<Text mx="1" fontSize="12px">
 												0
@@ -124,8 +124,8 @@ const CareerCards = ({ data }) => {
 														loading="lazy"
 														ml="0.5"
 														src="/icons/star.svg"
-														w="13px"
-														h="13px"
+														htmlWidth="13px"
+														htmlHeight="13px"
 														filter="invert(73%) sepia(49%) saturate(692%) hue-rotate(354deg) brightness(104%) contrast(99%)"
 													/>
 												))}
