@@ -23,7 +23,12 @@ const MenuComponent = ({ item }) => {
 	return (
 		<Flex color="white">
 			<Box alignSelf="center" h="100%" align="center">
-				<Menu aria-labelledby="Menu-inMenuComponent" isOpen={isOpen} isLazy>
+				<Menu
+					aria-labelledby="PrincipalMenu"
+					id="Menu-inMenuComponent"
+					isOpen={isOpen}
+					isLazy
+				>
 					<Link href={item.link} _hover={{ textDecoration: "none" }}>
 						<MenuButton
 							ref={finalRef}
