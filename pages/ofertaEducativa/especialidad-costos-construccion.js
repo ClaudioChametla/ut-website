@@ -11,7 +11,6 @@ import {
 	Spacer,
 } from "@chakra-ui/react";
 import { useEffect } from "react";
-import { useRouter } from "next/router";
 import Container from "../../components/Container";
 import { HeroDynamic } from "../../components/Hero";
 import List from "../../components/List";
@@ -21,10 +20,7 @@ import styles from "../../styles/styles.json";
 import Gallery from "../../components/Gallery";
 
 export default function Home() {
-	const router = useRouter();
-	const { oferta } = router.query;
-
-	const pageData = educativeOffer.find((item) => item.id === oferta);
+	const pageData = educativeOffer.find((item) => item.id === "especialidad-costos-construccion");
 	useEffect(() => {
 		global.window.onload = function spinn() {
 			const spinner = global.document.getElementById("spinner");
